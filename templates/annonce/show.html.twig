@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ annonce.title }}{% endblock %}
+
+{% block body %}
+
+
+    <div class="annonce-title" style="background-image: url({{ annonce.coverImage }})">
+        <div class="container">
+            <h1 class="my-3">{{ annonce.title }}</h1>
+            <p>{{ annonce.introduction | raw }}</p>
+            <p>{{ annonce.type }}</p>
+            <a href="#" class="btn btn-primary">Contactez l'auteur</a>
+            {% if  app.user and app.user == annonce.author %}
+            <a href="{{ path('annonces_edit', {'slug': annonce.slug}) }}" class="btn btn-primary">Modifier l'annonce</a>
+            <a href="{{ path('annonces_delete', {'slug':annonce.slug}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer l'annonce: {{ annonce.title }} ?`)">Supprimer l'annonce</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mb-3">
+                {{ annonce.content | raw}}
+            </div>
+            <div class="col">
+                {% set a = annonce.author %}
+                <div class="row">
+                    <div class="col-3">
+                        <a href="{{ path('user_show', {'slug':a.slug}) }}">
+                          <img src="" class="avatar avatar-medium" alt="Avatar de {{ a.fullName }}">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="{{ path('user_show', {'slug':a.slug}) }}">
+                          <h3>{{ a.fullName}}</h3>
+                        </a>
+                        <span class="badge badge-primary">{{a.annonces | length}} annonces</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/lemas.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
+        <title>Le Mas - {% block title %}{% endblock %}</title>
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{path('homepage')}}">Le Mas</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Infos du quartiers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="adminDropdown">
+                            <i class="fas fa-edit fa-2x"></i>A prêter</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="adminDropdown">
+                            <a class="dropdown-item" href="{{path('annonces_index')}}">Bricolage</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{path('annonces_index')}}">Jardinage</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{path('annonces_index')}}">Autre</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="adminDropdown">
+                            <i class="fas fa-edit fa-2x"></i>A Organiser</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="adminDropdown">
+                            <a class="dropdown-item" href="{{path('annonces_index')}}">Sortir</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{path('annonces_index')}}">Fêter</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{path('annonces_index')}}">Achats collectifs</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="adminDropdown">
+                            <i class="fas fa-edit fa-2x"></i>Offre de service</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="adminDropdown">
+                            <a class="dropdown-item" href="{{path('annonces_index')}}">Besoins</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{path('annonces_index')}}">Offres</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    {%  if app.user %}
+                        <li class="nav item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="accountDropdownLink">
+                                <img src="" alt="Avatar de {{ app.user.fullName }}" class="avatar avatar-mini"> {{ app.user.fullName }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdownLink">
+                                <a href="{{ path('annonce_create') }}" class="dropdown-item">Créer une annonce</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="{{ path('account_index') }}" class="dropdown-item">Mon compte</a>
+                                <a href="{{ path('account_profile') }}" class="dropdown-item">Modifier mon profil</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="{{ path('account_logout') }}" class="dropdown-item">Déconnexion</a>
+                            </div>
+                        </li>
+                    {% else %}
+                        <li class="nav item">
+                            <a href="{{ path('account_register') }}" class="nav-link">Inscription</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="{{ path('account_login') }}" class="nav-link">Connexion</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+
+        {% for label, message in app.flashes %}
+            <div class="container">
+                <div class="alert alert-{{ label }}">
+                    {% for message in message %}
+                        {{ message | raw }}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+        var timeout = 3000;
+        $('.alert').delay(timeout).fadeOut(300);
+    </script>
+</html>
