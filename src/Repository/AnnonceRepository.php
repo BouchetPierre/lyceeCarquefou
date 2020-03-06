@@ -20,22 +20,30 @@ class AnnonceRepository extends ServiceEntityRepository
         parent::__construct($registry, Annonce::class);
     }
 
-    // /**
-    //  * @return Annonce[] Returns an array of Annonce objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @return Annonce[] Returns an array of Annonce objects
+    */
+
+    public function findByType($type)
     {
         return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
+            ->where('a.type = :val')
+            ->setParameter('val', $type)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+
+    public function findLastInfo()
+    {
+        return $this->createQueryBuilder('a')
+            ->where('a.type = :val')
+            ->setParameter('val', 'Information_Le_Mas')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
 
     /*
     public function findOneBySomeField($value): ?Annonce

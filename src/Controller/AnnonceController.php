@@ -15,18 +15,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class AnnonceController extends AbstractController
 {
-    /**
-     * @Route("/annonces", name="annonces_index")
-     * @IsGranted("ROLE_USER")
-     */
-    public function index(AnnonceRepository $repo)
-    {
-        $annonces = $repo->findAll();
-
-        return $this->render('annonce/index.html.twig', [
-            'annonces' => $annonces,
-        ]);
-    }
 
     /**
      * Permet de creer une annonce
@@ -67,8 +55,22 @@ class AnnonceController extends AbstractController
     }
 
     /**
+     * @Route("/annonces/{type}", name="annonces_index")
+     * @IsGranted("ROLE_USER")
+     */
+    public function index($type, AnnonceRepository $repo)
+    {
+
+        $annonces = $repo->findByType($type);
+
+        return $this->render('annonce/index.html.twig', [
+            'annonces' => $annonces,
+        ]);
+    }
+
+    /**
      * Permet d'afficher et de modifier une annonce
-     * @Route("annonces/{slug}/edit", name="annonces_edit")
+     * @Route("annonces/show/{slug}/edit", name="annonces_edit")
      * @Security("is_granted('ROLE_USER') and user === annonce.getAuthor()", message="Vous n'est pas propriétaire de cette annonce !")
      *
      * @return Response
@@ -103,7 +105,7 @@ class AnnonceController extends AbstractController
     /**
      * Permet de voir une annonce définie
      *
-     * @Route("/annonces/{slug}", name="annonces_show")
+     * @Route("/annonces/show/{slug}", name="annonces_show")
      * @IsGranted("ROLE_USER")
      *
      * @return Response
@@ -122,7 +124,7 @@ class AnnonceController extends AbstractController
 
     /**
      * Permet de supprimer une annonce
-     * @Route("/annones/{slug}/delete", name="annonces_delete")
+     * @Route("/annones/show/{slug}/delete", name="annonces_delete")
      * @Security("is_granted('ROLE_USER') and user === annonce.getAuthor()")
      *
      * @return Response
@@ -137,6 +139,6 @@ class AnnonceController extends AbstractController
             'Votre annonce a bien été supprimée !'
         );
 
-        return $this->redirectToRoute("annonces_index");
+        return $this->redirectToRoute('account_index');
     }
 }

@@ -6,11 +6,14 @@
 
 
     <div class="annonce-title" style="background-image: url({{ annonce.coverImage }})">
+        {{ include ('annonce/imageAnnonce.html.twig')  }}
         <div class="container">
             <h1 class="my-3">{{ annonce.title }}</h1>
             <p>{{ annonce.introduction | raw }}</p>
             <p>{{ annonce.type }}</p>
-            <a href="#" class="btn btn-primary">Contactez l'auteur</a>
+            {% if  app.user and app.user != annonce.author %}
+            <a href="{{ path('message_create', {'slug': annonce.slug})}}" class="btn btn-primary">Contactez l'auteur</a>
+            {% endif %}
             {% if  app.user and app.user == annonce.author %}
             <a href="{{ path('annonces_edit', {'slug': annonce.slug}) }}" class="btn btn-primary">Modifier l'annonce</a>
             <a href="{{ path('annonces_delete', {'slug':annonce.slug}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer l'annonce: {{ annonce.title }} ?`)">Supprimer l'annonce</a>
@@ -28,7 +31,6 @@
                 <div class="row">
                     <div class="col-3">
                         <a href="{{ path('user_show', {'slug':a.slug}) }}">
-                          <img src="" class="avatar avatar-medium" alt="Avatar de {{ a.fullName }}">
                         </a>
                     </div>
                     <div class="col">

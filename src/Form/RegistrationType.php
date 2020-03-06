@@ -29,7 +29,6 @@ class RegistrationType extends AbstractType
             ->add('name', TextType::class, $this->getConf("Nom", "Votre nom ..."))
             ->add('lastname',TextType::class, $this->getConf("Prénom", "Votre prénom ..."))
             ->add('email', EmailType::class, $this->getConf("Email", "Votre adresses email"))
-            ->add('picture', UrlType::class, $this->getConf("Photo de profil", "Url de votre avatar ..."))
             ->add('address', TextType::class, $this->getConf("Adresse", "Votre adresse ..."))
             ->add('hash', PasswordType::class, $this->getConf("Mot de Passe", "Choisissez un mot de passe"))
             ->add('passwordConfirm', PasswordType::class, $this->getConf("Confirmation de mot de passe","Veuillez confirmer votre mot de passe." ))

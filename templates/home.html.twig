@@ -13,60 +13,32 @@
         <p>Des annoces, des évenements, des envies, des besoins, échanger simplement avec vos voisins pour se faciliter la vie et mutualiser ... </p>
     </div>
 
-    <h2>Les derniéres nouvelles du quartiers</h2>
+    <h2>Derniére information de l'ASL</h2>
 
-    <div class="row mt-5">
-        <div class="col-md-4">
-            <div class="card bg-light mb-3">
-                <div class="card-header text-center">
-                    Reunion Annuelle
-                </div>
-                <img src="http://placehold.it/1000*400" alt="image du quartier" style="height: 200px; width:100%; display: block ">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        Réunion annuelle
-                    </h4>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fugit ipsa molestiae sunt? Consequuntur dignissimos ea earum enim, eos illo impedit modi nobis officiis voluptas.
-                    </p>
-                    <a href="#" class="btn btn-secondary">En savoir plus !</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card bg-light mb-3">
-                <div class="card-header text-center">
-                    Reunion Annuelle
-                </div>
-                <img src="http://placehold.it/1000*400" alt="image du quartier" style="height: 200px; width:100%; display: block ">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        Réunion annuelle
-                    </h4>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fugit ipsa molestiae sunt? Consequuntur dignissimos ea earum enim, eos illo impedit modi nobis officiis voluptas.
-                    </p>
-                    <a href="#" class="btn btn-secondary">En savoir plus !</a>
+    <div class="row">
+        {% for annonce in annonces  %}
+            <div >
+                <div class="card bg-light mb-3">
+                    <div class="card-header text-center">
+                        {{ annonce.type }}
+                    </div>
+                    {{ include ('annonce/imageAnnonce.html.twig')  }}
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            {{ annonce.title }}
+                        </h4>
+                        <p class="card-text">
+                            {{ annonce.introduction }}
+                        </p>
+                        <a href="{{path('annonces_show', {'slug':annonce.slug})}}" class="btn btn-secondary">En savoir plus !</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card bg-light mb-3">
-                <div class="card-header text-center">
-                    Reunion Annuelle
-                </div>
-                <img src="http://placehold.it/1000*400" alt="image du quartier" style="height: 200px; width:100%; display: block ">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        Réunion annuelle
-                    </h4>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fugit ipsa molestiae sunt? Consequuntur dignissimos ea earum enim, eos illo impedit modi nobis officiis voluptas.
-                    </p>
-                    <a href="#" class="btn btn-secondary">En savoir plus !</a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
+    </div>
+
+
+
     </div>
 
 

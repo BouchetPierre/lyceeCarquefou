@@ -37,7 +37,6 @@ class AnnonceType extends AbstractType
 
         $builder
             ->add('title', TextType::class, $this->getConf("titre","Tapez votre titre d'annonce", true))
-            ->add('slug',TextType::class,  $this->getConf("Adresse web","Tapez l'adresse web (automatique", false))
             ->add('introduction', TextType::class, $this->getConf("Introduction","Donnez une description rapide",true))
             ->add('content', TextareaType::class, $this->getConf("Description détaillée","Donnez une description détaillée de votre annonce", true))
             ->add('imageFile', FileType::class, ['required'=> false])

@@ -77,9 +77,9 @@ class User implements UserInterface
     private $userRoles;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\PictureUser", mappedBy="userImage", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="App\Entity\Message", mappedBy="author")
      */
-    private $pictureUser;
+    private $messages;
 
     public function getFullName(){
         return "{$this->lastname} {$this->name}";
@@ -105,6 +105,7 @@ class User implements UserInterface
     {
         $this->annonces = new ArrayCollection();
         $this->userRoles = new ArrayCollection();
+        $this->messages = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -273,21 +274,35 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getPictureUser(): ?PictureUser
+    /**
+     * @return Collection|Message[]
+     */
+    public function getMessages(): Collection
     {
-        return $this->pictureUser;
+        return $this->messages;
     }
 
-    public function setPictureUser(?PictureUser $pictureUser): self
+    public function addMessage(Message $message): self
     {
-        $this->pictureUser = $pictureUser;
-
-        // set (or unset) the owning side of the relation if necessary
-        $newUserImage = null === $pictureUser ? null : $this;
-        if ($pictureUser->getUserImage() !== $newUserImage) {
-            $pictureUser->setUserImage($newUserImage);
+        if (!$this->messages->contains($message)) {
+            $this->messages[] = $message;
+            $message->setAuthor($this);
         }
 
         return $this;
     }
+
+    public function removeMessage(Message $message): self
+    {
+        if ($this->messages->contains($message)) {
+            $this->messages->removeElement($message);
+            // set the owning side to null (unless already changed)
+            if ($message->getAuthor() === $this) {
+                $message->setAuthor(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

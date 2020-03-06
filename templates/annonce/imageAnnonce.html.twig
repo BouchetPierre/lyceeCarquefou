@@ -1,0 +1,13 @@
+{% if annonce.coverImage %}
+    <img src="/pictures/annonces/{{annonce.coverImage}} " alt="" style="height: 200px; width:100%; display: block ">
+{% elseif annonce.type == 'jardinage' %}
+    <img src="/pictures/placeolderPictures/jardinage.jpg" alt="image du quartier" style="height: 200px; width:100%; display: block ">
+{% elseif annonce.type == 'bricolage' %}
+    <img src="/pictures/placeolderPictures/bricolage.jpg" alt="image du quartier" style="height: 300px; width:100%; display: block ">
+{% elseif annonce.type == 'sortie' %}
+    <img src="/pictures/placeolderPictures/echange.jpg" alt="image du quartier" style="height: 200px; width:100%; display: block ">
+{% elseif annonce.type == 'annonce' %}
+    <img src="/pictures/placeolderPictures/village.jpg" alt="image du quartier" style="height: 200px; width:100%; display: block ">
+{% elseif annonce.type == 'fete' %}
+    <img src="/pictures/placeolderPictures/echange.jpg" alt="image du quartier" style="height: 200px; width:100%; display: block ">
+{% endif %}

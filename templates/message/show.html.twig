@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vos message{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        {% if messages %}
+            <h1 class="my-3">Vos messages envoyés</h1>
+            <div class="row">
+                {% for message in messages  %}
+                    <div class="col-md-4">
+                        <div class="card bg-light mb-3">
+                            <div class="card-header text-center">
+                                Annonce:{{ message.destinataire.title}}
+                            </div>
+                            <div class="card-header text-center">
+                                Message pour:  {{ message.destinataire.author.name}} {{ message.destinataire.author.lastName}}
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    {{ message.message }}
+                                </h4>
+                            </div>
+                                <a href="{{ path('message_delete', {'id': message.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer le message ?`)">Supprimer</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h1 class="my-3">Vous n'avez écrit auncun message!!!</h1>
+        {% endif %}
+    </div>
+    <hr>
+    <div class="container">
+        {% if messageRecu %}
+            <h1 class="my-3">Vos messages reçus</h1>
+            <div class="row">
+                {% for messageRecu in messageRecu  %}
+                    <div class="col-md-4">
+                        <div class="card bg-light mb-3">
+                            <div class="card-header text-center">
+                                Annonce: {{ messageRecu.destinataire.title}}
+                            </div>
+                            <div class="card-header text-center">
+                                Message de:  {{ messageRecu.author.lastName}} {{ messageRecu.author.name}}
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    {{ messageRecu.message }}
+                                </h4>
+                            </div>
+                                <a href="{{ path('message_delete', {'id': messageRecu.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer le message ?`)">Supprimer</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h1 class="my-3">Vous n'avez reçu auncun message!!!</h1>
+        {% endif %}
+    </div>
+
+{% endblock %}

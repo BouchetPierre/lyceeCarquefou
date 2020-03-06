@@ -54,6 +54,7 @@ class AppFixtures extends Fixture
                 ->setAddress($faker->address)
                 ->setEmail($faker->email)
                 ->setHash($hash)
+
                 ;
 
             $manager->persist($user);
@@ -63,10 +64,9 @@ class AppFixtures extends Fixture
 // Annonces
         for($i=1; $i <=20; $i++) {
             $annonce = new Annonce;
-
+            $choixType= ['annonce', 'bricolage', 'jardinage','sortie','fete'];
+            $type = $choixType[rand(0,4)];
             $title = $faker->sentence();
-            $type = $faker->sentence();
-            $coverImage = 'https://picsum.photos/id/'.rand(1,500).'/300/200';
             $introduction = $faker->paragraph(2);
             $content = '<p>'.join("</p><p>",$faker->paragraphs(5)).'</p>';
 
@@ -77,7 +77,6 @@ class AppFixtures extends Fixture
                     ->setIntroduction($introduction)
                     ->setContent($content)
                     ->setAuthor($user)
-                    ->setCoverImage($coverImage)
             ;
 
 
