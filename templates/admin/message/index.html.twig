@@ -1,0 +1,54 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration des messages{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <h1 class="my-5">Gestion des messages</h1>
+
+        <table id="tab" class="table table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Auteur</th>
+                <th>Destinataire</th>
+                <th class="">Sujet</th>
+                <th class="">Texte</th>
+                <th class="text-center">Supprimer</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for message in messages %}
+                <tr>
+                    <td>{{ message.id }}</td>
+                    <td>{{ message.author.fullname }}</td>
+                    <td>{{ message.destinataire.author.fullname }}</td>
+                    <td>{{ message.destinataire.title }}</td>
+                    <td>{{ message.message|nl2br }}</td>
+                    <td class="text-center">
+                        <a href="{{path('admin_message_delete', {'id':message.id})}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            {% for reponse in reponses %}
+                <tr>
+                    <td>{{ reponse.id }}</td>
+                    <td>{{ reponse.author.fullname }}</td>
+                    <td>{{ reponse.destinataire.fullname }}</td>
+                    <td>{{ reponse.subject }}</td>
+                    <td>{{ reponse.text|nl2br }}</td>
+                    <td class="text-center">
+                        <a href="{{path('admin_reponse_delete', {'id':reponse.id})}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#tab').DataTable();
+        });
+    </script>
+{% endblock %}

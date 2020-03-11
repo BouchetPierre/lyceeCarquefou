@@ -1,19 +1,20 @@
 {% extends 'admin/base.html.twig' %}
 
-{% block title %}Administration de annonces{% endblock %}
+{% block title %}Administration des annonces{% endblock %}
 
 {% block body %}
 <div class="container-fluid">
     <h1 class="my-5">Gestion des annonces</h1>
 
-    <table class="table table-hover">
+    <table id="tab" class="table table-hover">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Titre</th>
-                <th>Auteur</th>
-                <th>Type</th>
-                <th>Supprimer l'annonce</th>
+                <th>Texte</th>
+                <th class="text-center">Auteur</th>
+                <th class="text-center">Type</th>
+                <th class="text-center">Supprimer l'annonce</th>
             </tr>
         </thead>
         <tbody>
@@ -21,14 +22,20 @@
             <tr>
                 <td>{{ annonce.id }}</td>
                 <td>{{ annonce.title}}</td>
-                <td>{{ annonce.author.fullName }}</td>
-                <td>{{ annonce.type }}</td>
-                <td>
-                    <a href="" class="btn btn-danger">Supprimer</a>
+                <td>{{ annonce.content|raw}}</td>
+                <td class="text-center">{{ annonce.author.fullName }}</td>
+                <td class="text-center">{{ annonce.type }}</td>
+                <td class="text-center">
+                    <a href="{{ path('admin_annonces_delete', {'id':annonce.id}) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
+    <script>
+        $(document).ready(function () {
+            $('#tab').DataTable();
+        });
+    </script>
 {% endblock %}

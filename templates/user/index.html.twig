@@ -3,10 +3,10 @@
 {% block title %}Page de {{ user.fullName }} {% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="container bg-light pb-5">
         <div class="row align-items-center">
             <div class="col-9">
-                <h1>{{ user.fullName }}</h1>
+                <h1 class="decalage">{{ user.fullName }}</h1>
                 {% if user is same as(app.user)%}
                     <div class="mt-3">
                         <a href="{{ path('account_profile') }}" class="btn btn-primary mr-2 mb-2">Modifier mes informations</a>
@@ -18,11 +18,12 @@
         </div>
         <hr>
         <h2>Mes annonces</h2>
-
+    </div>
+    <div class="container">
         {% if user.annonces | length > 0 %}
             <div class="row">
                 {% for annonce in user.annonces %}
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="margin-bottom: 50px;">
                         <div class="card bg-light mb-3">
                             <div class="card-header text-center">
                                 {{ annonce.type }}
@@ -42,7 +43,7 @@
                 {% endfor %}
             </div>
         {% else %}
-            <div class="alert alert-warning">
+            <div class="alert alert-warning mb-3">
                 <p>
                     <strong>{{ user.fullName }}</strong> n'a pas encore d'annonce sur le site !
                 </p>

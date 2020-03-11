@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Annonce;
+use App\Entity\User;
 use App\Form\MessageType;
 use App\Repository\AnnonceRepository;
 use App\Repository\MessageRepository;
+use App\Repository\RepondRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -55,20 +57,26 @@ class MessageController extends AbstractController
         ]);
     }
 
+
     /**
+     * Permet d'afficher les messages
      * @Route("/message/show", name="message_show")
      * @IsGranted("ROLE_USER")
      */
-    public function index(MessageRepository $repo)
+    public function index(MessageRepository $repo, RepondRepository $repond)
     {
         $user = $this->getUser()->getId();
 
+        $reponsesRecu = $repond->findByUserRecu($user);
+        $reponsesSend = $repond->findByUserSend($user);
         $messages = $repo->findByUser($user);
         $messageRecu = $repo->findByDest($user);
 
       return $this->render('message/show.html.twig', [
             'messages' => $messages,
-            'messageRecu' => $messageRecu
+            'messageRecu' => $messageRecu,
+            'reponsesRecu'=> $reponsesRecu,
+            'reponsesSend'=> $reponsesSend
 
         ]);
     }

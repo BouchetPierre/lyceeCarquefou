@@ -64,7 +64,7 @@ class AppFixtures extends Fixture
 // Annonces
         for($i=1; $i <=20; $i++) {
             $annonce = new Annonce;
-            $choixType= ['annonce', 'bricolage', 'jardinage','sortie','fete'];
+            $choixType= ['Bricolage', 'Jardinage','Sortie','Fête', 'Collectif'];
             $type = $choixType[rand(0,4)];
             $title = $faker->sentence();
             $introduction = $faker->paragraph(2);

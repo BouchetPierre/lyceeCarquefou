@@ -55,6 +55,7 @@ class AnnonceController extends AbstractController
     }
 
     /**
+     * Permet de voir les annonces en fonction du type
      * @Route("/annonces/{type}", name="annonces_index")
      * @IsGranted("ROLE_USER")
      */

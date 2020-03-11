@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Infos ASL Le Mas{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+        {% if publications %}
+
+            <h1 class="decalage mb-5 text-white"><strong>Informations de l'ASL Le Mas</strong></h1>
+            <div>
+                {% for publication in publications  %}
+                        <div class="card bg-light mb-5">
+                            <div class="card-header">
+                                <h4>{{ publication.subject }}</h4>
+                            </div>
+                            <div class="card-body">
+                                {% if publication.image %}
+                                <img src="/pictures/annonces/{{ publication.image }}" alt="" style="height: 250px;">
+                                {% endif %}
+                                <p class="card-body">
+                                    {{ publication.text|nl2br }}
+                                </p>
+                                {% if publication.brochureFilename %}
+                                <a href="{{ asset('uploads/brochures/' ~ publication.brochureFilename) }}">Voir le document joint (PDF)</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h1 class="decalage my-3 text-white"><strong>Il n'y a pas d'information pour l'instant !!!</strong></h1>
+        {% endif %}
+    </div>
+
+{% endblock %}

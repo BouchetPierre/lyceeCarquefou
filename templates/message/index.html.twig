@@ -3,13 +3,13 @@
 {% block title %}Message{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1>Envoyer un message à {{ destinataire }}</h1>
+    <div class="container bg-light my-5 py-5">
+        <h1 class="decalage">Envoyer un message à {{ destinataire }}</h1>
 
         {{ form_start(form) }}
 
         <div class="form-groupe">
-            {{ form_label(form) }}
+
             {{ form_widget(form) }}
 
         </div>
@@ -17,6 +17,8 @@
 
 
         <button type="submit" class="btn btn-primary">Valider et publier</button>
+
+            {{ form_end(form) }}
 
 
     </div>

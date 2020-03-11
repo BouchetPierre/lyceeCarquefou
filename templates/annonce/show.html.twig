@@ -4,10 +4,24 @@
 
 {% block body %}
 
+<div class="container bg-light py-5 ">
 
-    <div class="annonce-title" style="background-image: url({{ annonce.coverImage }})">
-        {{ include ('annonce/imageAnnonce.html.twig')  }}
         <div class="container">
+            <div class="container-fluid">
+                {% if annonce.coverImage %}
+                    <img class="rounded mx-auto d-block" src="/pictures/annonces/{{annonce.coverImage}} " alt="" style="height: 200px; display: block ">
+                {% elseif annonce.type == 'Jardinage' %}
+                    <img class="rounded mx-auto d-block" src="/pictures/placeolderPictures/jardinage.jpg" alt="image du quartier" style="height: 200px; display: block ">
+                {% elseif annonce.type == 'Bricolage' %}
+                    <img class="rounded mx-auto d-block" src="/pictures/placeolderPictures/bricolage.jpg" alt="image du quartier" style="height: 300px; display: block ">
+                {% elseif annonce.type == 'Sortie' %}
+                    <img class="rounded mx-auto d-block" src="/pictures/placeolderPictures/echange.jpg" alt="image du quartier" style="height: 200px;  display: block ">
+                {% elseif annonce.type == 'Annonce' %}
+                    <img class="rounded mx-auto d-block" src="/pictures/placeolderPictures/village.jpg" alt="image du quartier" style="height: 200px; display: block ">
+                {% elseif annonce.type == 'Fête' %}
+                    <img class="rounded mx-auto d-block" src="/pictures/placeolderPictures/echange.jpg" alt="image du quartier" style="height: 200px; display: block ">
+                {% endif %}
+            </div>
             <h1 class="my-3">{{ annonce.title }}</h1>
             <p>{{ annonce.introduction | raw }}</p>
             <p>{{ annonce.type }}</p>
@@ -19,12 +33,12 @@
             <a href="{{ path('annonces_delete', {'slug':annonce.slug}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer l'annonce: {{ annonce.title }} ?`)">Supprimer l'annonce</a>
             {% endif %}
         </div>
-    </div>
+
 
     <div class="container">
         <div class="row">
             <div class="col-md-8 mb-3">
-                {{ annonce.content | raw}}
+                {{ annonce.content | nl2br}}
             </div>
             <div class="col">
                 {% set a = annonce.author %}
@@ -43,5 +57,6 @@
             </div>
         </div>
     </div>
+</div>
 
 {% endblock %}

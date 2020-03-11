@@ -13,3 +13,48 @@
     max-width: 34px;
     max-height: 34px;
 }
+
+.body-login{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card-login{
+    margin-top: 10%;
+}
+
+div.container, div.container-fluid{
+    margin-top: 20px;
+}
+
+.footer{
+    position:absolute;
+    bottom: 0;
+    margin-top: 10px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+.home{
+    background-image: url("/pictures/MontphotoTran05.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar{
+    background-color: #2F611C;
+    font-size: 1.2em;
+
+}
+.decalage{
+    padding-top: 50px;
+}
+body{
+    background-image: url("/pictures/quartierLeMas.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}

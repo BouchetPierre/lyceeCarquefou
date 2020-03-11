@@ -76,7 +76,7 @@ class Annonce
     private $updated_at;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Message", mappedBy="destinataire")
+     * @ORM\OneToMany(targetEntity="App\Entity\Message", mappedBy="destinataire", cascade={"remove"})
      */
     private $messages;
 

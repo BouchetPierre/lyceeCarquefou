@@ -3,13 +3,13 @@
 {% block title %}Annonces{% endblock %}
 
 {% block body %}
-
+<div class="container-fluid annonces">
     <div class="container">
         {% if annonces %}
-            <h1 class="my-3">Voici les annonces du quartier</h1>
+            <h1 class="text-white decalage my-3"><strong>Les annonces du quartier</strong></h1>
             <div class="row">
                 {% for annonce in annonces  %}
-                    <div class="col-md-4">
+                    <div class="col-md-4 " style="margin-bottom: 50px;">
                         <div class="card bg-light mb-3">
                             <div class="card-header text-center">
                                 {{ annonce.type }}
@@ -22,7 +22,7 @@
                                 <p class="card-text">
                                     {{ annonce.introduction }}
                                 </p>
-                                <a href="{{path('annonces_show', {'slug':annonce.slug})}}" class="btn btn-secondary">En savoir plus !</a>
+                                <a href="{{path('annonces_show', {'slug':annonce.slug})}}" class="btn btn-secondary ">En savoir plus !</a>
                                 {% if  app.user and app.user == annonce.author %}
                                     <a href="{{ path('annonces_edit', {'slug': annonce.slug}) }}" class="btn btn-primary">Modifier l'annonce</a>
                                 {% endif %}
@@ -32,8 +32,8 @@
                 {% endfor %}
             </div>
         {% else %}
-            <h1 class="my-3">Il n'y a pas d'annonce pour l'instant !!!</h1>
+            <h1 class="text-white decalage my-3"><strong>Il n'y a pas d'annonce pour l'instant !!!</strong></h1>
         {% endif %}
     </div>
-
+</div>
 {% endblock %}

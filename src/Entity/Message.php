@@ -27,7 +27,7 @@ class Message
     private $author;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Annonce", inversedBy="messages")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Annonce", inversedBy="messages", cascade={"remove"})
      */
     private $destinataire;
 

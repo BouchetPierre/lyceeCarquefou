@@ -4,60 +4,87 @@
 
 {% block body %}
 
-    <div class="container">
-        {% if messages %}
-            <h1 class="my-3">Vos messages envoyés</h1>
-            <div class="row">
-                {% for message in messages  %}
-                    <div class="col-md-4">
-                        <div class="card bg-light mb-3">
-                            <div class="card-header text-center">
-                                Annonce:{{ message.destinataire.title}}
-                            </div>
-                            <div class="card-header text-center">
-                                Message pour:  {{ message.destinataire.author.name}} {{ message.destinataire.author.lastName}}
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    {{ message.message }}
-                                </h4>
-                            </div>
-                                <a href="{{ path('message_delete', {'id': message.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer le message ?`)">Supprimer</a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <h1 class="my-3">Vous n'avez écrit auncun message!!!</h1>
-        {% endif %}
+    <div class="container bg-light">
+        <h1 class="decalage my-5">Votre messagerie</h1>
+        <h4>Message Reçus</h4>
+
+        <table id="tab" class="table table-hover">
+            <thead>
+            <tr>
+                <th>Auteur</th>
+                <th>Sujet</th>
+                <th>Texte</th>
+                <th>Repondre</th>
+                <th class="text-center">Supprimer</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for messageRecu in messageRecu  %}
+                <tr>
+                    <td>{{ messageRecu.author.fullname }}</td>
+                    <td>{{ messageRecu.destinataire.title }}</td>
+                    <td>{{ messageRecu.message |nl2br }}</td>
+                    <td class="text-center">
+                        <a href="{{path('repond', {'id':messageRecu.author.id})}}" class="btn btn-success" ><i class="fas fa-pen-alt"></i></a>
+                    </td>
+                    <td class="text-center">
+                        <a href="{{path('message_delete', {'id':messageRecu.id})}}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer le message ?`)"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            {% for reponseRecu in reponsesRecu  %}
+                <tr>
+                    <td>{{ reponseRecu.author.fullname }}</td>
+                    <td>{{ reponseRecu.subject }}</td>
+                    <td>{{ reponseRecu.text |nl2br }}</td>
+                    <td class="text-center">
+                        <a href="{{path('repond', {'id':reponseRecu.author.id})}}" class="btn btn-success" ><i class="fas fa-pen-alt"></i></a>
+                    </td>
+                    <td class="text-center">
+                        <a href="{{path('reponse_delete', {'id':reponseRecu.id})}}" class="btn btn-danger"><i class="fas fa-trash" onclick="return confirm(`Êtes vous sur de vouloir supprimer le message ?`)"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <h4>Message Envoyés</h4>
+        <table id="tab2" class="table table-hover">
+            <thead>
+            <tr>
+                <th>Destinataire</th>
+                <th>Sujet</th>
+                <th>Texte</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for message in messages  %}
+                <tr>
+                    <td>{{ message.destinataire.author.fullname }}</td>
+                    <td>{{ message.destinataire.title }}</td>
+                    <td>{{ message.message }}</td>
+
+                </tr>
+            {% endfor %}
+            {% for reponseSend in reponsesSend  %}
+                <tr>
+                    <td>{{ reponseSend.destinataire.fullname }}</td>
+                    <td>{{ reponseSend.subject }}</td>
+                    <td>{{ reponseSend.text }}</td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
-    <hr>
-    <div class="container">
-        {% if messageRecu %}
-            <h1 class="my-3">Vos messages reçus</h1>
-            <div class="row">
-                {% for messageRecu in messageRecu  %}
-                    <div class="col-md-4">
-                        <div class="card bg-light mb-3">
-                            <div class="card-header text-center">
-                                Annonce: {{ messageRecu.destinataire.title}}
-                            </div>
-                            <div class="card-header text-center">
-                                Message de:  {{ messageRecu.author.lastName}} {{ messageRecu.author.name}}
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    {{ messageRecu.message }}
-                                </h4>
-                            </div>
-                                <a href="{{ path('message_delete', {'id': messageRecu.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer le message ?`)">Supprimer</a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <h1 class="my-3">Vous n'avez reçu auncun message!!!</h1>
-        {% endif %}
-    </div>
+    <script>
+        $(document).ready(function () {
+            $('#tab').DataTable();
+        });
+        $(document).ready(function () {
+            $('#tab2').DataTable();
+        });
+    </script>
+
 
 {% endblock %}

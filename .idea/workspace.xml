@@ -2,11 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/partials/rating.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/MontphotoTran05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/lemas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/Montpellier.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/MontpellierTouri.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/Tam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/agenda-culturel-34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/cinema.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/franceBleu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/logo-marche-du-lez.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/logo_mouetteMCCgd_1_.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/midi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/liens/planTram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/quartierLeMas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/plublication/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/user.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/publications/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2223db44-1e75-4051-88a9-ff5093191098.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2223db44-1e75-4051-88a9-ff5093191098.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/message/alarmMess.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/message/alarmMess.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/lemas.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/lemas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminAccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminAccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminAnnonceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminAnnonceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AnnonceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AnnonceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MessageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MessageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Annonce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AccountType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AccountType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AnnonceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AnnonceType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/MessageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/MessageType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AnnonceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AnnonceRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/password.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/password.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/profile.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/registration.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/account/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/account/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/annonces/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/annonces/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partials/rating.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/plublication/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/imageAnnonce.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/imageAnnonce.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error403.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error403.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/message/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/message/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/message/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/message/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +110,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="bdlemas: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="message: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - bdlemas@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bdlemas: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="repond: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -209,13 +267,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/pictures" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/admin/account" />
-      <recent name="$PROJECT_DIR$/templates/admin/annonces" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/pictures" />
+      <recent name="$PROJECT_DIR$/public/pictures/liens" />
       <recent name="$PROJECT_DIR$/public/pictures/placeolderPictures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/admin" />
+      <recent name="$PROJECT_DIR$/templates/admin/account" />
+      <recent name="$PROJECT_DIR$/templates/admin/annonces" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -234,7 +294,17 @@
       <workItem from="1583310131688" duration="22835000" />
       <workItem from="1583393797656" duration="23261000" />
       <workItem from="1583422180469" duration="2839000" />
-      <workItem from="1583480297411" duration="22712000" />
+      <workItem from="1583480297411" duration="22923000" />
+      <workItem from="1583513287633" duration="291000" />
+      <workItem from="1583514073194" duration="4874000" />
+      <workItem from="1583594888579" duration="5803000" />
+      <workItem from="1583739458203" duration="26962000" />
+      <workItem from="1583825848438" duration="26068000" />
+      <workItem from="1583862911929" duration="19000" />
+      <workItem from="1583862965675" duration="7000" />
+      <workItem from="1583863036405" duration="37000" />
+      <workItem from="1583863405093" duration="5000" />
+      <workItem from="1583912421527" duration="27526000" />
     </task>
     <servers />
   </component>
@@ -254,12 +324,13 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="1987" y="27" width="825" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583224853341" />
-    <state x="2356" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583486901868">
+    <state x="2356" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583849645276">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="872" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1583145959597" />
-    <state x="2356" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583486901868" />
+    <state x="2356" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583849645276" />
     <state x="2581" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582887521778" />
+    <state x="488" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583595406876" />
     <state x="2441" y="296" width="374" height="497" key="FileChooserDialogImpl" timestamp="1583486829827">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -271,18 +342,19 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583312292616" />
-    <state x="563" y="407" key="com.intellij.ide.util.TipDialog" timestamp="1583480712416">
+    <state x="563" y="407" key="com.intellij.ide.util.TipDialog" timestamp="1583912424360">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583480712415" />
-    <state x="649" y="368" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1582908766691" />
-    <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583491859513">
+    <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1583912424360" />
+    <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583825850791" />
+    <state x="649" y="368" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583594919654" />
+    <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583852054948">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583491859513" />
-    <state x="2147" y="434" width="1611" height="646" key="find.popup" timestamp="1583328374986">
+    <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583852054948" />
+    <state x="2147" y="434" width="1611" height="646" key="find.popup" timestamp="1583832341354">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2147" y="434" width="1611" height="646" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583328374986" />
+    <state x="2147" y="434" width="1611" height="646" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583832341354" />
   </component>
 </project>

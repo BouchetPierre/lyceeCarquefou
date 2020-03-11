@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Répondre{% endblock %}
+
+{% block body %}
+    <div class="container bg-light py-5">
+        <h1 class="decalage">Envoyer un message à {{ destinataire }}</h1>
+
+        {{ form_start(form) }}
+
+        <div class="form-groupe">
+            {{ form_widget(form) }}
+
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Valider et publier</button>
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}

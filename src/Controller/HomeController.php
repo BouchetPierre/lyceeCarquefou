@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Repository\AnnonceRepository;
+use App\Repository\AdminPlublicationRepository;
 use App\Repository\MessageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,17 +12,24 @@ Class HomeController extends AbstractController{
     /**
      * @Route("/", name="homepage")
      */
-    public function home(AnnonceRepository $repo, MessageRepository $repoMes){
+    public function home(MessageRepository $repoMes, AdminPlublicationRepository $publi){
 
-        $user = $this->getUser()->getId();
-        $mesRecu = $repoMes->findByDest($user);
-        $info = count($mesRecu);
-        $annonces = $repo->findLastInfo();
+        if ($this->getUser()){
+            $user = $this->getUser()->getId();
+            $mesRecu = $repoMes->findByDest($user);
+            $info = count($mesRecu);
+            $publications= $publi->findLast();
+            return $this->render(
+                'home.html.twig', [
+                'publications' => $publications,
+                'info' => $info
+            ]);
+        }
 
+        $publications= $publi->findLast();
         return $this->render(
             'home.html.twig', [
-            'annonces' => $annonces,
-             'info' => $info
+            'publications' => $publications
             ]);
     }
 

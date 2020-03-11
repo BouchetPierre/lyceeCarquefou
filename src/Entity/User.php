@@ -81,6 +81,21 @@ class User implements UserInterface
      */
     private $messages;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Repond", mappedBy="author")
+     */
+    private $reponds;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Repond", mappedBy="destinataire")
+     */
+    private $destiReponds;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\AdminPlublication", mappedBy="author")
+     */
+    private $adminPlublications;
+
     public function getFullName(){
         return "{$this->lastname} {$this->name}";
     }
@@ -106,6 +121,9 @@ class User implements UserInterface
         $this->annonces = new ArrayCollection();
         $this->userRoles = new ArrayCollection();
         $this->messages = new ArrayCollection();
+        $this->reponds = new ArrayCollection();
+        $this->destiReponds = new ArrayCollection();
+        $this->adminPlublications = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -299,6 +317,99 @@ class User implements UserInterface
             // set the owning side to null (unless already changed)
             if ($message->getAuthor() === $this) {
                 $message->setAuthor(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Repond[]
+     */
+    public function getReponds(): Collection
+    {
+        return $this->reponds;
+    }
+
+    public function addRepond(Repond $repond): self
+    {
+        if (!$this->reponds->contains($repond)) {
+            $this->reponds[] = $repond;
+            $repond->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRepond(Repond $repond): self
+    {
+        if ($this->reponds->contains($repond)) {
+            $this->reponds->removeElement($repond);
+            // set the owning side to null (unless already changed)
+            if ($repond->getAuthor() === $this) {
+                $repond->setAuthor(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Repond[]
+     */
+    public function getDestiReponds(): Collection
+    {
+        return $this->destiReponds;
+    }
+
+    public function addDestiRepond(Repond $destiRepond): self
+    {
+        if (!$this->destiReponds->contains($destiRepond)) {
+            $this->destiReponds[] = $destiRepond;
+            $destiRepond->setDestinataire($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDestiRepond(Repond $destiRepond): self
+    {
+        if ($this->destiReponds->contains($destiRepond)) {
+            $this->destiReponds->removeElement($destiRepond);
+            // set the owning side to null (unless already changed)
+            if ($destiRepond->getDestinataire() === $this) {
+                $destiRepond->setDestinataire(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|AdminPlublication[]
+     */
+    public function getAdminPlublications(): Collection
+    {
+        return $this->adminPlublications;
+    }
+
+    public function addAdminPlublication(AdminPlublication $adminPlublication): self
+    {
+        if (!$this->adminPlublications->contains($adminPlublication)) {
+            $this->adminPlublications[] = $adminPlublication;
+            $adminPlublication->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAdminPlublication(AdminPlublication $adminPlublication): self
+    {
+        if ($this->adminPlublications->contains($adminPlublication)) {
+            $this->adminPlublications->removeElement($adminPlublication);
+            // set the owning side to null (unless already changed)
+            if ($adminPlublication->getAuthor() === $this) {
+                $adminPlublication->setAuthor(null);
             }
         }
 

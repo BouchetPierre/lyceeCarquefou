@@ -36,19 +36,17 @@ class AnnonceType extends AbstractType
     {
 
         $builder
-            ->add('title', TextType::class, $this->getConf("titre","Tapez votre titre d'annonce", true))
+            ->add('title', TextType::class, $this->getConf("Titre","Tapez votre titre d'annonce", true))
             ->add('introduction', TextType::class, $this->getConf("Introduction","Donnez une description rapide",true))
             ->add('content', TextareaType::class, $this->getConf("Description détaillée","Donnez une description détaillée de votre annonce", true))
-            ->add('imageFile', FileType::class, ['required'=> false])
+            ->add('imageFile', FileType::class, $this->getConf('Image (Optionnelle, 2M maxi.)', 'Selectionnez un fichier', false))
             ->add('type', ChoiceType::class, [
                 'choices' => [
-                    'Annonce'=> 'Annonce',
-                    'Prêt Bricolage' => 'Prêt-Bricolage',
-                    'Prêt Jardinage' => 'Prêt_Jardinage',
-                    'Achat Collectif' => 'Achat_Collectif',
+                    'Prêt Bricolage' => 'Bricolage',
+                    'Prêt Jardinage' => 'Jardinage',
+                    'Achat Collectif' => 'Collectif',
                     'Sortie' => 'Sortie',
-                    'Fête' => 'Fête',
-                    'Information Le Mas' => 'Information_Le_Mas'
+                    'Fête' => 'Fête'
                 ],  'expanded' => true,
                 'multiple' => false,
                 'label_attr'=>[

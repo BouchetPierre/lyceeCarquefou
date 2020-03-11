@@ -1,0 +1,40 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration des inscrits{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1 class="my-5">Gestion des inscrits</h1>
+
+        <table id="tab" class="table table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom / Prénom</th>
+                <th >email</th>
+                <th >Adresse</th>
+                <th class="text-center">Supprimer l'utilisateur</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.fullname}}</td>
+                    <td >{{ user.email }}</td>
+                    <td >{{ user.address }}</td>
+                    <td class="text-center">
+                        <a href="{{ path('admin_user_delete', {'id':user.id}) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+    $(document).ready(function () {
+    $('#tab').DataTable();
+    });
+    </script>
+{% endblock %}
+

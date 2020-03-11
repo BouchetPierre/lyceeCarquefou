@@ -34,16 +34,6 @@ class AnnonceRepository extends ServiceEntityRepository
         ;
     }
 
-    public function findLastInfo()
-    {
-        return $this->createQueryBuilder('a')
-            ->where('a.type = :val')
-            ->setParameter('val', 'Information_Le_Mas')
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-
 
     /*
     public function findOneBySomeField($value): ?Annonce
