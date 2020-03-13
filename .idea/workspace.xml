@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leMas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leMas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +254,7 @@
       <workItem from="1583863036405" duration="37000" />
       <workItem from="1583863405093" duration="5000" />
       <workItem from="1583912421527" duration="34424000" />
-      <workItem from="1584085040165" duration="14615000" />
+      <workItem from="1584085040165" duration="15245000" />
     </task>
     <servers />
   </component>
@@ -273,9 +266,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2508" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583312255953" />
-    <state x="2566" y="343" width="555" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582880715992">
+    <state x="2566" y="343" width="583" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584106267120">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2566" y="343" width="583" height="390" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584106267120" />
     <state x="2566" y="343" width="555" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582880715992" />
     <state x="1987" y="27" width="825" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583224853341">
       <screen x="1920" y="0" width="1920" height="1080" />
