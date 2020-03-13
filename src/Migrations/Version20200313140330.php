@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20200305084240 extends AbstractMigration
+final class Version20200313140330 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,8 +22,7 @@ final class Version20200305084240 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        //$this->addSql('ALTER TABLE picture_user DROP INDEX UNIQ_327353DCDD28C16D, ADD INDEX IDX_327353DCDD28C16D (user_image_id)');
-        $this->addSql('ALTER TABLE picture_user CHANGE user_image_id user_image_id INT NOT NULL');
+        $this->addSql('ALTER TABLE admin_plublication CHANGE subject subject VARCHAR(255) DEFAULT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -31,7 +30,6 @@ final class Version20200305084240 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        //$this->addSql('ALTER TABLE picture_user DROP INDEX IDX_327353DCDD28C16D, ADD UNIQUE INDEX UNIQ_327353DCDD28C16D (user_image_id)');
-        $this->addSql('ALTER TABLE picture_user CHANGE user_image_id user_image_id INT DEFAULT NULL');
+        $this->addSql('ALTER TABLE admin_plublication CHANGE subject subject VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`');
     }
 }
