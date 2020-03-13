@@ -39,6 +39,7 @@
         "doctrine/doctrine-fixtures-bundle": "^3.3"
     },
     "require-dev": {
+
         "symfony/debug-pack": "*",
         "symfony/maker-bundle": "^1.0",
         "symfony/profiler-pack": "*",
@@ -82,7 +83,8 @@
         ],
         "compile": [
             "php bin/console doctrine:migrations:migrate --no-interaction --allow-no-migration",
-            "php bin/console doctrine:fixtures:load --no-interaction --env=PROD"
+            "php bin/console doctrine:fixtures:laod --no-interaction --env=PROD"
+
         ]
     },
     "conflict": {
