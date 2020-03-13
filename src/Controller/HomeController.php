@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Repository\AdminPlublicationRepository;
 use App\Repository\MessageRepository;
+use App\Repository\RepondRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -12,12 +13,13 @@ Class HomeController extends AbstractController{
     /**
      * @Route("/", name="homepage")
      */
-    public function home(MessageRepository $repoMes, AdminPlublicationRepository $publi){
+    public function home(MessageRepository $repoMes, AdminPlublicationRepository $publi, RepondRepository $repoRep){
 
         if ($this->getUser()){
             $user = $this->getUser()->getId();
             $mesRecu = $repoMes->findByDest($user);
-            $info = count($mesRecu);
+            $repoRecu = $repoRep->findByUserRecu($user);
+            $info = count($mesRecu)+count($repoRecu);
             $publications= $publi->findLast();
             return $this->render(
                 'home.html.twig', [
@@ -40,10 +42,12 @@ Class HomeController extends AbstractController{
      *
      */
 
-    public function messRecu(MessageRepository $repoMes){
+    public function messRecu(MessageRepository $repoMes,RepondRepository $repoRep){
         $user = $this->getUser()->getId();
         $mesRecu = $repoMes->findByDest($user);
-        $info = count($mesRecu);
+        $repoRecu = $repoRep->findByUserRecu($user);
+        $info = count($mesRecu)+count($repoRecu);
+
         return $this->render(
             'message/alarmMess.html.twig', [
             'info' => $info

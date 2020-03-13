@@ -4,44 +4,46 @@
 {% block body %}
 <div class="container-fluid home">
     <div class="container pt-2">
-        <div class="jumbotron mt-5" style="background-image: url(../pictures/quartierLeMas.png); background-size: cover; height: 600px;">
-            <div style="width: 70%; background-color: #4f805d">
-            <h1 class="text-white"><strong>Bienvenue sur le site de notre quartier</strong></h1>
+        <div class="jumbotron mt-5">
+            <div class="h1quartier">
+            <h1 class="text-white "><strong>Bienvenue sur le site de notre quartier</strong></h1>
             <p class="lead text-white">Partager, Echanger, Apprendre, Organiser, Fêter, Une vrai vie de quartier</p>
             </div>
         </div>
         <div>
-            <p>Des annoces, des évenements, des envies, des besoins, échanger simplement avec vos voisins pour se faciliter la vie et mutualiser ... </p>
+            <p><strong>Des annoces, des évenements, des envies, des besoins, échanger simplement avec vos voisins pour se faciliter la vie et mutualiser ... </strong></p>
         </div>
         <div class="row">
-            <div class="col-md-8 col-sm-auto">
-                <h2>Derniéres informations de l'ASL</h2>
-                <div class="card bg-light mb-3" >
-                    <div class="card-body">
-                    {% for publication in publications  %}
-                                <a class="text-dark" href="{{ path('plublication_show') }}">- {{ publication.subject}}</a><br>
+            <div class="col-md-8 col-sm-auto ">
+                <div class="h2home mt-3">
+                    <h2 class="text-white">Derniéres informations de l'ASL</h2>
+                    <div class="card bg-light mb-3" >
+                        <div class="card-body">
+                        {% for publication in publications  %}
+                                    <a class="text-dark" href="{{ path('plublication_show') }}">- {{ publication.subject}}</a><br>
 
-                    {% endfor %}
+                        {% endfor %}
+                        </div>
                     </div>
                 </div>
-                <h4 class="mt-5">Cliquez sur la bannière qui vous intéresse</h4>
-                <div id="carouselExampleSlidesOnly" class="carousel slide mt-3 " data-ride="carousel" style="height: 340px;">
+                <h5 class="mt-4">Cliquez sur la bannière qui vous intéresse</h5>
+                <div id="carouselExampleSlidesOnly" class="carousel slide my-3 " data-ride="carousel" >
                     <div class="carousel-inner">
                         <div class="carousel-item active" >
-                            <a href="https://tam.cartographie.pro/"><img src="/pictures/liens/planTram.png" class="d-block w-100" alt=""></a>
+                            <a href="https://tam.cartographie.pro/"><img src="/pictures/liens/planTram.png" class="d-block w-100" alt="" ></a>
                         </div>
                         <div class="carousel-item">
-                            <a href="http://www.allocine.fr/film/"><img src="/pictures/liens/cinema.png" class="d-block w-100" alt=""></a>
+                            <a href="http://www.allocine.fr/film/"><img src="/pictures/liens/cinema.png" class="d-block w-100" alt="" ></a>
                         </div>
                         <div class="carousel-item">
-                            <a href="https://www.midilibre.fr/herault/montpellier/"><img src="/pictures/liens/midi.png" class="d-block w-100" alt=""></a>
+                            <a href="https://www.midilibre.fr/herault/montpellier/"><img src="/pictures/liens/midi.png" class="d-block w-100" alt="" ></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-auto mt-5">
-                <iframe src="https://www.meteo-montpellier.fr/widget/prevision-meteo" frameborder="0" style="width:350px; height: 250px;"></iframe>
-                <div class="bg-secondary py-2 mb-5 mt-3 " style="width: 350px;">
+            <div class="col-md-4 col-sm-auto mt-3 ">
+                <iframe class="meteo" src="https://www.meteo-montpellier.fr/widget/prevision-meteo" frameborder="0" ></iframe>
+                <div class="liens py-2 mb-5 mt-3 ">
                     <h3 class="m-2">Les liens utiles</h3>
                         <ul class="list-unstyled">
                             <li class="m-3"><a class="text-white" href="https://www.montpellier.fr/"><img src="/pictures/liens/Montpellier.jpg" alt="Ville de Montpellier" style="height: 35px;">&nbsp;&nbsp; Ville de Montpellier</a></li>

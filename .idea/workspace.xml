@@ -2,61 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/pictures/MontphotoTran05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/lemas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/Montpellier.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/MontpellierTouri.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/Tam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/agenda-culturel-34.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/cinema.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/franceBleu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/logo-marche-du-lez.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/logo_mouetteMCCgd_1_.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/midi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/planTram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/quartierLeMas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/plublication/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/user.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/publications/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2223db44-1e75-4051-88a9-ff5093191098.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2223db44-1e75-4051-88a9-ff5093191098.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/quartierLeMasO70.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leMas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leMas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/lemas.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/lemas.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminAccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminAccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminAnnonceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminAnnonceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AnnonceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AnnonceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminPlublicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPlublicationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MessageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MessageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Annonce.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AccountType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AccountType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AnnonceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AnnonceType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/MessageType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/MessageType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AnnonceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AnnonceRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/password.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/profile.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/registration.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/account/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/account/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/annonces/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/annonces/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/AdminPlublication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AdminPlublication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdminPlublicationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdminPlublicationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AdminPlublicationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AdminPlublicationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/partials/rating.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/plublication/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/imageAnnonce.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/imageAnnonce.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/plublication/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/plublication/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/plublication/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/plublication/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/annonce/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/annonce/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error403.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error403.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/message/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/message/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/message/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/message/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/publications/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publications/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -250,6 +217,7 @@
       <path value="$PROJECT_DIR$/vendor/imagine/imagine" />
       <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1YQb5zbPZPnjGkDSIbeFhRIJwsw" />
@@ -304,7 +272,8 @@
       <workItem from="1583862965675" duration="7000" />
       <workItem from="1583863036405" duration="37000" />
       <workItem from="1583863405093" duration="5000" />
-      <workItem from="1583912421527" duration="27526000" />
+      <workItem from="1583912421527" duration="34424000" />
+      <workItem from="1584085040165" duration="12804000" />
     </task>
     <servers />
   </component>
@@ -342,19 +311,19 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583312292616" />
-    <state x="563" y="407" key="com.intellij.ide.util.TipDialog" timestamp="1583912424360">
+    <state x="563" y="407" key="com.intellij.ide.util.TipDialog" timestamp="1584085041642">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1583912424360" />
+    <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1584085041642" />
     <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583825850791" />
     <state x="649" y="368" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583594919654" />
     <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583852054948">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583852054948" />
-    <state x="2147" y="434" width="1611" height="646" key="find.popup" timestamp="1583832341354">
+    <state x="2229" y="434" width="1611" height="646" key="find.popup" timestamp="1584098213182">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2147" y="434" width="1611" height="646" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583832341354" />
+    <state x="2229" y="434" width="1611" height="646" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584098213182" />
   </component>
 </project>

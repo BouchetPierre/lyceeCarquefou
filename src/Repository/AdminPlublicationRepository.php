@@ -33,6 +33,19 @@ class AdminPlublicationRepository extends ServiceEntityRepository
         ;
     }
 
+    /**
+     * @return AdminPlublication[] Returns an array of AdminPlublication objects
+     */
+
+    public function findAll2()
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.id', 'DESC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
 
     /*
     public function findOneBySomeField($value): ?AdminPlublication

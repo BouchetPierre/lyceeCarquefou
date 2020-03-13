@@ -77,7 +77,7 @@ class AdminPlublicationController extends AbstractController
     public function index(AdminPlublicationRepository $repo)
     {
 
-        $publications = $repo->findAll();
+        $publications = $repo->findAll2();
 
         return $this->render('publications/index.html.twig', [
             'publications' => $publications,

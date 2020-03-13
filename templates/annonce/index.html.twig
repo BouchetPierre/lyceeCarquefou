@@ -3,10 +3,11 @@
 {% block title %}Annonces{% endblock %}
 
 {% block body %}
-<div class="container-fluid annonces">
+
     <div class="container">
         {% if annonces %}
-            <h1 class="text-white decalage my-3"><strong>Les annonces du quartier</strong></h1>
+            <div class="decalage"></div>
+            <h1 class="my-5 text-white titlePage"><strong>Les annonces du quartier</strong></h1>
             <div class="row">
                 {% for annonce in annonces  %}
                     <div class="col-md-4 " style="margin-bottom: 50px;">
@@ -32,8 +33,9 @@
                 {% endfor %}
             </div>
         {% else %}
-            <h1 class="text-white decalage my-3"><strong>Il n'y a pas d'annonce pour l'instant !!!</strong></h1>
+            <div class="decalage"></div>
+            <h1 class="text-white titlePage my-5"><strong>Il n'y a pas d'annonce pour l'instant !!!</strong></h1>
         {% endif %}
     </div>
-</div>
+
 {% endblock %}
