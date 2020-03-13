@@ -5,19 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/AdminPlublication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AdminPlublication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200304150258.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200304154019.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305084240.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305090110.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305100101.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305153433.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200306074723.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200306175423.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200307160132.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200310090945.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200310141251.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200311133336.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200313122917.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305084240.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200305084240.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +257,7 @@
       <workItem from="1583863036405" duration="37000" />
       <workItem from="1583863405093" duration="5000" />
       <workItem from="1583912421527" duration="34424000" />
-      <workItem from="1584085040165" duration="17355000" />
+      <workItem from="1584085040165" duration="17703000" />
     </task>
     <servers />
   </component>
