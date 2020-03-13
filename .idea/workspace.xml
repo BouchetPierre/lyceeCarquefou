@@ -5,7 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/AdminPlublication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AdminPlublication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305084240.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200305084240.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200304150258.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200304150258.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305084240.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +258,7 @@
       <workItem from="1583863036405" duration="37000" />
       <workItem from="1583863405093" duration="5000" />
       <workItem from="1583912421527" duration="34424000" />
-      <workItem from="1584085040165" duration="17703000" />
+      <workItem from="1584085040165" duration="18981000" />
     </task>
     <servers />
   </component>
