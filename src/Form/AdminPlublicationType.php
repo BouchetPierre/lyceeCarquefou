@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\AdminPlublication;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -17,7 +18,7 @@ class AdminPlublicationType extends AbstractType
     {
         $builder
             ->add('subject',  TextType::class,['label' =>'Sujet', 'required'=>true])
-            ->add('text', TextareaType::class,  ['label' =>'Texte', 'required'=>true])
+            ->add('text', CKEditorType::class,  ['label' =>'Texte', 'required'=>true])
             ->add('imageFile', FileType::class, ['label' => 'Photo (jpg, jpeg ou png file)','required'=> false])
             ->add('brochure', FileType::class, [
                 'label' => 'Brochure (PDF file)', 'mapped' => false,'required' => false,'constraints' => [
