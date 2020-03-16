@@ -1,0 +1,103 @@
+
+.body-login{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card-login{
+    margin-top: 10%;
+}
+
+div.container, div.container-fluid{
+    margin-top: 20px;
+}
+
+.footer{
+    position:absolute;
+    bottom: 0;
+    margin-top: 10px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+.home{
+    background-image: url("/pictures/MontphotoTran05.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar{
+    background-color: #42904e;
+    font-size: 1.2em;
+}
+
+.decalage{
+    padding-top: 50px;
+}
+body{
+    background-image: url("/pictures/quartierLeMasO70.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h1quartier{
+    border-radius: 10px;
+    padding: 5px;
+    width: 75%;
+    background-color: #42904e;
+    text-align: center;
+    margin-top: -40px;
+    margin-left: -10px;
+
+}
+
+.jumbotron {
+    background-image: url(../pictures/quartierLeMas.png);
+    background-size: cover;
+    height: 600px;
+}
+
+.liens{
+    width: 350px;
+    background-color: #42904e;
+    border-radius: 5px;
+}
+
+.btn-primary{
+    background-color: #42904e;
+    border-color: #42904e;
+}
+
+.author{
+    color:#42904e;
+}
+
+.badge-primary{
+    background-color: #42904e;
+}
+
+.titlePage{
+    border-radius: 5px;
+    padding: 5px;
+    width: 70%;
+    background-color: #42904e;
+}
+
+.h2home{
+    background-color: #42904e;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.meteo{
+    width:350px;
+    height: 250px;
+    border-radius: 5px;
+
+}
+.carousel-item{
+    height: 410px;
+}
+
