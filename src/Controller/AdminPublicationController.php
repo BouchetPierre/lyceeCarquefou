@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
-use App\Entity\AdminPlublication;
-use App\Form\AdminPlublicationType;
-use App\Repository\AdminPlublicationRepository;
+use App\Entity\AdminPublication;
+use App\Form\AdminPublicationType;
+use App\Repository\AdminPublicationRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,20 +12,20 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
-class AdminPlublicationController extends AbstractController
+class AdminPublicationController extends AbstractController
 {
     /**
      * Permet de faire une publication
      *
-     * @Route("/admin/plublication/new", name="admin_publication")
+     * @Route("/admin/publication/new", name="admin_publication")
      *
      * @return Response
      */
 
     public function create(Request $request, EntityManagerInterface $manager){
-        $publication = new AdminPlublication();
+        $publication = new AdminPublication();
 
-        $form= $this->createForm(AdminPlublicationType::class, $publication);
+        $form= $this->createForm(AdminPublicationType::class, $publication);
 
         $form->handleRequest($request);
 
@@ -63,7 +63,7 @@ class AdminPlublicationController extends AbstractController
             return $this->redirectToRoute("admin_dachboard");
         }
 
-        return $this->render('admin/plublication/new.html.twig', [
+        return $this->render('admin/publication/new.html.twig', [
             'form' => $form->createView()
         ]);
 
@@ -71,10 +71,10 @@ class AdminPlublicationController extends AbstractController
 
     /**
      * Permet de voir les publications
-     * @Route("/publications/show", name="plublication_show")
+     * @Route("/publications/show", name="publication_show")
      * @IsGranted("ROLE_USER")
      */
-    public function index(AdminPlublicationRepository $repo)
+    public function index(AdminPublicationRepository $repo)
     {
 
         $publications = $repo->findAll2();
@@ -87,11 +87,11 @@ class AdminPlublicationController extends AbstractController
     /**
      * @Route("/admin/publications", name="admin_publications_index")
      */
-    public function indexAdmin(AdminPlublicationRepository $repo)
+    public function indexAdmin(AdminPublicationRepository $repo)
     {
         $publications = $repo->findAll();
 
-        return $this->render('admin/plublication/index.html.twig', [
+        return $this->render('admin/publication/index.html.twig', [
             'publications' => $publications
         ]);
     }
@@ -103,7 +103,7 @@ class AdminPlublicationController extends AbstractController
      * @return Response
      */
 
-    public function deleteMes(AdminPlublication $publication, EntityManagerInterface $manager){
+    public function deleteMes(AdminPublication $publication, EntityManagerInterface $manager){
         $manager->remove($publication);
         $manager->flush();
 
@@ -122,9 +122,9 @@ class AdminPlublicationController extends AbstractController
      * @return Response
      */
 
-    public function edit(AdminPlublication $publication, Request $request, EntityManagerInterface $manager){
+    public function edit(AdminPublication $publication, Request $request, EntityManagerInterface $manager){
 
-        $form= $this->createForm(AdminPlublicationType::class, $publication);
+        $form= $this->createForm(AdminPublicationType::class, $publication);
 
         $form->handleRequest($request);
 
@@ -139,7 +139,7 @@ class AdminPlublicationController extends AbstractController
 
             return $this->redirectToRoute('admin_publications_index');
         }
-        return $this->render('admin/plublication/edit.html.twig',[
+        return $this->render('admin/publication/edit.html.twig',[
             'form' => $form->createView(),
             'publication'=> $publication
         ]);

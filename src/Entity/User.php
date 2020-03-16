@@ -92,9 +92,9 @@ class User implements UserInterface
     private $destiReponds;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\AdminPlublication", mappedBy="author")
+     * @ORM\OneToMany(targetEntity="App\Entity\AdminPublication", mappedBy="author")
      */
-    private $adminPlublications;
+    private $AdminPublications;
 
     public function getFullName(){
         return "{$this->lastname} {$this->name}";
@@ -123,7 +123,7 @@ class User implements UserInterface
         $this->messages = new ArrayCollection();
         $this->reponds = new ArrayCollection();
         $this->destiReponds = new ArrayCollection();
-        $this->adminPlublications = new ArrayCollection();
+        $this->AdminPublications = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -386,30 +386,30 @@ class User implements UserInterface
     }
 
     /**
-     * @return Collection|AdminPlublication[]
+     * @return Collection|AdminPublication[]
      */
-    public function getAdminPlublications(): Collection
+    public function getAdminPublications(): Collection
     {
-        return $this->adminPlublications;
+        return $this->AdminPublications;
     }
 
-    public function addAdminPlublication(AdminPlublication $adminPlublication): self
+    public function addAdminPublication(AdminPublication $AdminPublication): self
     {
-        if (!$this->adminPlublications->contains($adminPlublication)) {
-            $this->adminPlublications[] = $adminPlublication;
-            $adminPlublication->setAuthor($this);
+        if (!$this->AdminPublications->contains($AdminPublication)) {
+            $this->AdminPublications[] = $AdminPublication;
+            $AdminPublication->setAuthor($this);
         }
 
         return $this;
     }
 
-    public function removeAdminPlublication(AdminPlublication $adminPlublication): self
+    public function removeAdminPublication(AdminPublication $AdminPublication): self
     {
-        if ($this->adminPlublications->contains($adminPlublication)) {
-            $this->adminPlublications->removeElement($adminPlublication);
+        if ($this->AdminPublications->contains($AdminPublication)) {
+            $this->AdminPublications->removeElement($AdminPublication);
             // set the owning side to null (unless already changed)
-            if ($adminPlublication->getAuthor() === $this) {
-                $adminPlublication->setAuthor(null);
+            if ($AdminPublication->getAuthor() === $this) {
+                $AdminPublication->setAuthor(null);
             }
         }
 

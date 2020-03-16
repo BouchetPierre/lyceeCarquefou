@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\AdminPlublication;
+use App\Entity\AdminPublication;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
- * @method AdminPlublication|null find($id, $lockMode = null, $lockVersion = null)
- * @method AdminPlublication|null findOneBy(array $criteria, array $orderBy = null)
- * @method AdminPlublication[]    findAll()
- * @method AdminPlublication[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method AdminPublication|null find($id, $lockMode = null, $lockVersion = null)
+ * @method AdminPublication|null findOneBy(array $criteria, array $orderBy = null)
+ * @method AdminPublication[]    findAll()
+ * @method AdminPublication[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AdminPlublicationRepository extends ServiceEntityRepository
+class AdminPublicationRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, AdminPlublication::class);
+        parent::__construct($registry, AdminPublication::class);
     }
 
      /**
-      * @return AdminPlublication[] Returns an array of AdminPlublication objects
+      * @return AdminPublication[] Returns an array of AdminPublication objects
       */
 
     public function findLast()
@@ -34,7 +34,7 @@ class AdminPlublicationRepository extends ServiceEntityRepository
     }
 
     /**
-     * @return AdminPlublication[] Returns an array of AdminPlublication objects
+     * @return AdminPublication[] Returns an array of AdminPublication objects
      */
 
     public function findAll2()
@@ -48,7 +48,7 @@ class AdminPlublicationRepository extends ServiceEntityRepository
 
 
     /*
-    public function findOneBySomeField($value): ?AdminPlublication
+    public function findOneBySomeField($value): ?AdminPublication
     {
         return $this->createQueryBuilder('a')
             ->andWhere('a.exampleField = :val')

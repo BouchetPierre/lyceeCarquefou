@@ -22,7 +22,7 @@ final class Version20200310141251 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE admin_plublication ADD updated_at DATETIME DEFAULT NULL');
+        $this->addSql('ALTER TABLE admin_publication ADD updated_at DATETIME DEFAULT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -30,6 +30,6 @@ final class Version20200310141251 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE admin_plublication DROP updated_at');
+        $this->addSql('ALTER TABLE admin_publication DROP updated_at');
     }
 }

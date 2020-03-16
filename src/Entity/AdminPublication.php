@@ -9,11 +9,11 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\AdminPlublicationRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\AdminPublicationRepository")
  * @ORM\HasLifecycleCallbacks
  * @Vich\Uploadable
  */
-class AdminPlublication
+class AdminPublication
 {
     /**
      * @ORM\Id()
@@ -23,7 +23,7 @@ class AdminPlublication
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="adminPlublications")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="AdminPublications")
      * @ORM\JoinColumn(nullable=false)
      */
     private $author;

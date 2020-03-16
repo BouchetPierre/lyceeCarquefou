@@ -22,8 +22,8 @@ final class Version20200310090945 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('CREATE TABLE admin_plublication (id INT AUTO_INCREMENT NOT NULL, author_id INT NOT NULL, subject VARCHAR(255) NOT NULL, text LONGTEXT NOT NULL, image VARCHAR(255) DEFAULT NULL, INDEX IDX_468965EFF675F31B (author_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
-        $this->addSql('ALTER TABLE admin_plublication ADD CONSTRAINT FK_468965EFF675F31B FOREIGN KEY (author_id) REFERENCES user (id)');
+        $this->addSql('CREATE TABLE admin_publication (id INT AUTO_INCREMENT NOT NULL, author_id INT NOT NULL, subject VARCHAR(255) NOT NULL, text LONGTEXT NOT NULL, image VARCHAR(255) DEFAULT NULL, INDEX IDX_468965EFF675F31B (author_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('ALTER TABLE admin_publication ADD CONSTRAINT FK_468965EFF675F31B FOREIGN KEY (author_id) REFERENCES user (id)');
     }
 
     public function down(Schema $schema) : void
@@ -31,6 +31,6 @@ final class Version20200310090945 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('DROP TABLE admin_plublication');
+        $this->addSql('DROP TABLE admin_publication');
     }
 }

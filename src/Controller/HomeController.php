@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Repository\AdminPlublicationRepository;
+use App\Repository\AdminPublicationRepository;
 use App\Repository\MessageRepository;
 use App\Repository\RepondRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,7 +13,7 @@ Class HomeController extends AbstractController{
     /**
      * @Route("/", name="homepage")
      */
-    public function home(MessageRepository $repoMes, AdminPlublicationRepository $publi, RepondRepository $repoRep){
+    public function home(MessageRepository $repoMes, AdminPublicationRepository $publi, RepondRepository $repoRep){
 
         if ($this->getUser()){
             $user = $this->getUser()->getId();

@@ -18,7 +18,7 @@ class AdminDachboardController extends AbstractController
         $annonces= $manager->createQuery('SELECT COUNT(a) FROM App\Entity\Annonce a')->getSingleScalarResult();
         $message= $manager->createQuery('SELECT COUNT(m) FROM App\Entity\Message m')->getSingleScalarResult();
         $reponse= $manager->createQuery('SELECT COUNT(r) FROM App\Entity\Repond r')->getSingleScalarResult();
-        $publication= $manager->createQuery('SELECT COUNT(r) FROM App\Entity\AdminPlublication r')->getSingleScalarResult();
+        $publication= $manager->createQuery('SELECT COUNT(r) FROM App\Entity\AdminPublication r')->getSingleScalarResult();
 
         return $this->render('admin/dachboard/index.html.twig', [
             'users' => $users,
