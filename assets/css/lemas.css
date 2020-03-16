@@ -54,7 +54,7 @@ body{
 }
 
 .jumbotron {
-    background-image: url(../pictures/quartierLeMas.png);
+    background-image: url("/pictures/quartierLeMas.png");
     background-size: cover;
     height: 600px;
 }

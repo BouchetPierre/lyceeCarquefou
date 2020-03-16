@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/lemas.css">
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
     <script src="https://kit.fontawesome.com/9b7d4f9d61.js" crossorigin="anonymous"></script>
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 
     {% block stylesheets %}{% endblock %}
 </head>
-<body class="" style="background-image: url("/pictures/village.png")">
+<body class="" style="background-image: url('/pictures/village.png')">
 <nav class="navbar navbar-expand-lg navbar-dark bg-info ">
     <a class="navbar-brand" href="{{path('homepage')}}"><img src="/pictures/lemas.png" style="height: 30px;" alt="logo"> Le Mas</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
