@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "cocur/slugify": "^4.0",
+        "doctrine/doctrine-fixtures-bundle": "^3.3",
         "friendsofsymfony/ckeditor-bundle": "^2.2",
         "fzaninotto/faker": "^1.9",
         "liip/imagine-bundle": "^2.3",
@@ -38,11 +39,9 @@
         "symfony/web-server-bundle": "4.4",
         "symfony/webpack-encore-bundle": "^1.7",
         "symfony/yaml": "5.0.*",
-        "vich/uploader-bundle": "^1.13",
-        "doctrine/doctrine-fixtures-bundle": "^3.3"
+        "vich/uploader-bundle": "^1.13"
     },
     "require-dev": {
-        "doctrine/doctrine-fixtures-bundle": "^3.3",
         "symfony/debug-pack": "*",
         "symfony/profiler-pack": "*",
         "symfony/test-pack": "*"
