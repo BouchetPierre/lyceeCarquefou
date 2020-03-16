@@ -21,7 +21,7 @@
                                     {{ annonce.title }}
                                 </h4>
                                 <p class="card-text">
-                                    {{ annonce.introduction }}
+                                    {{ annonce.introduction |raw|nl2br }}
                                 </p>
                                 <a href="{{path('annonces_show', {'slug':annonce.slug})}}" class="btn btn-secondary ">En savoir plus !</a>
                                 {% if  app.user and app.user == annonce.author %}
