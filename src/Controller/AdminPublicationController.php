@@ -35,21 +35,18 @@ class AdminPublicationController extends AbstractController
             $brochureFile = $form->get('brochure')->getData();
 
             if ($brochureFile) {
-                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
-
-                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
-                $newFilename = $safeFilename.'-'.uniqid().'.'.$brochureFile->guessExtension();
+                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME).'.pdf';
 
 
                 try {
                     $brochureFile->move(
                         $this->getParameter('brochures_directory'),
-                        $newFilename
+                        $originalFilename
                     );
                 } catch (FileException $e) {
 
                 }
-                $publication->setBrochureFilename($newFilename);
+                $publication->setBrochureFilename($originalFilename);
             }
 
             $manager->persist($publication);
