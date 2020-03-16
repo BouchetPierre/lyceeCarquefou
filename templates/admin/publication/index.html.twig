@@ -38,7 +38,7 @@
                     {% endif %}
                     <td class="text-center">
                         <a href="{{ path('admin_publications_edit', {'id':publication.id}) }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                        <a href="{{ path('admin_publications_delete', {'id':publication.id}) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                        <a href="{{ path('admin_publications_delete', {'id':publication.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer la publication ?`)"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
             {% endfor %}

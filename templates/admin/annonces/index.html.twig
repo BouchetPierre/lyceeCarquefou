@@ -26,7 +26,7 @@
                 <td class="text-center">{{ annonce.author.fullName }}</td>
                 <td class="text-center">{{ annonce.type }}</td>
                 <td class="text-center">
-                    <a href="{{ path('admin_annonces_delete', {'id':annonce.id}) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                    <a href="{{ path('admin_annonces_delete', {'id':annonce.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer l'annonce' ?`)"><i class="fas fa-trash"></i></a>
                 </td>
             </tr>
             {% endfor %}

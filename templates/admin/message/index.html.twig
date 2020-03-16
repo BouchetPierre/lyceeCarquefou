@@ -27,7 +27,7 @@
                     <td>{{ message.destinataire.title }}</td>
                     <td>{{ message.message|nl2br }}</td>
                     <td class="text-center">
-                        <a href="{{path('admin_message_delete', {'id':message.id})}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                        <a href="{{path('admin_message_delete', {'id':message.id})}}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer le message ?`)"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
             {% endfor %}
@@ -39,7 +39,7 @@
                     <td>{{ reponse.subject }}</td>
                     <td>{{ reponse.text|nl2br }}</td>
                     <td class="text-center">
-                        <a href="{{path('admin_reponse_delete', {'id':reponse.id})}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                        <a href="{{path('admin_reponse_delete', {'id':reponse.id})}}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer le message ?`)"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
             {% endfor %}
