@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200316085622.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200316085622.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,28 +48,7 @@
         <item name="MySQL - bdlemas@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="bdlemas: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="annonce: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - bdlemas@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="bdlemas: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="message: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - bdlemas@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="bdlemas: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="repond: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - bdlemas@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="bdlemas: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="admin_publication: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -266,7 +246,7 @@
       <workItem from="1584085040165" duration="20578000" />
       <workItem from="1584112667818" duration="280000" />
       <workItem from="1584113044492" duration="495000" />
-      <workItem from="1584344498244" duration="5175000" />
+      <workItem from="1584344498244" duration="5857000" />
     </task>
     <servers />
   </component>
@@ -274,10 +254,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2508" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583312255953">
+    <state x="2508" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584353802288">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2508" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583312255953" />
+    <state x="2508" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584353802288" />
     <state x="2566" y="343" width="583" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584106267120">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -294,6 +274,10 @@
     <state x="2356" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583849645276" />
     <state x="2581" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582887521778" />
     <state x="488" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583595406876" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1584353796211">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584353796211" />
     <state x="2441" y="296" width="374" height="497" key="FileChooserDialogImpl" timestamp="1583486829827">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
