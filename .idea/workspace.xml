@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminDachboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminDachboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminPlublicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPublicationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/AdminPlublication.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AdminPublication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AdminPlublicationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdminPublicationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200310090945.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200310090945.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200310141251.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200310141251.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200311133336.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200311133336.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200313122917.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200313122917.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200313140330.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200313140330.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AdminPlublicationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AdminPublicationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/plublication/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/publication/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/plublication/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/publication/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/plublication/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/publication/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +266,7 @@
       <workItem from="1584085040165" duration="20578000" />
       <workItem from="1584112667818" duration="280000" />
       <workItem from="1584113044492" duration="495000" />
-      <workItem from="1584344498244" duration="3665000" />
+      <workItem from="1584344498244" duration="5175000" />
     </task>
     <servers />
   </component>

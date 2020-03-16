@@ -22,7 +22,7 @@ final class Version20200316085622 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE admin_publication RENAME INDEX idx_468965eff675f31b TO IDX_32262E70F675F31B');
+        //$this->addSql('ALTER TABLE admin_publication RENAME INDEX idx_468965eff675f31b TO IDX_32262E70F675F31B');
     }
 
     public function down(Schema $schema) : void
@@ -30,6 +30,6 @@ final class Version20200316085622 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE admin_publication RENAME INDEX idx_32262e70f675f31b TO IDX_468965EFF675F31B');
+        //$this->addSql('ALTER TABLE admin_publication RENAME INDEX idx_32262e70f675f31b TO IDX_468965EFF675F31B');
     }
 }
