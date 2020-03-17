@@ -1,7 +1,7 @@
 {% if annonce.coverImage %}
-    <img class="rounded mx-auto d-block" src="/pictures/annonces/{{annonce.coverImage}} " alt="" style="height: 200px; width: 100%; display: block ">
+    <img class="rounded mx-auto d-block" src="/pictures/annonces/{{annonce.coverImage}} " alt="" style="height: 200px;  display: block ">
 {% elseif annonce.type == 'Jardinage' %}
-    <img class="rounded mx-auto d-block" src="/pictures/placeolderPictures/jardinage.jpg" alt="image du quartier" style="height: 200px; width: 100%; display: block ">
+    <img class="rounded mx-auto d-block" src="/pictures/placeolderPictures/jardinage.jpg" alt="image du quartier" style="height: 200px; max-width: 100%; display: block ">
 {% elseif annonce.type == 'Bricolage' %}
     <img class="rounded mx-auto d-block" src="/pictures/placeolderPictures/bricolage.jpg" alt="image du quartier" style="height: 300px; width: 100%; display: block ">
 {% elseif annonce.type == 'Sortie' %}
