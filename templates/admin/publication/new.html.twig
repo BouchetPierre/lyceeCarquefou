@@ -10,11 +10,44 @@
 
         {{ form_start(form) }}
         <div class="form-groupe">
+            {{ form_label(form.subject) }}
+            {{ form_widget(form.subject) }}
+            {{ form_label(form.text) }}
+            {{ form_widget(form.text) }}
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                   {{ form_row(form.imageFile,{
+                        attr:{
+                            'placeholder': 'Selectionnez une image,  facultatif'
+                        }
+                      })
+                   }}
+                </div>
+                <div class="col-md-6 mt-3">
+                    {{ form_row(form.brochure,{
+                        attr:{
+                            'placeholder': 'Selectionnez un fichier,  facultatif'
+                        }
+                    })
+                    }}
+                </div>
+            </div>
 
-        {{ form_widget(form) }}
+
         </div>
-        <button type="submit" class="btn btn-primary">Valider et publier</button>
-
+        <button type="submit" class="btn btn-primary mt-3">Valider et publier</button>
+        {{ form_end(form) }}
     </div>
+
+    {% block javascripts %}
+        <script>
+            $('.custom-file-input').on('change', function(event) {
+                var inputFile = event.currentTarget;
+                $(inputFile).parent()
+                    .find('.custom-file-label')
+                    .html(inputFile.files[0].name);
+            });
+        </script>
+    {% endblock %}
 
 {% endblock %}

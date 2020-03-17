@@ -52,6 +52,44 @@ body{
     text-align: center;
     margin-top: -40px;
     margin-left: -10px;
+}
+
+.meteo{
+    width:350px;
+    height: 250px;
+    border-radius: 5px;
+
+}
+.liens{
+    width: 350px;
+    background-color: #42904e;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 64em) {
+    .h1quartier{
+        border-radius: 10px;
+        padding: 5px;
+        width: 100%;
+        background-color: #42904e;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: -10px;
+    }
+    .liens{
+        width: auto;
+        background-color: #42904e;
+        border-radius: 5px;
+    }
+
+    .meteo{
+        width:auto;
+        height: 250px;
+        border-radius: 5px;
+
+    }
+
 
 }
 
@@ -61,11 +99,6 @@ body{
     height: 600px;
 }
 
-.liens{
-    width: 350px;
-    background-color: #42904e;
-    border-radius: 5px;
-}
 
 .btn-primary{
     background-color: #42904e;
@@ -93,13 +126,5 @@ body{
     padding: 5px;
 }
 
-.meteo{
-    width:350px;
-    height: 250px;
-    border-radius: 5px;
 
-}
-.carousel-item{
-    height: 410px;
-}
 

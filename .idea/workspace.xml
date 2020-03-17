@@ -5,9 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/lemas.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/lemas.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/build/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/imageAnnonce.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/imageAnnonce.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/publication/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/publication/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +252,7 @@
       <workItem from="1584113044492" duration="495000" />
       <workItem from="1584344498244" duration="20804000" />
       <workItem from="1584430329912" duration="63000" />
-      <workItem from="1584430609663" duration="6242000" />
+      <workItem from="1584430609663" duration="12628000" />
     </task>
     <servers />
   </component>
