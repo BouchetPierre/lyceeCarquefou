@@ -40,7 +40,9 @@ body{
     background-image: url("/pictures/quartierLeMasO70.png");
     background-repeat: no-repeat;
     background-size: cover;
+    font-size:100%;
 }
+
 
 .h1quartier{
     border-radius: 10px;
