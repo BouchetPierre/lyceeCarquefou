@@ -13,7 +13,8 @@ use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-
+use App\Form\ResettingType;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 class ResettingController extends AbstractController
 {
@@ -103,8 +104,8 @@ class ResettingController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid())
         {
-            $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
-            $user->setPassword($password);
+            $password = $passwordEncoder->encodePassword($user, $user->getHash());
+            $user->setHash($password);
 
             // réinitialisation du token à null pour qu'il ne soit plus réutilisable
             $user->setToken(null);
@@ -116,7 +117,7 @@ class ResettingController extends AbstractController
 
             $request->getSession()->getFlashBag()->add('success', "Votre mot de passe a été renouvelé.");
 
-            return $this->redirectToRoute('connexion');
+            return $this->redirectToRoute('account_login');
 
         }
 

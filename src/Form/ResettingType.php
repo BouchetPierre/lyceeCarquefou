@@ -14,7 +14,7 @@ class ResettingType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('plainPassword', RepeatedType::class, array(
+            ->add('hash', RepeatedType::class, array(
                 'type' => PasswordType::class,
                 'first_options' => array('label' => 'Nouveau mot de passe'),
                 'second_options' => array('label' => 'Confirmer le mot de passe'),

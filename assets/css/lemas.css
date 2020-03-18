@@ -133,3 +133,6 @@ body{
     background-color: #42904e;
 }
 
+.carousel-item{
+    max-height: 410px;
+}
