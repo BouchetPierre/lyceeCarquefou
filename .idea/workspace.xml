@@ -2,11 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/pictures/placeolderPictures/autre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/placeolderPictures/autreidee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/placeolderPictures/besoins.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/placeolderPictures/fete.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/placeolderPictures/offres.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/placeolderPictures/sortie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ResettingController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ResettingType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Mailer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/resetting/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/resetting/mail.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/resetting/request.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leMas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leMas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/lemas.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/lemas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/build/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/publication/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/publication/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/echange.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/village.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AnnonceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AnnonceType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/imageAnnonce.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/imageAnnonce.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/annonce/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/publications/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publications/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +75,20 @@
         <item name="MySQL - bdlemas@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="bdlemas: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - bdlemas@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bdlemas: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="admin_publication: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - bdlemas@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bdlemas: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="annonce: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -188,6 +232,8 @@
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1YQb5zbPZPnjGkDSIbeFhRIJwsw" />
@@ -203,21 +249,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/pictures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/pictures/placeolderPictures" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/pictures" />
-      <recent name="$PROJECT_DIR$/assets" />
-      <recent name="$PROJECT_DIR$/public/pictures/liens" />
-      <recent name="$PROJECT_DIR$/public/pictures/placeolderPictures" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/assets/css" />
       <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/templates/admin/account" />
       <recent name="$PROJECT_DIR$/templates/admin/annonces" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/pictures/placeolderPictures" />
+      <recent name="$PROJECT_DIR$/public/pictures" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/public/pictures/liens" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -252,7 +298,9 @@
       <workItem from="1584113044492" duration="495000" />
       <workItem from="1584344498244" duration="20804000" />
       <workItem from="1584430329912" duration="63000" />
-      <workItem from="1584430609663" duration="12628000" />
+      <workItem from="1584430609663" duration="14015000" />
+      <workItem from="1584461222949" duration="4534000" />
+      <workItem from="1584517927910" duration="12602000" />
     </task>
     <servers />
   </component>
@@ -264,11 +312,12 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2508" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584353802288" />
-    <state x="2566" y="343" width="583" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584106267120">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="690" y="361" width="573" height="381" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584528909814">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="2566" y="343" width="583" height="390" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584106267120" />
     <state x="2566" y="343" width="555" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582880715992" />
+    <state x="690" y="361" width="573" height="381" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584528909814" />
     <state x="1987" y="27" width="825" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583224853341">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -299,13 +348,13 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2274" y="249" width="718" height="676" key="RollbackChangesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584347598520" />
-    <state x="2483" y="390" key="com.intellij.ide.util.TipDialog" timestamp="1584430618583">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="649" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1584517930255">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1584113046348" />
     <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584344500416" />
     <state x="2483" y="390" key="com.intellij.ide.util.TipDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584430618583" />
-    <state x="649" y="368" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583594919654" />
+    <state x="649" y="368" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1584517930255" />
     <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583852054948">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

@@ -42,13 +42,17 @@ class AnnonceType extends AbstractType
             ->add('imageFile', FileType::class, $this->getConf('Image (Optionnelle, 2M maxi.)', 'Selectionnez un fichier', false))
             ->add('type', ChoiceType::class, [
                 'choices' => [
-                    'Prêt Bricolage' => 'Bricolage',
-                    'Prêt Jardinage' => 'Jardinage',
-                    'Achat Collectif' => 'Collectif',
-                    'Sortie' => 'Sortie',
-                    'Fête' => 'Fête'
+                    'Bricolage' => 'Bricolage',
+                    'Jardinage' => 'Jardinage',
+                    'Autre' => 'Autre',
+                    'Sortir' => 'Sortir',
+                    'Fêter' => 'Feter',
+                    'Autre Idée' => 'AutreIdee',
+                    'Besoins' => 'Besoins',
+                    'Offres' => 'Offres',
                 ],  'expanded' => true,
                 'multiple' => false,
+                'label' =>'Choisissez la catégorie',
                 'label_attr'=>[
                     'class'=>'radio-inline'
                 ] ]);

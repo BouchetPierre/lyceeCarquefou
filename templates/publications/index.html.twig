@@ -22,7 +22,7 @@
                                     {{ publication.text|raw|nl2br }}
                                 </p>
                                 {% if publication.brochureFilename %}
-                                <a href="{{ asset('uploads/brochures/' ~ publication.brochureFilename) }}">Voir le document joint (PDF)</a>
+                                <a class="text-success" href="{{ asset('uploads/brochures/' ~ publication.brochureFilename) }}">Voir le document joint (PDF)</a>
                                 {% endif %}
                             </div>
                         </div>
