@@ -28,6 +28,16 @@ class UserRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
     }
 
+    public function idAdmin()
+    {
+        return $this->createQueryBuilder('u')
+            ->where('u.name = :name')
+            ->setParameter('name', 'LeMas')
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
+
     // /**
     //  * @return User[] Returns an array of User objects
     //  */

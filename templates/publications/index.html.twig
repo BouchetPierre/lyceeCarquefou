@@ -6,8 +6,14 @@
 
     <div class="container mt-5">
         {% if publications %}
-            <div class="decalage"></div>
-            <h1 class="mb-5 text-white titlePage"><strong>Informations de l'ASL Le Mas</strong></h1>
+            <div class="decalage row">
+                <div class="col-9">
+                    <h1 class="mb-5 text-white titlePagePublication"><strong>Informations de l'ASL Le Mas</strong></h1>
+                </div>
+                <div class="col-3 pt-2 ">
+                    <a  href="{{ path('repond', {'id': idLeMas.id})}}" class="btn btn-primary"><strong><i class="far fa-paper-plane"></i> Contactez l'ASL</strong></a>
+                </div>
+            </div>
             <div>
                 {% for publication in publications  %}
                         <div class="card bg-light mb-5">

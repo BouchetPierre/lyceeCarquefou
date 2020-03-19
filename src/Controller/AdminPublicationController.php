@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\AdminPublication;
 use App\Form\AdminPublicationType;
 use App\Repository\AdminPublicationRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -71,13 +72,15 @@ class AdminPublicationController extends AbstractController
      * @Route("/publications/show", name="publication_show")
      * @IsGranted("ROLE_USER")
      */
-    public function index(AdminPublicationRepository $repo)
+    public function index(AdminPublicationRepository $repo, UserRepository $user)
     {
 
         $publications = $repo->findAll2();
+        $idAuthor = $user->idAdmin();
 
         return $this->render('publications/index.html.twig', [
             'publications' => $publications,
+            'idLeMas' => $idAuthor
         ]);
     }
 

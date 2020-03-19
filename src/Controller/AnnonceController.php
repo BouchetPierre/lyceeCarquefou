@@ -56,6 +56,20 @@ class AnnonceController extends AbstractController
 
     /**
      * Permet de voir les annonces en fonction du type
+     * @Route("/annonces/all", name="annonces_index_all")
+     * @IsGranted("ROLE_USER")
+     */
+    public function indexAll(AnnonceRepository $repo)    {
+
+        $annonces = $repo->findAll();
+
+        return $this->render('annonce/index.html.twig', [
+            'annonces' => $annonces,
+        ]);
+    }
+
+    /**
+     * Permet de voir les annonces en fonction du type
      * @Route("/annonces/{type}", name="annonces_index")
      * @IsGranted("ROLE_USER")
      */
@@ -68,6 +82,8 @@ class AnnonceController extends AbstractController
             'annonces' => $annonces,
         ]);
     }
+
+
 
     /**
      * Permet d'afficher et de modifier une annonce
