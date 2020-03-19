@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Annonce;
 use App\Entity\User;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -12,31 +11,23 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
 {
-    /**
-     * @Route("/user/{slug}", name="user_show")
-     */
-    public function index(User $user)
-    {
-       return $this->render('user/index.html.twig', [
-            'user' => $user
-        ]);
-    }
+
 
     /**
-     * @Route("/admin/user", name="admin_user_show")
+     * @Route("/admin/show/user", name="admin_user_index")
+     *
      */
     public function users(UserRepository $repo)
     {
         $users = $repo->findAll();
-
         return $this->render('admin/user.html.twig', [
             'users' => $users
         ]);
     }
 
     /**
-     * Permet de supprimer une annonce
-     * @Route("/user/show/{id}/delete", name="admin_user_delete")
+     * Permet de supprimer un user
+     * @Route("/admin/user/{id}/delete", name="admin_user_delete")
      *
      * @return Response
      */
@@ -51,5 +42,15 @@ class UserController extends AbstractController
         );
 
         return $this->redirectToRoute('admin_user_show');
+    }
+
+    /**
+     * @Route("/user/{slug}", name="user_show")
+     */
+    public function index(User $user)
+    {
+        return $this->render('user/index.html.twig', [
+            'user' => $user
+        ]);
     }
 }
