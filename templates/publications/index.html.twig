@@ -25,7 +25,7 @@
                                 <img src="/pictures/annonces/{{ publication.image }}" alt="" style="height: 250px;">
                                 {% endif %}
                                 <p class="card-body">
-                                    {{ publication.text|raw|nl2br }}
+                                    {{ publication.text|raw }}
                                 </p>
                                 {% if publication.brochureFilename %}
                                 <a class="text-success" href="{{ asset('uploads/brochures/' ~ publication.brochureFilename) }}">Voir le document joint (PDF)</a>

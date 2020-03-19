@@ -29,7 +29,7 @@
                     <td>{{ publication.id }}</td>
                     <td>{{ publication.subject}}</td>
                     <td class="text-center">{{ publication.author.fullName }}</td>
-                    <td>{{ publication.text|raw|nl2br }}</td>
+                    <td>{{ publication.text|raw }}</td>
                     <td><img src="/pictures/annonces/{{ publication.image }}" alt="" style="height: 100px;"></td>
                     {% if publication.brochureFilename %}
                     <td><a href="{{ asset('uploads/brochures/' ~ publication.brochureFilename) }}">Télécharger le document joint (PDF)</a></td>
