@@ -41,7 +41,7 @@ class UserController extends AbstractController
             "L'utilisateur a bien été supprimé !"
         );
 
-        return $this->redirectToRoute('admin_user_show');
+        return $this->redirectToRoute('admin_user_index');
     }
 
     /**
