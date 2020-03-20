@@ -74,6 +74,13 @@ body{
     background-color: #42904e;
 }
 
+.titlePageAnnonce{
+    border-radius: 5px;
+    padding: 5px;
+    width: 40%;
+    background-color: #42904e;
+}
+
 @media screen and (max-width: 64em) {
     .h1quartier{
         border-radius: 10px;
@@ -97,6 +104,13 @@ body{
 
     }
     .titlePagePublication{
+        border-radius: 5px;
+        padding: 5px;
+        width: 90%;
+        background-color: #42904e;
+    }
+
+    .titlePageAnnonce{
         border-radius: 5px;
         padding: 5px;
         width: 90%;
@@ -136,13 +150,6 @@ body{
     background-color: #42904e;
     border-radius: 5px;
     padding: 5px;
-}
-
-.titlePageAnnonce{
-    border-radius: 5px;
-    padding: 5px;
-    width: 40%;
-    background-color: #42904e;
 }
 
 .carousel-item{
