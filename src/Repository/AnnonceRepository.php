@@ -11,7 +11,7 @@ use Doctrine\Common\Persistence\ManagerRegistry;
  * @method Annonce|null findOneBy(array $criteria, array $orderBy = null)
  * @method Annonce[]    findAll()
  * @method Annonce[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
- * @method findOneBySlug($slug)
+ * @method findOneById($id)
  */
 class AnnonceRepository extends ServiceEntityRepository
 {

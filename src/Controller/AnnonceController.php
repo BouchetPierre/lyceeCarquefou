@@ -87,7 +87,7 @@ class AnnonceController extends AbstractController
 
     /**
      * Permet d'afficher et de modifier une annonce
-     * @Route("annonces/show/{slug}/edit", name="annonces_edit")
+     * @Route("annonces/show/{id}/edit", name="annonces_edit")
      * @Security("is_granted('ROLE_USER') and user === annonce.getAuthor()", message="Vous n'est pas propriétaire de cette annonce !")
      *
      * @return Response
@@ -122,16 +122,16 @@ class AnnonceController extends AbstractController
     /**
      * Permet de voir une annonce définie
      *
-     * @Route("/annonces/show/{slug}", name="annonces_show")
+     * @Route("/annonces/show/{id}", name="annonces_show")
      * @IsGranted("ROLE_USER")
      *
      * @return Response
      */
 
 
-    public function show($slug, AnnonceRepository $repo){
+    public function show($id, AnnonceRepository $repo){
 
-        $annonce = $repo->findOneBySlug($slug);
+        $annonce = $repo->findOneById($id);
 
         return $this->render('annonce/show.html.twig', [
             'annonce' => $annonce,
@@ -141,7 +141,7 @@ class AnnonceController extends AbstractController
 
     /**
      * Permet de supprimer une annonce
-     * @Route("/annones/show/{slug}/delete", name="annonces_delete")
+     * @Route("/annones/show/{id}/delete", name="annonces_delete")
      * @Security("is_granted('ROLE_USER') and user === annonce.getAuthor()")
      *
      * @return Response
