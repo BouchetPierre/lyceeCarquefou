@@ -43,6 +43,7 @@ class RegistrationType extends AbstractType
                 ] ])
             ->add('yearsBac', DateType::class, [
                 'widget' => 'choice',
+                'data' => new \DateTime(),
                 'label' =>"Année d'obtention du BAC"
             ])
             ->add('typeBac', ChoiceType::class, [

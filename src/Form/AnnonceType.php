@@ -82,6 +82,7 @@ class AnnonceType extends AbstractType
             ->add('descriptionOne', TextareaType::class, $this->getConf("Commentaire","Ajoutez un commentaire", false))
             ->add('yearsOne', DateType::class, [
                 'widget' => 'choice',
+                'data' => new \DateTime(),
                 'label' =>"Année d'entrée",
                 'required' => false
                 ])
@@ -121,6 +122,7 @@ class AnnonceType extends AbstractType
             ->add('descriptionTwo', TextareaType::class, $this->getConf("Commentaire","Ajoutez un commentaire", false))
             ->add('yearsTwo', DateType::class, [
                 'widget' => 'choice',
+                'data' => new \DateTime(),
                 'label' =>"Année d'entrée",
                 'required' => false
             ])
@@ -160,6 +162,7 @@ class AnnonceType extends AbstractType
             ->add('descriptionThree', TextareaType::class, $this->getConf("Commentaire","Ajoutez un commentaire", false))
             ->add('yearsThree', DateType::class, [
                 'widget' => 'choice',
+                'data' => new \DateTime(),
                 'label' =>"Année d'entrée",
                 'required' => false
             ])
