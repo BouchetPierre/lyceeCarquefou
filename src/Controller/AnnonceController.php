@@ -17,7 +17,7 @@ class AnnonceController extends AbstractController
 {
 
     /**
-     * Permet de creer une annonce
+     * Permet de creer une fiche
      *
      * @Route ("/annonces/new", name="annonce_create")
      * @IsGranted("ROLE_USER")
@@ -34,18 +34,17 @@ class AnnonceController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
 
+            $this->getUser()->setFicheOK(1);
             $annonce->setAuthor($this->getUser());
             $manager->persist($annonce);
             $manager->flush();
 
             $this->addFlash(
                 'success',
-                'Votre annonce a bien été crée !'
+                'Votre fiche a bien été crée !'
             );
 
-            return $this->redirectToRoute("annonces_show", [
-               'slug' => $annonce->getSlug()
-            ]);
+            return $this->redirectToRoute('homepage');
         }
 
         return $this->render("annonce/new.html.twig", [
@@ -54,22 +53,8 @@ class AnnonceController extends AbstractController
 
     }
 
-    /**
-     * Permet de voir les annonces en fonction du type
-     * @Route("/annonces/all", name="annonces_index_all")
-     * @IsGranted("ROLE_USER")
-     */
-    public function indexAll(AnnonceRepository $repo)    {
-
-        $annonces = $repo->findAll();
-
-        return $this->render('annonce/index.html.twig', [
-            'annonces' => $annonces,
-        ]);
-    }
-
-    /**
-     * Permet de voir les annonces en fonction du type
+     /**
+     * Permet de voir les fiches en fonction du type
      * @Route("/annonces/{type}", name="annonces_index")
      * @IsGranted("ROLE_USER")
      */
@@ -86,8 +71,8 @@ class AnnonceController extends AbstractController
 
 
     /**
-     * Permet d'afficher et de modifier une annonce
-     * @Route("annonces/show/{id}/edit", name="annonces_edit")
+     * Permet d'afficher et de modifier une fiche
+     * @Route("annonces/show/{id}/edit", name="fiche_edit")
      * @Security("is_granted('ROLE_USER') and user === annonce.getAuthor()", message="Vous n'est pas propriétaire de cette annonce !")
      *
      * @return Response
@@ -105,12 +90,12 @@ class AnnonceController extends AbstractController
 
             $this->addFlash(
                 'success',
-                'Votre annonce a bien été modifiée !'
+                'Votre fiche a bien été modifiée !'
             );
 
-            return $this->redirectToRoute('annonces_show', [
-                'slug' => $annonce->getSlug()
-            ]);
+            return $this->redirectToRoute('account_index', [
+                'user'=> $this->getUser()
+                ]);
         }
         return $this->render('annonce/edit.html.twig',[
             'form' => $form->createView(),
@@ -120,7 +105,7 @@ class AnnonceController extends AbstractController
 
 
     /**
-     * Permet de voir une annonce définie
+     * Permet de voir une afiche définie
      *
      * @Route("/annonces/show/{id}", name="annonces_show")
      * @IsGranted("ROLE_USER")
@@ -140,14 +125,15 @@ class AnnonceController extends AbstractController
 
 
     /**
-     * Permet de supprimer une annonce
-     * @Route("/annones/show/{id}/delete", name="annonces_delete")
+     * Permet de supprimer une fiche
+     * @Route("/annones/show/{id}/delete", name="fiche_delete")
      * @Security("is_granted('ROLE_USER') and user === annonce.getAuthor()")
      *
      * @return Response
      */
 
     public function delete(Annonce $annonce, EntityManagerInterface $manager){
+        $this->getUser()->setFicheOK(0);
         $manager->remove($annonce);
         $manager->flush();
 

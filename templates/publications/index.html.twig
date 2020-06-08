@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Infos ASL Le Mas{% endblock %}
+{% block title %}Infos du Lycée{% endblock %}
 
 {% block body %}
 
@@ -8,11 +8,9 @@
         {% if publications %}
             <div class="decalage row">
                 <div class="col-9">
-                    <h1 class="mb-5 text-white titlePagePublication"><strong>Informations de l'ASL Le Mas</strong></h1>
+                    <h1 class="mb-5 "><strong>Informations du lycée</strong></h1>
                 </div>
-                <div class="col-3 pt-2 ">
-                    <a  href="{{ path('repond', {'id': idLeMas.id})}}" class="btn btn-primary"><strong><i class="far fa-paper-plane"></i> Contactez l'ASL</strong></a>
-                </div>
+
             </div>
             <div>
                 {% for publication in publications  %}
@@ -36,7 +34,7 @@
             </div>
         {% else %}
             <div class="decalage"></div>
-            <h1 class="text-white"><strong>Il n'y a pas d'information pour l'instant !!!</strong></h1>
+            <h1 class="text-dark"><strong>Il n'y a pas d'information pour l'instant !!!</strong></h1>
         {% endif %}
     </div>
 

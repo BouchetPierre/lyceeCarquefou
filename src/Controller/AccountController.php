@@ -67,13 +67,13 @@ class AccountController extends AbstractController
            if($form->isSubmitted() && $form->isValid()){
                $hash = $encoder->encodePassword($user, $user->getHash());
                $user->setHash($hash);
-
+               $user->setInscriVal(0);
                $manager->persist($user);
                $manager->flush();
 
                $this->addFlash(
                     'success',
-                    'Votre compte a bien été crée ! Vous pouvez vous connecter !'
+                    'Votre compte a bien été crée ! Vous pouver vous connecter après validation de votre compte par le Lycée!'
                 );
 
                 return $this->redirectToRoute('account_login');
@@ -169,6 +169,7 @@ class AccountController extends AbstractController
     public function myAccount(){
         return $this->render('user/index.html.twig', [
             'user'=> $this->getUser()
+
         ]);
     }
 

@@ -3,6 +3,8 @@
 namespace App\Form;
 
 use App\Entity\User;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -25,7 +27,24 @@ class AccountType extends AbstractType
             ->add('name', TextType::class, $this->getConf('Nom'))
             ->add('lastname', TextType::class, $this->getConf('Prénom'))
             ->add('email', EmailType::class, $this->getConf('Adresse Mail'))
-            ->add('address', TextType::class, $this->getConf('Adresse Postal'))
+            ->add('yearsBac', DateType::class, [
+                'widget' => 'single_text',
+                'format' => 'yyyy',
+                'html5' => false,
+                'label' =>"Année d'obtention du BAC"
+
+            ])
+            ->add('typeBac', ChoiceType::class, [
+                'choices' => [
+                    'S' => 'S',
+                    'L' => 'L',
+                    'ES' => 'ES',
+                ],  'expanded' => true,
+                'multiple' => false,
+                'label' =>'Choisissez le Type de Bac',
+                'label_attr'=>[
+                    'class'=>'radio-inline'
+                ] ]);
         ;
     }
 

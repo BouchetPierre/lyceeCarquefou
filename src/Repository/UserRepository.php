@@ -37,6 +37,26 @@ class UserRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
     }
 
+    public function findAllStud()
+    {
+        return $this->createQueryBuilder('u')
+            ->where('u.studOrTeach = :name')
+            ->setParameter('name', 'Student')
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findAllTeach()
+    {
+        return $this->createQueryBuilder('u')
+            ->where('u.studOrTeach = :name')
+            ->setParameter('name', 'Teacher')
+            ->getQuery()
+            ->getResult();
+    }
+
+
+
 
     // /**
     //  * @return User[] Returns an array of User objects

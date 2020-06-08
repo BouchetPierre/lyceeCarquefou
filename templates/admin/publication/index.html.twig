@@ -47,7 +47,17 @@
     </div>
     <script>
         $(document).ready(function () {
-            $('#tab').DataTable();
+            $('#tab').DataTable(
+                {
+                    "language": {
+                        "lengthMenu": "Resultats _MENU_ par page",
+                        "zeroRecords": "Nothing found - sorry",
+                        "info": "Page _PAGE_ sur _PAGES_",
+                        "infoEmpty": "No records available",
+                        "infoFiltered": "(filtered from _MAX_ total records)"
+                    }
+                }
+            );
         });
     </script>
 {% endblock %}

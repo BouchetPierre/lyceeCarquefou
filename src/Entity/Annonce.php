@@ -28,25 +28,32 @@ class Annonce
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\Length(max=30, maxMessage="Attention votre Titre est trop long !!! 30 caractéres max.")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $title;
+    private $phone;
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $address;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $slug;
+    private $city;
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $linkIn;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $introduction;
+    private $country;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="boolean")
      */
-    private $content;
+    private $emailOk;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -59,12 +66,7 @@ class Annonce
      */
     private $imageFile;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $type;
-
-    /**
+     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="annonces")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -76,80 +78,151 @@ class Annonce
     private $updated_at;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Message", mappedBy="destinataire", cascade={"remove"})
+     * @ORM\OneToMany(targetEntity="App\Entity\Message", mappedBy="destinataire", cascade = {"remove"})
      */
     private $messages;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $typeScoolOne;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $specialOne;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $yearsOne;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $typeScoolTwo;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $specialTwo;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $yearsTwo;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $typeScoolThree;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $specialThree;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $yearsThree;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $profActivity;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $yourActivity;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $descriptionOne;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $descrisptionTwo;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $descriptionThree;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $descriptionActivity;
 
     public function __construct()
     {
         $this->messages = new ArrayCollection();
     }
 
-    /**
-     * Permet d'initialiser le slug
-     *
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     *
-     * @return void
-     */
-
-    public function initializeSlug(){
-        if(empty($this->slug)){
-            $slugify = Slugify::create();
-            $this->slug = $slugify->slugify($this->title);
-        }
-    }
-
-    public function getId(): ?int
+        public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getTitle(): ?string
+    public function getPhone(): ?string
     {
-        return $this->title;
+        return $this->phone;
     }
 
-    public function setTitle(string $title): self
+    public function setPhone(string $phone): self
     {
-        $this->title = $title;
+        $this->phone = $phone;
 
         return $this;
     }
 
-    public function getSlug(): ?string
+    public function getAddress(): ?string
     {
-        return $this->slug;
+        return $this->address;
     }
 
-    public function setSlug(string $slug): self
+    public function setAddress(string $address): self
     {
-        $this->slug = $slug;
+        $this->address = $address;
 
         return $this;
     }
 
-    public function getIntroduction(): ?string
+    public function getCity(): ?string
     {
-        return $this->introduction;
+        return $this->city;
     }
 
-    public function setIntroduction(string $introduction): self
+    public function setCity(string $city): self
     {
-        $this->introduction = $introduction;
+        $this->city = $city;
 
         return $this;
     }
 
-    public function getContent(): ?string
+    public function getCountry(): ?string
     {
-        return $this->content;
+        return $this->country;
     }
 
-    public function setContent(string $content): self
+    public function setCountry(string $country): self
     {
-        $this->content = $content;
+        $this->country = $country;
+
+        return $this;
+    }
+
+    public function getLinkIn(): ?string
+    {
+        return $this->linkIn;
+    }
+
+    public function setLinkIn(string $linkIn): self
+    {
+        $this->linkIn = $linkIn;
 
         return $this;
     }
@@ -165,14 +238,14 @@ class Annonce
 
     }
 
-    public function getType(): ?string
+    public function getEmailOk(): ?bool
     {
-        return $this->type;
+        return $this->emailOk;
     }
 
-    public function setType(string $type): self
+    public function setEmailOk(bool $emailOk): self
     {
-        $this->type = $type;
+        $this->emailOk = $emailOk;
 
         return $this;
     }
@@ -242,6 +315,186 @@ class Annonce
                 $message->setDestinataire(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getTypeScoolOne(): ?string
+    {
+        return $this->typeScoolOne;
+    }
+
+    public function setTypeScoolOne(?string $typeScoolOne): self
+    {
+        $this->typeScoolOne = $typeScoolOne;
+
+        return $this;
+    }
+
+    public function getSpecialOne(): ?string
+    {
+        return $this->specialOne;
+    }
+
+    public function setSpecialOne(?string $specialOne): self
+    {
+        $this->specialOne = $specialOne;
+
+        return $this;
+    }
+
+    public function getYearsOne(): ?\DateTimeInterface
+    {
+        return $this->yearsOne;
+    }
+
+    public function setYearsOne(?\DateTimeInterface $yearsOne): self
+    {
+        $this->yearsOne = $yearsOne;
+
+        return $this;
+    }
+
+    public function getTypeScoolTwo(): ?string
+    {
+        return $this->typeScoolTwo;
+    }
+
+    public function setTypeScoolTwo(?string $typeScoolTwo): self
+    {
+        $this->typeScoolTwo = $typeScoolTwo;
+
+        return $this;
+    }
+
+    public function getSpecialTwo(): ?string
+    {
+        return $this->specialTwo;
+    }
+
+    public function setSpecialTwo(?string $specialTwo): self
+    {
+        $this->specialTwo = $specialTwo;
+
+        return $this;
+    }
+
+    public function getYearsTwo(): ?\DateTimeInterface
+    {
+        return $this->yearsTwo;
+    }
+
+    public function setYearsTwo(?\DateTimeInterface $yearsTwo): self
+    {
+        $this->yearsTwo = $yearsTwo;
+
+        return $this;
+    }
+
+    public function getTypeScoolThree(): ?string
+    {
+        return $this->typeScoolThree;
+    }
+
+    public function setTypeScoolThree(?string $typeScoolThree): self
+    {
+        $this->typeScoolThree = $typeScoolThree;
+
+        return $this;
+    }
+
+    public function getSpecialThree(): ?string
+    {
+        return $this->specialThree;
+    }
+
+    public function setSpecialThree(?string $specialThree): self
+    {
+        $this->specialThree = $specialThree;
+
+        return $this;
+    }
+
+    public function getYearsThree(): ?\DateTimeInterface
+    {
+        return $this->yearsThree;
+    }
+
+    public function setYearsThree(?\DateTimeInterface $yearsThree): self
+    {
+        $this->yearsThree = $yearsThree;
+
+        return $this;
+    }
+
+    public function getProfActivity(): ?bool
+    {
+        return $this->profActivity;
+    }
+
+    public function setProfActivity(?bool $profActivity): self
+    {
+        $this->profActivity = $profActivity;
+
+        return $this;
+    }
+
+    public function getYourActivity(): ?string
+    {
+        return $this->yourActivity;
+    }
+
+    public function setYourActivity(?string $yourActivity): self
+    {
+        $this->yourActivity = $yourActivity;
+
+        return $this;
+    }
+
+    public function getDescriptionOne(): ?string
+    {
+        return $this->descriptionOne;
+    }
+
+    public function setDescriptionOne(?string $descriptionOne): self
+    {
+        $this->descriptionOne = $descriptionOne;
+
+        return $this;
+    }
+
+    public function getDescriptionTwo(): ?string
+    {
+        return $this->descrisptionTwo;
+    }
+
+    public function setDescriptionTwo(?string $descriptionTwo): self
+    {
+        $this->descriptionTwo = $descriptionTwo;
+
+        return $this;
+    }
+
+    public function getDescriptionThree(): ?string
+    {
+        return $this->descriptionThree;
+    }
+
+    public function setDescriptionThree(?string $descriptionThree): self
+    {
+        $this->descriptionThree = $descriptionThree;
+
+        return $this;
+    }
+
+    public function getDescriptionActivity(): ?string
+    {
+        return $this->descriptionActivity;
+    }
+
+    public function setDescriptionActivity(?string $descriptionActivity): self
+    {
+        $this->descriptionActivity = $descriptionActivity;
 
         return $this;
     }

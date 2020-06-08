@@ -24,7 +24,7 @@
                     <td>{{ message.id }}</td>
                     <td>{{ message.author.fullname }}</td>
                     <td>{{ message.destinataire.author.fullname }}</td>
-                    <td>{{ message.destinataire.title }}</td>
+                    <td></td>
                     <td>{{ message.message|nl2br }}</td>
                     <td class="text-center">
                         <a href="{{path('admin_message_delete', {'id':message.id})}}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer le message ?`)"><i class="fas fa-trash"></i></a>
@@ -48,7 +48,17 @@
     </div>
     <script>
         $(document).ready(function () {
-            $('#tab').DataTable();
+            $('#tab').DataTable(
+                {
+                    "language": {
+                        "lengthMenu": "Resultats _MENU_ par page",
+                        "zeroRecords": "Nothing found - sorry",
+                        "info": "Page _PAGE_ sur _PAGES_",
+                        "infoEmpty": "No records available",
+                        "infoFiltered": "(filtered from _MAX_ total records)"
+                    }
+                }
+            );
         });
     </script>
 {% endblock %}

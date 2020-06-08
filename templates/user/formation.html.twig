@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Formations{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h1 class="" style="margin-top:120px;">Les parcours de formation</h1>
+
+        <H3>trouvez les personnes en fonction de leurs formations</H3>
+
+        <h5 class="text-primary mt-5">Selectionnez un type de formation supérieure:</h5>
+
+           <div>
+                <a class="btn btn-light m-2" href="{{path('user_show_form', {'form':'DUT'})}}"><i class="fas fa-money-check"></i> DUT</a>
+                <a class="btn btn-light m-2" href="{{path('user_show_form', {'form':'DEUST'})}}"><i class="fas fa-money-check"></i> DEUST</a>
+                <a class="btn btn-light m-2" href="{{path('user_show_form', {'form':'BTS_BTSA'})}}"><i class="fas fa-money-check"></i> BTS ou BTSA</a>
+
+                <a class="btn btn-dark m-2" href="{{path('user_show_form', {'form':'Licences'})}}"><i class="fas fa-money-check"></i> Licences</a>
+                <a class="btn btn-dark m-2" href="{{path('user_show_form', {'form':'Licences_professionnelles'})}}"><i class="fas fa-money-check"></i> Licences professionnelles</a>
+                <a class="btn btn-dark m-2" href="{{path('user_show_form', {'form':'CPES'})}}"><i class="fas fa-money-check"></i> CPES</a>
+
+                <a class="btn btn-success m-2" href="{{path('user_show_form', {'form':'Classes_preparatoires'})}}"><i class="fas fa-money-check"></i> Classes préparatoires (CPGE)</a>
+                <a class="btn btn-success m-2" href="{{path('user_show_form', {'form':'Cycles_preparatoires'})}}"><i class="fas fa-money-check"></i> Cycles préparatoires (écoles d'ingénieurs</a>
+                <a class="btn btn-success m-2" href="{{path('user_show_form', {'form':'Ecoles_ingenieurs'})}}"><i class="fas fa-money-check"></i> Écoles d'ingénieurs</a>
+
+                <a class="btn btn-warning m-2" href="{{path('user_show_form', {'form':'Etudes_medicales'})}}"><i class="fas fa-money-check"></i> Études médicales</a>
+                <a class="btn btn-warning m-2" href="{{path('user_show_form', {'form':'Ecoles_paramedical'})}}"><i class="fas fa-money-check"></i> Écoles du paramédical</a>
+                <a class="btn btn-warning m-2" href="{{path('user_show_form', {'form':'Ecoles_social'})}}"><i class="fas fa-money-check"></i> Écoles du social</a>
+
+                <a class="btn btn-secondary m-2" href="{{path('user_show_form', {'form':'IEP'})}}"><i class="fas fa-money-check"></i> IEP</a>
+                <a class="btn btn-secondary m-2" href="{{path('user_show_form', {'form':'ENS'})}}"><i class="fas fa-money-check"></i> ENS</a>
+                <a class="btn btn-secondary m-2" href="{{path('user_show_form', {'form':'Ecoles_commerce'})}}"><i class="fas fa-money-check"></i> Ecoles de commerce</a>
+
+                <a class="btn btn-info m-2" href="{{path('user_show_form', {'form':'Filiere_comptable'})}}"><i class="fas fa-money-check"></i> Filière expertise comptable</a>
+                <a class="btn btn-info m-2" href="{{path('user_show_form', {'form':'Ecoles_specialisees'})}}"><i class="fas fa-money-check"></i> Ecoles spécialisées</a>
+                <a class="btn btn-info m-2" href="{{path('user_show_form', {'form':'Ecoles_veterinaires'})}}"><i class="fas fa-money-check"></i> Ecoles vétérinaires (ENV)</a>
+
+                <a class="btn btn-success m-2" href="{{path('user_show_form', {'form':'Ecoles_journalisme'})}}"><i class="fas fa-money-check"></i> Ecoles de journalisme</a>
+                <a class="btn btn-success m-2" href="{{path('user_show_form', {'form':'Formation_enseignants'})}}"><i class="fas fa-money-check"></i> Formation des enseignants</a>
+                <a class="btn btn-success m-2" href="{{path('user_show_form', {'form':'Ecoles_art'})}}"><i class="fas fa-money-check"></i> Ecoles d'art</a>
+                <a class="btn btn-success m-2" href="{{path('user_show_form', {'form':'Ecoles_audiovisuel'})}}"><i class="fas fa-money-check"></i> Ecoles d'audiovisuel</a>
+
+                <a class="btn btn-primary m-2" href="{{path('user_show_form', {'form':'Ecoles_police'})}}"><i class="fas fa-money-check"></i> Ecoles de police</a>
+                <a class="btn btn-primary m-2" href="{{path('user_show_form', {'form':'Ecoles_defense'})}}"><i class="fas fa-money-check"></i> Écoles de la défense</a>
+                <a class="btn btn-primary m-2" href="{{path('user_show_form', {'form':'Ecoles_gendarmerie'})}}"><i class="fas fa-money-check"></i> Écoles de gendarmerie</a>
+
+            </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <h1 class="my-5">Liste des utilisateurs</h1>
+
+        <table id="tab" class="table table-hover">
+            <thead>
+            <tr>
+                <th>Nom / Prénom</th>
+                <th >Année d'obtention du Bac</th>
+                <th >Filière Bac</th>
+                <th >Edutiant / Prof.</th>
+                <th class="text-center">En savoir plus !</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.author.fullname}}</td>
+                    <td >{{ user.author.yearsBac | date ('Y') }}</td>
+                    <td >{{ user.author.typeBac }}</td>
+                    <td > {% if user.author.studOrTeach == 'Student' %}
+                            <i class="fas fa-user-graduate"></i>
+                        {% else %}
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        {% endif%}
+                    </td>
+                    <td class="text-center"><a class="btn btn-success" href="{{path('user_show', {'id': user.author.id})}}"><i class="fas fa-money-check"></i></a></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#tab').DataTable(
+                {
+                    "language": {
+                        "lengthMenu": "Resultats _MENU_ par page",
+                        "zeroRecords": "Nothing found - sorry",
+                        "info": "Page _PAGE_ sur _PAGES_",
+                        "infoEmpty": "No records available",
+                        "infoFiltered": "(filtered from _MAX_ total records)"
+                    }
+                }
+            );
+        });
+    </script>
+
+{% endblock %}

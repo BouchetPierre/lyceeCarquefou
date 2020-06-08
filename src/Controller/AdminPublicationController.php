@@ -80,7 +80,7 @@ class AdminPublicationController extends AbstractController
 
         return $this->render('publications/index.html.twig', [
             'publications' => $publications,
-            'idLeMas' => $idAuthor
+            'idLycee' => $idAuthor
         ]);
     }
 

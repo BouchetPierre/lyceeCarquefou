@@ -21,21 +21,24 @@ class MessageController extends AbstractController
 {
     /**
      * permet de creer un message
-     * @Route("/message/new/{slug}", name="message_create")
+     * @Route("/message/new/{id}", name="message_create")
      * @IsGranted("ROLE_USER")
      *
      * @return Response
      */
-    public function create(Annonce $annonce, Request $request, EntityManagerInterface $manager)
+    public function create(Annonce $annonce, Request $request, EntityManagerInterface $manager, \Swift_Mailer $mailer)
     {
         $message = new Message();
-        $destinataire = $annonce->getAuthor()->getLastname();
+        $destinataire = $annonce->getAuthor()->getFullName();
 
         $form= $this->createForm(MessageType::class, $message);
 
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+
+            $mailUser = $annonce->getAuthor()->getEmail();
+            $this->notify($mailUser, $mailer);
 
             $message->setDestinataire($annonce);
             $message->setAuthor($this->getUser());
@@ -85,7 +88,7 @@ class MessageController extends AbstractController
     /**
      * Permet de supprimer un message
      * @Route("/message/show/{id}/delete", name="message_delete")
-     *
+     * @IsGranted("ROLE_USER")
      * @return Response
      */
 
@@ -99,5 +102,22 @@ class MessageController extends AbstractController
         );
 
         return $this->redirectToRoute('message_show');
+    }
+
+
+    private function notify($mailUser, \Swift_Mailer $mailer) //function to send a mail to member for notify cancellation
+    {
+
+        $message = (new \Swift_Message('Vous avez reçu un message sur le site du Lycée !!!'))
+            ->setFrom('bouchet.hp@gmail.com')
+            ->setTo($mailUser)
+            ->setBody('Allez consulter votre messagerie sur le site du Lycée !!!');
+
+        try {
+            $mailer->send($message);
+        }
+        catch(\Exception $e) {
+
+        }
     }
 }

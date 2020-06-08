@@ -23,13 +23,9 @@ html {
     position: relative;
     min-height: 100%;
 }
-.home{
-    background-image: url("/pictures/MontphotoTran05.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .navbar{
-    background-color: #42904e;
+    background-color: #208097;
     font-size: 1.2em;
 }
 
@@ -37,9 +33,6 @@ html {
     padding-top: 50px;
 }
 body{
-    background-image: url("/pictures/quartierLeMasO70.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     font-size:100%;
     font-family: Tahoma;
 }
@@ -49,7 +42,7 @@ body{
     border-radius: 10px;
     padding: 5px;
     width: 80%;
-    background-color: #42904e;
+    background-color: #208097;
     text-align: center;
     margin-top: -40px;
     margin-left: -10px;
@@ -63,22 +56,23 @@ body{
 
 .liens{
     width: 350px;
-    background-color: #42904e;
+    background-color: #208097;
     border-radius: 5px;
+    padding-right: 15px;
 }
 
 .titlePagePublication{
     border-radius: 5px;
     padding: 5px;
     width: 70%;
-    background-color: #42904e;
+    background-color: #208097;
 }
 
 .titlePageAnnonce{
     border-radius: 5px;
     padding: 5px;
     width: 40%;
-    background-color: #42904e;
+    background-color: #208097;
 }
 
 @media screen and (max-width: 64em) {
@@ -86,14 +80,14 @@ body{
         border-radius: 10px;
         padding: 5px;
         width: 100%;
-        background-color: #42904e;
+        background-color: #208097;
         text-align: center;
         margin-top: 20px;
         margin-left: -10px;
     }
     .liens{
         width: auto;
-        background-color: #42904e;
+        background-color: #208097;
         border-radius: 5px;
     }
 
@@ -107,47 +101,48 @@ body{
         border-radius: 5px;
         padding: 5px;
         width: 90%;
-        background-color: #42904e;
+        background-color: #208097;
     }
 
     .titlePageAnnonce{
         border-radius: 5px;
         padding: 5px;
         width: 90%;
-        background-color: #42904e;
+        background-color: #208097;
     }
 
 }
 
 .jumbotron {
-    background-image: url("/pictures/quartierLeMas.png");
+    background-image: url("/pictures/carquefou2.jpg");
+    height: 400px;
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
 }
 
 
 .btn-primary{
-    background-color: #42904e;
-    border-color: #42904e;
+    background-color: #208097;
+    border-color: #208097;
 }
 
 .author{
-    color:#42904e;
+    color:#208097;
 }
 
 .badge-primary{
-    background-color: #42904e;
+    background-color: #208097;
 }
 
 .titlePage{
     border-radius: 5px;
     padding: 5px;
     width: 50%;
-    background-color: #42904e;
+    background-color: #208097;
 }
 
 .h2home{
-    background-color: #42904e;
+    background-color: #208097;
     border-radius: 5px;
     padding: 5px;
 }

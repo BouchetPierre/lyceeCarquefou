@@ -4,11 +4,11 @@
 
 {% block body %}
 
-    <div class="container bg-light">
-        <h1 class="decalage my-5">Votre messagerie</h1>
-        <h4>Message Reçus</h4>
+    <div class="container">
+        <h1 class="decalage my-5 ">Votre messagerie</h1>
+        <h4 class="text-primary">Message Reçus</h4>
 
-        <table id="tab" class="table table-hover">
+        <table id="tab" class="table table-hover  bg-light">
             <thead>
             <tr>
                 <th>Auteur</th>
@@ -22,7 +22,7 @@
             {% for messageRecu in messageRecu  %}
                 <tr>
                     <td>{{ messageRecu.author.fullname }}</td>
-                    <td>{{ messageRecu.destinataire.title }}</td>
+                    <td></td>
                     <td>{{ messageRecu.message |nl2br }}</td>
                     <td class="text-center">
                         <a href="{{path('repond', {'id':messageRecu.author.id})}}" class="btn btn-success" ><i class="fas fa-pen-alt"></i></a>
@@ -47,8 +47,8 @@
             {% endfor %}
             </tbody>
         </table>
-        <h4>Message Envoyés</h4>
-        <table id="tab2" class="table table-hover">
+        <h4 class="mt-5 text-primary">Message Envoyés</h4>
+        <table id="tab2" class="table table-hover  bg-light">
             <thead>
             <tr>
                 <th>Destinataire</th>
@@ -61,7 +61,7 @@
             {% for message in messages  %}
                 <tr>
                     <td>{{ message.destinataire.author.fullname }}</td>
-                    <td>{{ message.destinataire.title }}</td>
+                    <td></td>
                     <td>{{ message.message }}</td>
 
                 </tr>
@@ -79,10 +79,30 @@
     </div>
     <script>
         $(document).ready(function () {
-            $('#tab').DataTable();
+            $('#tab').DataTable(
+                {
+                    "language": {
+                        "lengthMenu": "Resultats _MENU_ par page",
+                        "zeroRecords": "Nothing found - sorry",
+                        "info": "Page _PAGE_ sur _PAGES_",
+                        "infoEmpty": "No records available",
+                        "infoFiltered": "(filtered from _MAX_ total records)"
+                    }
+                }
+            );
         });
         $(document).ready(function () {
-            $('#tab2').DataTable();
+            $('#tab2').DataTable(
+                {
+                    "language": {
+                        "lengthMenu": "Resultats _MENU_ par page",
+                        "zeroRecords": "Nothing found - sorry",
+                        "info": "Page _PAGE_ sur _PAGES_",
+                        "infoEmpty": "No records available",
+                        "infoFiltered": "(filtered from _MAX_ total records)"
+                    }
+                }
+            );
         });
     </script>
 

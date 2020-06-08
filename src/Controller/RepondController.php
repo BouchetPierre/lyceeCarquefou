@@ -22,7 +22,7 @@ class RepondController extends AbstractController
      *
      * @return Response
      */
-    public function create(User $user, Request $request, EntityManagerInterface $manager)
+    public function create(User $user, Request $request, EntityManagerInterface $manager, \Swift_Mailer $mailer)
     {
         $reponse = new Repond();
         $destinataire = $user->getLastname();
@@ -32,6 +32,8 @@ class RepondController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+            $mailUser = $user->getEmail();
+            $this->notify($mailUser, $mailer);
 
             $reponse->setDestinataire($user);
             $reponse->setAuthor($this->getUser());
@@ -56,7 +58,7 @@ class RepondController extends AbstractController
     /**
      * Permet de supprimer un message
      * @Route("/repond/show/{id}/delete", name="repond_delete")
-     *
+     * @IsGranted("ROLE_USER")
      * @return Response
      */
 
@@ -70,5 +72,22 @@ class RepondController extends AbstractController
         );
 
         return $this->redirectToRoute('message_show');
+    }
+
+
+    private function notify($mailUser, \Swift_Mailer $mailer) //function to send a mail to member for notify cancellation
+    {
+
+        $message = (new \Swift_Message('Vous avez reçu un message sur le site du Lycée !!!'))
+            ->setFrom('bouchet.hp@gmail.com')
+            ->setTo($mailUser)
+            ->setBody('Allez consulter votre messagerie sur le site du Lycée !!!');
+
+        try {
+            $mailer->send($message);
+        }
+        catch(\Exception $e) {
+
+        }
     }
 }

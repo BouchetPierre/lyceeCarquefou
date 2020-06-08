@@ -34,6 +34,15 @@ class AnnonceRepository extends ServiceEntityRepository
         ;
     }
 
+    public function findAllForForm($form)
+    {
+        return $this->createQueryBuilder('a')
+            ->select()
+            ->where('(a.typeScoolOne = :val) or (a.typeScoolTwo = :val) or (a.typeScoolThree = :val)')
+            ->setParameter('val', $form)
+            ->getQuery()
+            ->getResult();
+    }
 
     /*
     public function findOneBySomeField($value): ?Annonce

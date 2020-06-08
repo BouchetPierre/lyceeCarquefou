@@ -1,62 +1,91 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Modification d'une annonce{% endblock %}
+{% block title %}Modification de votre fiche{% endblock %}
 
 {% block body %}
 
 
     <div class="container bg-light py-5">
-        <h1 class="decalage">Modifier l'annonce {{ annonce.title }}</h1>
+        <h1 class="decalage">Modifiez votre fiche utilisateur</h1>
+        <div class="row">
+            <div class="col-md-6">
+                {{ form_start(form) }}
 
-        {{ form_start(form) }}
-        <div class="form-groupe " >
-            <div class="mt-3">
-                {{ form_label(form.title) }}
-                {{ form_widget(form.title) }}
+                <p>Mes informations personnelles</p>
+                {{ form_row(form.imageFile) }}
+                {{ form_row(form.address) }}
+                {{ form_row(form.city) }}
+                {{ form_row(form.country) }}
+                {{ form_row(form.phone) }}
+                {{ form_row(form.emailOk) }}
+                {{ form_row(form.linkIn) }}
             </div>
-            <div class="mt-3">
-                {{ form_label(form.introduction) }}
-                {{ form_widget(form.introduction) }}
-            </div>
-            <div class="mt-3">
-                {{ form_label(form.content) }}
-                {{ form_widget(form.content) }}
-            </div>
-            <div class="mt-3 ">
-                {{ form_row(form.imageFile,{
-                    attr:{
-                        'placeholder': 'Selectionnez une image,  facultatif'
-                    }
-                })
-                }}
-            </div>
-            <div>
-                <strong>{{ form_label(form.type) }}</strong>
-                <div class="row">
-                    <div class="col-4">
-                        <h6><u>Help Matériel</u></h6>
-                        {{ form_widget(form.type[0]) }}
-                        {{ form_widget(form.type[1]) }}
-                        {{ form_widget(form.type[2]) }}
-                    </div>
-                    <div class="col-4">
-                        <h6><u>Idées Festives</u></h6>
-                        {{ form_widget(form.type[3]) }}
-                        {{ form_widget(form.type[4]) }}
-                        {{ form_widget(form.type[5]) }}
-                    </div>
-                    <div class="col-4">
-                        <h6><u>Services à la carte</u></h6>
-                        {{ form_widget(form.type[6]) }}
-                        {{ form_widget(form.type[7]) }}
-                    </div>
+            <div class="col-md-6">
+                <p>Mon parcours</p>
+                <div class="parcours1">
+                    {{ form_row(form.yearsOne) }}
+                    {{ form_row(form.typeScoolOne) }}
+                    {{ form_row(form.specialOne) }}
+                    {{ form_row(form.descriptionOne) }}
                 </div>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary mt-3">Valider et publier</button>
-        {{ form_end(form) }}
+                <div class="parcours2">
+                    {{ form_row(form.yearsTwo) }}
+                    {{ form_row(form.typeScoolTwo) }}
+                    {{ form_row(form.specialTwo) }}
+                    {{ form_row(form.descriptionTwo) }}
+                </div>
+                <div class="parcours3">
+                    {{ form_row(form.yearsThree) }}
+                    {{ form_row(form.typeScoolThree) }}
+                    {{ form_row(form.specialThree) }}
+                    {{ form_row(form.descriptionThree) }}
+                </div>
+                <button type="button" class="btn btn-primary ajouter1">Ajoutez une formation</button>
+                <button type="button" class="btn btn-primary ajouter2">Ajoutez une formation</button>
+                <button type="button" class="btn btn-primary ajouter3">Ajoutez une formation</button>
+                <div class="activityOk mt-3">
+                    {{ form_row(form.profActivity) }}
+                </div>
+                <div class="parcours4">
+                    {{ form_row(form.yourActivity) }}
+                    {{ form_row(form.descriptionActivity) }}
+                </div>
 
+                <button type="submit" class="btn btn-primary mt-3">Valider</button>
+                {{ form_end(form) }}
+            </div>
+
+        </div>
     </div>
 
 
+    {% block javascripts %}
+        <script type="text/javascript" language="javascript">
+
+            var btn1 = document.querySelector('.ajouter1');
+            var btn2 = document.querySelector('.ajouter2');
+            var btn3 = document.querySelector('.ajouter3');
+
+            var yearsOne1 = document.querySelector('#annonce_yearsOne_month');
+            var yearsOne2 = document.querySelector('#annonce_yearsOne_day');
+            yearsOne1.style.display = 'none';
+            yearsOne2.style.display = 'none';
+            var yearsTwo1 = document.querySelector('#annonce_yearsTwo_month');
+            var yearsTwo2 = document.querySelector('#annonce_yearsTwo_day');
+            yearsTwo1.style.display = 'none';
+            yearsTwo2.style.display = 'none';
+            var yearsThree1 = document.querySelector('#annonce_yearsThree_month');
+            var yearsThree2 = document.querySelector('#annonce_yearsThree_day');
+            yearsThree1.style.display = 'none';
+            yearsThree2.style.display = 'none';
+
+
+            btn1.style.display = 'none';
+            btn2.style.display = 'none';
+            btn3.style.display = 'none';
+
+
+        </script>
+
+    {% endblock %}
 {% endblock %}

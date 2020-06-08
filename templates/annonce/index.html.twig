@@ -1,41 +1,50 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base.html.twig' %}
 
-{% block title %}Annonces{% endblock %}
+{% block title %}Les utilisateurs{% endblock %}
 
 {% block body %}
+    <div class="container-fluid">
+        <h1 class="my-5">Liste des utilisateurs</h1>
 
-    <div class="container">
-        {% if annonces %}
-            <div class="decalage"></div>
-            <h1 class="my-5 text-white titlePageAnnonce"><strong>Annonces du Quartier</strong></h1>
-            <div class="row">
-                {% for annonce in annonces  %}
-                    <div class="col-lg-4 col-12 " style="margin-bottom: 50px;">
-                        <div class="card bg-light mb-3">
-                            <div class="card-header text-center">
-                                {{ include ('annonce/typeAnnonce.html.twig')  }}
-                            </div>
-                            {{ include ('annonce/imageAnnonce.html.twig')  }}
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    {{ annonce.title }}
-                                </h4>
-                                <p class="card-text">
-                                    {{ annonce.introduction |raw|nl2br }}
-                                </p>
-                                <a href="{{path('annonces_show', {'id':annonce.id})}}" class="btn btn-secondary ">En savoir plus !</a>
-                                {% if  app.user and app.user == annonce.author %}
-                                    <a href="{{ path('annonces_edit', {'id': annonce.id}) }}" class="btn btn-primary">Modifier l'annonce</a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <div class="decalage"></div>
-            <h1 class="text-white titlePage my-5"><strong>Il n'y a pas d'annonce pour l'instant !!!</strong></h1>
-        {% endif %}
+        <table id="tab" class="table table-hover">
+            <thead>
+            <tr>
+                <th></th>
+                <th>Nom / Prénom</th>
+                <th >Année d'obtention du Bac</th>
+                <th >Filière Bac</th>
+                <th >Edutiant / Prof.</th>
+                <th class="text-center">En savoir plus !</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for annonce in annonces %}
+                <tr>
+                    <td>{{ annonce.author.fullname}}</td>
+                    <td >{{ annonce.author.yearsBac |date }}</td>
+                    <td >{{ annonce.author.typeBac }}</td>
+
+                    <td class="text-center">
+                        <a href=""></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
-
+    <script>
+        $(document).ready(function () {
+            $('#tab').DataTable(
+                {
+                    "language": {
+                        "lengthMenu": "Resultats _MENU_ par page",
+                        "zeroRecords": "Nothing found - sorry",
+                        "info": "Page _PAGE_ sur _PAGES_",
+                        "infoEmpty": "No records available",
+                        "infoFiltered": "(filtered from _MAX_ total records)"
+                    }
+                }
+            );
+        });
+    </script>
 {% endblock %}

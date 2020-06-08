@@ -9,20 +9,29 @@
         <table id="tab" class="table table-hover">
             <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom / Prénom</th>
-                <th >email</th>
-                <th >Adresse</th>
+                <th>Année BAC</th>
+                <th>Filière Bac</th>
+                <th>Email</th>
+                <th>Utilisateur approuvé</th>
+                <th>Voir le fiche</th>
                 <th class="text-center">Supprimer l'utilisateur</th>
             </tr>
             </thead>
             <tbody>
             {% for user in users %}
                 <tr>
-                    <td>{{ user.id }}</td>
-                    <td>{{ user.fullname}}</td>
-                    <td >{{ user.email }}</td>
-                    <td >{{ user.address }}</td>
+                    <td>{{ user.fullname }}</td>
+                    <td>{{ user.yearsBac | date ('Y')}}</td>
+                    <td >{{ user.typeBac }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{% if user.inscriVal == 0%}
+                        <a href="{{ path('admin_user_val', {'id':user.id}) }}" class="btn btn-warning" onclick="return confirm(`Voulez vous valider cet utilisateur ?`)"><i class="fas fa-chalkboard-teacher"></i></a>
+                        {% else %}
+                        OK
+                        {% endif%}
+                    </td>
+                    <td class="text-center"><a class="btn btn-success" href="{{path('user_show', {'id': user.id})}}"><i class="fas fa-money-check"></i></a></td>
                     <td class="text-center">
                         <a href="{{ path('admin_user_delete', {'id':user.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer cet utilisateur ?`)"><i class="fas fa-trash"></i></a>
                     </td>
@@ -33,7 +42,17 @@
     </div>
     <script>
     $(document).ready(function () {
-    $('#tab').DataTable();
+    $('#tab').DataTable(
+        {
+            "language": {
+                "lengthMenu": "Resultats _MENU_ par page",
+                "zeroRecords": "Nothing found - sorry",
+                "info": "Page _PAGE_ sur _PAGES_",
+                "infoEmpty": "No records available",
+                "infoFiltered": "(filtered from _MAX_ total records)"
+            }
+        }
+    );
     });
     </script>
 {% endblock %}

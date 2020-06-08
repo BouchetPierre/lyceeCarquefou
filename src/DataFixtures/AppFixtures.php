@@ -12,6 +12,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Faker\Factory;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use DateTime;
 
 class AppFixtures extends Fixture
 {
@@ -31,11 +32,16 @@ class AppFixtures extends Fixture
         $adminRole->setTitle('ROLE_ADMIN');
         $manager->persist($adminRole);
 
+        $date = $faker->date($format = 'd-m-Y', $max = 'now');
+        $yearsBac = new \DateTime($date);
         $adminUser = new User();
-        $adminUser->setName('Bouchet')
-            ->setLastname('Pierre')
-            ->setAddress('99 Rue Edmond Halley')
-            ->setEmail('pf.bouchet@orange.fr')
+        $adminUser->setName('Admin')
+            ->setLastname('Admin')
+            ->setInscriVal(1)
+            ->setEmail('bouchet.hp@gmail.com')
+            ->setYearsBac($yearsBac)
+            ->setTypeBac('S')
+            ->setStudOrTeach('Teacher')
             ->setHash($this->encoder->encodePassword($adminUser, 'password'))
             ->addUserRole($adminRole);
         $manager->persist($adminUser);
@@ -44,14 +50,22 @@ class AppFixtures extends Fixture
         $users = [];
         $genres = ['male', 'female'];
 
-        for($i=1; $i<=5; $i++) {
+        for($i=1; $i<=30; $i++) {
             $user = new User();
-
+            $choixType= ['S', 'L','ES'];
+            $typeBac = $choixType[rand(0,2)];
+            $date = $faker->date($format = 'd-m-Y', $max = 'now');
+            $yearsBac = new \DateTime($date);
+            $choixTypeTwo= ['Student', 'Teacher'];
+            $type = $choixTypeTwo[rand(0,1)];
             $hash = $this->encoder->encodePassword($user, 'password');
 
-            $user->setName($faker->lastName)
-                ->setLastname($faker->firstName)
-                ->setAddress($faker->address)
+            $user->setName($faker->firstName)
+                ->setLastname($faker->lastName)
+                ->setTypeBac($typeBac)
+                ->setInscriVal(0)
+                ->setStudOrTeach($type)
+                ->setYearsBac($yearsBac)
                 ->setEmail($faker->email)
                 ->setHash($hash)
 
@@ -59,30 +73,6 @@ class AppFixtures extends Fixture
 
             $manager->persist($user);
             $users [] = $user;
-        }
-
-// Annonces
-        for($i=1; $i <=20; $i++) {
-            $annonce = new Annonce;
-            $choixType= ['Bricolage', 'Jardinage','Sortie','Fête', 'Collectif'];
-            $type = $choixType[rand(0,4)];
-            $title = $faker->sentence();
-            $introduction = $faker->paragraph(2);
-            $content = '<p>'.join("</p><p>",$faker->paragraphs(5)).'</p>';
-
-            $user =$users[mt_rand(0, count($users)-1)];
-
-            $annonce->setTitle($title)
-                    ->setType($type)
-                    ->setIntroduction($introduction)
-                    ->setContent($content)
-                    ->setAuthor($user)
-            ;
-
-
-
-
-            $manager->persist($annonce);
         }
 
         $manager->flush();

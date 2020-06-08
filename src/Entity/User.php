@@ -57,9 +57,14 @@ class User implements UserInterface
     public $passwordConfirm;
 
     /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $yearsBac;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
-    private $address;
+    private $typeBac;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -108,6 +113,21 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $token;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $inscriVal;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $studOrTeach;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $ficheOK;
 
     /**
      * Get passwordRequestedAt
@@ -227,14 +247,26 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getAddress(): ?string
+    public function getYearsBac(): ?\DateTimeInterface
     {
-        return $this->address;
+        return $this->yearsBac;
     }
 
-    public function setAddress(string $address): self
+    public function setYearsBac(\DateTimeInterface $yearsBac): self
     {
-        $this->address = $address;
+        $this->yearsBac = $yearsBac;
+
+        return $this;
+    }
+
+    public function getTypeBac(): ?string
+    {
+        return $this->typeBac;
+    }
+
+    public function setTypeBac(string $typeBac): self
+    {
+        $this->typeBac = $typeBac;
 
         return $this;
     }
@@ -459,6 +491,42 @@ class User implements UserInterface
                 $AdminPublication->setAuthor(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getInscriVal(): ?bool
+    {
+        return $this->inscriVal;
+    }
+
+    public function setInscriVal(bool $inscriVal): self
+    {
+        $this->inscriVal = $inscriVal;
+
+        return $this;
+    }
+
+    public function getStudOrTeach(): ?string
+    {
+        return $this->studOrTeach;
+    }
+
+    public function setStudOrTeach(string $studOrTeach): self
+    {
+        $this->studOrTeach = $studOrTeach;
+
+        return $this;
+    }
+
+    public function getFicheOK(): ?bool
+    {
+        return $this->ficheOK;
+    }
+
+    public function setFicheOK(?bool $ficheOK): self
+    {
+        $this->ficheOK = $ficheOK;
 
         return $this;
     }

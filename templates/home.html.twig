@@ -6,55 +6,36 @@
     <div class="container pt-2">
         <div class="jumbotron mt-5">
             <div class="h1quartier">
-            <h1 class="text-white "><strong>BIENVENUE SUR LE SITE DU QUARTIER</strong></h1>
-            <p class="lead text-white">Pour une vraie vie de quartier : Partager, Echanger, Apprendre, Organiser, Fêter !!!</p>
+            <h2 class="text-white "><strong>BIENVENUE SUR LE SITE DU LYCEE</strong></h2>
+            <p class="lead text-white">Echangez sur vos parcours, Gardez le contact</p>
             </div>
         </div>
-        <div>
-            <h4><strong>Des annonces, des évènements, des envies, des besoins, échanger simplement avec ses voisins ... </strong></h4>
-        </div>
-        <div class="row">
-            <div class="col-12 col-lg-8  ">
-                <div class="h2home mt-3">
-                    <h2 class="text-white">Dernières informations de l'ASL</h2>
-                    <div class="card bg-light mb-3" >
-                        <div class="card-body">
-                        {% for publication in publications  %}
-                                    <a class="text-dark" href="{{ path('publication_show') }}">- {{ publication.subject}}</a><br>
+            <div class="h2home mt-3">
+            <h2 class="text-white">Dernières informations du Lycée</h2>
+            <div class="card bg-light mb-3" >
+                <div class="card-body">
+                {% for publication in publications  %}
+                            <a class="text-dark" href="{{ path('publication_show') }}">- {{ publication.subject}}</a><br>
 
-                        {% endfor %}
-                        </div>
-                    </div>
+                {% endfor %}
                 </div>
-                <h5 class="mt-4"><strong>Cliquez sur la bannière qui vous intéresse</strong></h5>
-                <div id="carouselExampleSlidesOnly" class="carousel slide my-3 " data-ride="carousel" >
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" >
-                            <a href="https://tam.cartographie.pro/"><img src="/pictures/liens/planTram.png" class="d-block w-100" alt="" ></a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="http://www.allocine.fr/film/"><img src="/pictures/liens/cinema.png" class="d-block w-100" alt="" ></a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://www.midilibre.fr/herault/montpellier/"><img src="/pictures/liens/midi.png" class="d-block w-100" alt="" ></a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between pr-3">
+            <div class="col-12 col-lg-4 mt-3 ">
+                <iframe src="https://www.meteo-nantes.net/widget/prevision-meteo" frameborder="0" style="width:340px; height: 250px;"></iframe>
             </div>
             <div class="col-12 col-lg-4 mt-3 ">
-                <iframe class="meteo" src="https://www.meteo-montpellier.fr/widget/prevision-meteo" frameborder="0" ></iframe>
-                <div class="liens py-2 mb-5 mt-3 ">
-                    <h3 class="m-2">Les liens utiles</h3>
-                        <ul class="list-unstyled">
-                            <li class="m-3"><a class="text-white" href="https://www.montpellier.fr/"><img src="/pictures/liens/Montpellier.jpg" alt="Ville de Montpellier" style="height: 35px;">&nbsp;&nbsp; Ville de Montpellier</a></li>
-                            <li class="m-3"><a class="text-white" href="https://www.montpellier-tourisme.fr/Preparer-Reserver/Decouvertes/Les-incontournables-de-Montpellier"><img src="/pictures/liens/MontpellierTouri.jpg" alt="Culture Montpellier" style="height: 30px;">&nbsp;&nbsp; Montpellier Tourisme</a></li>
-                            <li class="m-3"><a class="text-white" href="https://34.agendaculturel.fr/"><img src="/pictures/liens/agenda-culturel-34.png" alt="Agenda culturel" style="height: 30px;"></a></li>
-                            <li class="m-3"><a class="text-white" href="https://montpellier.citycrunch.fr/"><img src="/pictures/liens/logo_mouetteMCCgd_1_.png" alt="Agenda culturel" style="height: 30px;"></a></li>
-                            <li class="m-3"><a class="text-white" href="http://www.marchedulez.com"><img src="/pictures/liens/logo-marche-du-lez.png" alt="Marche du Lez" style="height: 35px;">&nbsp;&nbsp; Marché du Lez</a></li>
-                            <li class="m-3"><a class="text-white" href="https://www.francebleu.fr/herault"><img src="/pictures/liens/franceBleu.png" alt="France Bleu" style="height: 35px;">&nbsp;&nbsp; France Bleu Hérault</a></li>
-                            <li class="m-3"><a class="text-white" href="https://www.tam-voyages.com/index.asp"><img src="/pictures/liens/Tam.png" alt="Tam" style="height: 35px;">&nbsp;&nbsp; Tramway - Bus</a></li>
-                        </ul>
-                </div>
+                <img src="/pictures/lycee.jpg" style="width:340px; height: 250px;"alt="">
+            </div>
+            <div class="liens py-2  mt-3 ">
+                <h3 class="m-2">Les liens utiles</h3>
+                    <ul class="list-unstyled">
+                        <li class="m-3"><a class="text-white" href="https://honore-destienne-dorves.paysdelaloire.e-lyco.fr/"><img src="/pictures/liens/carquefou.jpg" alt="Lycee de Carquefou" style="height: 35px;">&nbsp;&nbsp; Lycée de Carquefou</a></li>
+                        <li class="m-3"><a class="text-white" href="http://www.onisep.fr/"><img src="/pictures/liens/onisep.png" alt="onisep" style="height: 30px;">&nbsp;&nbsp; ONISEP</a></li>
+                        <li class="m-3"><a class="text-white" href="https://www.emploi-store.fr/portail/accueil"><img src="/pictures/liens/emploi.jpeg" alt="emploi" style="height: 30px;">&nbsp;&nbsp; Emploi-Store</a></li>
+                        <li class="m-3"><a class="text-white" href="https://www.letudiant.fr/"><img src="/pictures/liens/Etudiant.png" alt="etudiant" style="height: 30px;">&nbsp;&nbsp; L'etudiant</a></li>
+                    </ul>
             </div>
         </div>
     </div>

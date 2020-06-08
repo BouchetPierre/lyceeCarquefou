@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les utilisateurs{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+
+        <h1 class="" style="margin-top:120px;">Liste des utilisateurs</h1>
+
+        <table id="tab" class="table table-hover">
+            <thead>
+            <tr>
+                <th>Nom / Prénom</th>
+                <th >Année d'obtention du Bac</th>
+                <th >Filière Bac</th>
+                <th >Edutiant / Prof.</th>
+                <th class="text-center">En savoir plus !</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.fullname}}</td>
+                    <td >{{ user.yearsBac | date ('Y') }}</td>
+                    <td >{{ user.typeBac }}</td>
+                    <td > {% if user.studOrTeach == 'Student' %}
+                            <i class="fas fa-user-graduate"></i>
+                        {% else %}
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        {% endif%}
+                    </td>
+                    <td class="text-center"><a class="btn btn-success" href="{{path('user_show', {'id': user.id})}}"><i class="fas fa-money-check"></i></a></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#tab').DataTable(
+                {
+                    "language": {
+                        "lengthMenu": "Resultats _MENU_ par page",
+                        "zeroRecords": "Nothing found - sorry",
+                        "info": "Page _PAGE_ sur _PAGES_",
+                        "infoEmpty": "No records available",
+                        "infoFiltered": "(filtered from _MAX_ total records)"
+                    }
+                }
+            );
+        });
+    </script>
+{% endblock %}

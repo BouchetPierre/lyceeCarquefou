@@ -15,5 +15,14 @@
                 </div>
             </div>
     </div>
+    {% block javascripts %}
+        <script type="text/javascript" language="javascript">
+            var parcours1 = document.querySelector('#registration_yearsBac_month');
+            var parcours2 = document.querySelector('#registration_yearsBac_day');
 
+            parcours2.style.display = 'none';
+            parcours1.style.display = 'none';
+
+        </script>
+    {% endblock %}
 {% endblock %}

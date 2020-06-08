@@ -1,53 +1,111 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page de {{ user.fullName }} {% endblock %}
+{% block title %}{{ user.fullName }} {% endblock %}
 
 {% block body %}
-    <div class="container bg-light pb-5" style="margin-top: 100px;">
+    <div class="container bg-light pb-5 " style="margin-top: 100px;">
         <div class="row align-items-center">
             <div class="col-9">
                 <div class="decalage"></div>
-                <h1 class="text-success"><strong>{{ user.fullName }}</strong></h1>
-                {% if user is same as(app.user)%}
-                    <div class="mt-3">
-                        <a href="{{ path('account_profile') }}" class="btn btn-primary mr-5 mb-2">Modifier mes informations</a>
-                        <a href="{{ path('account_password') }}" class="btn btn-primary mr-5 mb-2">Modifier mon mot de passe</a>
-                        <a href="{{ path('message_show') }}" class="btn btn-primary mb-2">Messagerie</a>
-                    </div>
-                {% endif %}
+                    <h1 class="text-success"><strong>{{ user.fullName }}</strong></h1>
+                    {% if user is same as(app.user)%}
+                        <div class="mt-3">
+                            <a href="{{ path('account_profile') }}" class="btn btn-primary mr-5 mb-2">Modifier mes informations</a>
+                            <a href="{{ path('account_password') }}" class="btn btn-primary mr-5 mb-2">Modifier mon mot de passe</a>
+                            <a href="{{ path('message_show') }}" class="btn btn-primary mb-2">Messagerie</a>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
-           </div>
+    </div>
     <div class="container">
-        {% if user.annonces | length > 0 %}
-            <div class="row">
+        {% if user.ficheOK == 1 %}
+            <div>
                 {% for annonce in user.annonces %}
-                    <div class="col-md-4" style="margin-bottom: 50px;">
-                        <div class="card bg-light mb-3">
-                            <div class="card-header text-center">
-                                {{ annonce.type }}
-                            </div>
-                            {{ include ('annonce/imageAnnonce.html.twig')  }}
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    {{ annonce.title }}
-                                </h4>
-                                <p class="card-text">
-                                    {{ annonce.introduction }}
-                                </p>
-                                <a href="{{path('annonces_show', {'id':annonce.id})}}" class="btn btn-secondary">En savoir plus !</a>
-                            </div>
+                    <div class="row">
+                        <div class="col-3">
+                            {% if annonce.coverImage %}
+                                <img src="/pictures/annonces/{{annonce.coverImage}} " alt="" style="height: 80px;  display: block ">
+                            {% else %}
+                                <img src="/pictures/annonces/avatar.jpeg " alt="" style="height: 80px;  display: block ">
+                            {% endif %}
+                        </div>
+                        <div class="col-9 pt-3">
+                            {% if user is same as(app.user)%}
+                                <a href="{{ path('fiche_edit', {'id':annonce.id}) }}" class="btn btn-primary mr-5 mb-2">Modifier ma fiche</a>
+                                <a href="{{ path('fiche_delete', {'id':annonce.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer votre fiche ?`)">Supprimer ma fiche</a>
+                            {% endif %}
                         </div>
                     </div>
-                {% endfor %}
+                    <div class="mt-5 border rounded-lg border-secondary p-3">
+                        <h2 class="text-success">Mes coordonnées</h2>
+                            <h5>Adresse: {{ annonce.address }}, {{ annonce.city }}, {{ annonce.country }} </h5>
+                            {% if annonce.emailOk == 1 %}
+                                <h5>Téléphone: {{ annonce.phone }}</h5>
+                                <h5>Email: {{ annonce.author.email }}</h5>
+                            {% endif %}
+                            {% if  app.user and app.user != annonce.author %}
+                                <a href="{{ path('message_create', {'id': annonce.id})}}" class="btn btn-primary">M'envoyer un message</a>
+                            {% endif %}
+                    </div>
+                    <div class="mt-5 border rounded-lg border-secondary p-3">
+                        <h2 class="text-success">Mon lien Linkedln</h2>
+                        <a href="{{ annonce.linkIn }}">{{ annonce.linkIn }}</a>
+                    </div>
+                    <div class="mt-5 mb-5 border rounded-lg border-secondary p-3">
+                        <h2 class="text-success">Mon parcours</h2>
+                        <div class="parcours1 mt-3">
+                            {% if annonce.typeScoolOne %}
+                                <h5 class="font-weight-bold">Année d'entrée: {{ annonce.yearsOne |date('Y')}}</h5>
+                                <h5>Formation: {{ annonce.typeScoolOne }}</h5>
+                                <h5>Spécialité: {{ annonce.specialOne }}</h5>
+                                <h5>Commentaire: {{ annonce.descriptionOne }}</h5>
+                            {% endif %}
+                        </div>
+                        <div class="parcours2 mt-3">
+                            {% if annonce.typeScoolTwo %}
+                                <h5 class="font-weight-bold">Année d'entrée: {{ annonce.yearsTwo |date('Y')}}</h5>
+                                <h5>Formation: {{ annonce.typeScoolTwo }}</h5>
+                                <h5>Spécialité: {{ annonce.specialTwo }}</h5>
+                                <h5>Commentaire: {{ annonce.descriptionTwo }}</h5>
+                            {% endif %}
+                        </div>
+                        <div class="parcours3 mt-3">
+                            {% if annonce.typeScoolThree %}
+                                <h5 class="font-weight-bold">Année d'entrée: {{ annonce.yearsThree |date('Y')}}</h5>
+                                <h5>Formation: {{ annonce.typeScoolThree }}</h5>
+                                <h5>Spécialité: {{ annonce.specialThree }}</h5>
+                                <h5>Commentaire: {{ annonce.descriptionThree }}</h5>
+                            {% endif %}
+                        </div>
+
+                        <div class="activityOk mt-3">
+                            {% if annonce.profActivity == 1 %}
+                                <h5 class="font-weight-bold">J'exerce une activité professionnelle, mon métier:</h5>
+                                    <h5>{{ annonce.yourActivity }}</h5>
+                                <h5>Description: {{ annonce.descriptionActivity }}</h5>
+                                    {{ annonce.descriptionActivity }}
+                            {% endif %}
+                        </div>
+                    </div>
+
+                 {% endfor %}
             </div>
         {% else %}
-            <div class="alert alert-warning mb-3">
-                <p>
-                    <strong>Vous n'a pas encore d'annonce sur le site !</strong>
-                </p>
-            </div>
-
+            {% if user is same as(app.user)%}
+                <div class="alert alert-warning mb-3">
+                    <p>
+                        <strong>Vous n'a pas encore rempli votre fiche utilisateur !</strong>
+                    </p>
+                </div>
+            {% else%}
+                <div class="alert alert-warning mb-3">
+                    <p>
+                        <strong>La fiche utilisateur de cette personne n'est pas encore faite !</strong>
+                    </p>
+                </div>
+            {% endif%}
         {% endif %}
     </div>
 
