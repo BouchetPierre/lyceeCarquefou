@@ -2,105 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/pictures/annonces/avatar.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/carquefou.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/Etudiant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/carquefou.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/emploi.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pictures/liens/onisep.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/allUsers.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/formation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2223db44-1e75-4051-88a9-ff5093191098.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2223db44-1e75-4051-88a9-ff5093191098.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leMas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leMas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/lemas.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/lemas.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/MontphotoTran05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/bouchet-pierre-photo-cv-5e60da5855082761237958.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/capture-d-ecran-de-2020-02-25-15-32-13-5e67a1356562d253147740.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/capture-d-ecran-de-2020-02-25-15-32-13-5e67c238e246d784791832.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/capture-d-ecran-de-2020-02-25-15-32-13-5e68eb3150b8e707042997.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/echange-5e5f8cd2b8223528591960.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/echange-5e5fcd78b62ea343794142.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/echange-5e60b7534b145980611956.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/fete-5e60d129726b2634605437.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/jardinage-5e60af5ec3072019988255.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/justificatif-5e68ded0d4a60968702457.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/annonces/village-5e5fd10771a67589738637.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/lemas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/liens/MontpellierTouri.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/liens/Tam.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/liens/agenda-culturel-34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/liens/cinema.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/liens/franceBleu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/liens/logo-marche-du-lez.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/liens/logo_mouetteMCCgd_1_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/liens/midi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/liens/planTram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/newMessage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/autre.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/autreidee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/besoins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/bricolage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/fete.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/jardinage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/offres.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/placeolderPictures/sortie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/quartierLeMas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/quartierLeMasO70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pictures/village.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/brochures/certificatopenclass-5e6cda8223f01.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/brochures/certificatopenclass-5e6cdea72561f.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/brochures/certificatopenclass-5e6f2d83940ff.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/brochures/justificatif-5e68eac9e7028.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/brochures/justificatif-5e68eaf42d8b1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/brochures/justificatif-5e68eb31505f1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/brochures/justificatif-5e68eb31505f1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/brochures/justificatif5e68eb31505f1-5e6b7bd644acb.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/brochures/justificatif5e68eb31505f1-5e6f7abb95e70.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AnnonceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AnnonceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Annonce.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AccountType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AccountType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AnnonceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AnnonceType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200304150258.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200304154019.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305090110.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305100101.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200305153433.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200306074723.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200306175423.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200307160132.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200310090945.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200310141251.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200311133336.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200313122917.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200313140330.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200316085622.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200318110044.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AnnonceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AnnonceRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/registration.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/annonces/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/annonces/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/imageAnnonce.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/typeAnnonce.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +24,6 @@
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
-      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
       <path value="$PROJECT_DIR$/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
@@ -174,7 +80,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
       <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
       <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
       <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
@@ -238,6 +143,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
     </include_path>
   </component>
   <component name="ProjectId" id="1YQb5zbPZPnjGkDSIbeFhRIJwsw" />
@@ -249,19 +156,20 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/pictures/liens" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/pictures" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/pictures" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/pictures/liens" />
       <recent name="$PROJECT_DIR$/public/pictures/placeolderPictures" />
       <recent name="$PROJECT_DIR$/public/pictures/annonces" />
-      <recent name="$PROJECT_DIR$/public/pictures" />
-      <recent name="$PROJECT_DIR$/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/pictures" />
@@ -329,7 +237,8 @@
       <workItem from="1591081539916" duration="18987000" />
       <workItem from="1591270364609" duration="8663000" />
       <workItem from="1591343008687" duration="8596000" />
-      <workItem from="1591593905644" duration="4502000" />
+      <workItem from="1591593905644" duration="31419000" />
+      <workItem from="1591627290111" duration="616000" />
     </task>
     <servers />
   </component>
@@ -346,7 +255,6 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="2566" y="343" width="583" height="390" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584106267120" />
-    <state x="2566" y="343" width="555" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582880715992" />
     <state x="690" y="361" width="573" height="381" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584528909814" />
     <state x="1987" y="27" width="825" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583224853341">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -357,19 +265,17 @@
     </state>
     <state x="872" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1583145959597" />
     <state x="2356" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583849645276" />
-    <state x="2581" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582887521778" />
     <state x="488" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591092427783" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1584353796211">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584353796211" />
-    <state x="753" y="316" width="374" height="497" key="FileChooserDialogImpl" timestamp="1591347253499">
+    <state x="753" y="316" width="374" height="497" key="FileChooserDialogImpl" timestamp="1591618268172">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="1041" y="316" key="FileChooserDialogImpl/0.27.3840.1053@0.27.3840.1053" timestamp="1583135859898" />
     <state x="2441" y="296" width="374" height="497" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583486829827" />
-    <state x="2631" y="296" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1582891752285" />
-    <state x="753" y="316" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1591347253499" />
+    <state x="753" y="316" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1591618268172" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1583312292616">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

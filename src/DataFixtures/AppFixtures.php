@@ -36,7 +36,7 @@ class AppFixtures extends Fixture
         $yearsBac = new \DateTime($date);
         $adminUser = new User();
         $adminUser->setName('Admin')
-            ->setLastname('Admin')
+            ->setLastname('Lycée')
             ->setInscriVal(1)
             ->setEmail('bouchet.hp@gmail.com')
             ->setYearsBac($yearsBac)
