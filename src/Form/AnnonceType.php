@@ -75,7 +75,7 @@ class AnnonceType extends AbstractType
 
                 ],  'expanded' => false,
                 'multiple' => false,
-                'label' =>'1er Type de formation supérieure',
+                'label' =>'Type de formation supérieure',
                 'required' => false
                 ])
             ->add('specialOne', TextType::class, $this->getConf("Spécialité","Indiquez votre spécialité", false))
@@ -115,7 +115,7 @@ class AnnonceType extends AbstractType
                     "Écoles de gendarmerie" => "Ecoles_gendarmerie"
                 ],  'expanded' => false,
                 'multiple' => false,
-                'label' =>'2nd Type de formation supérieure',
+                'label' =>'Type de formation supérieure',
                 'required' => false
             ])
             ->add('specialTwo', TextType::class, $this->getConf("Spécialité","Indiquez votre spécialité", false))
@@ -155,7 +155,7 @@ class AnnonceType extends AbstractType
                     "Écoles de gendarmerie" => "Ecoles_gendarmerie"
                 ],  'expanded' => false,
                 'multiple' => false,
-                'label' =>'3éme Type de formation supérieure',
+                'label' =>'Type de formation supérieure',
                 'required' => false
             ])
             ->add('specialThree', TextType::class, $this->getConf("Spécialité","Indiquez votre spécialité", false))
