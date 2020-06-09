@@ -62,7 +62,7 @@ class User implements UserInterface
     private $yearsBac;
 
     /**
-     * @ORM\Column(type="string", length=255, , nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $typeBac;
 
