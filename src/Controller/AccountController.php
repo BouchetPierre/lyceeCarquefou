@@ -73,7 +73,7 @@ class AccountController extends AbstractController
 
                $this->addFlash(
                     'success',
-                    'Votre compte a bien été crée ! Vous pouver vous connecter après validation de votre compte par le Lycée!'
+                    'Votre compte a bien été crée ! Vous pourrez vous connecter après validation de votre compte par le Lycée!'
                 );
 
                 return $this->redirectToRoute('account_login');
