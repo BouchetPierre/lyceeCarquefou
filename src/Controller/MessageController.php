@@ -109,7 +109,7 @@ class MessageController extends AbstractController
     {
 
         $message = (new \Swift_Message('Vous avez reçu un message sur le site du Lycée !!!'))
-            ->setFrom('bouchet.hp@gmail.com')
+            ->setFrom('ancienshdo@gmail.com')
             ->setTo($mailUser)
             ->setBody('Allez consulter votre messagerie sur le site du Lycée !!!');
 

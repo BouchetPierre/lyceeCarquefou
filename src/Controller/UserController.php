@@ -136,7 +136,7 @@ class UserController extends AbstractController
     {
 
         $message = (new \Swift_Message('Validation de votre compte !!!'))
-            ->setFrom('bouchet.hp@gmail.com')
+            ->setFrom('ancienshdo@gmail.com')
             ->setTo($mailUser)
             ->setBody('Félicitation, votre compte à été validé par le Lycée !!!');
 
