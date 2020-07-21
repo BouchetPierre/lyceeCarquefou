@@ -33,7 +33,12 @@
                         OK
                         {% endif%}
                     </td>
-                    <td class="text-center"><a class="btn btn-success" href="{{path('user_show', {'id': user.id})}}"><i class="fas fa-money-check"></i></a></td>
+                    {% if  user.ficheOK == true %}
+                        <td class="text-center"><a class="btn btn-success" href="{{path('user_show', {'id': user.id})}}"><i class="fas fa-money-check"></i></a></td>
+                    {% else %}
+                        <td class="text-center"><i class="fas fa-eye-slash"></i></td>
+                    {% endif %}
+
                     {% if user != app.user %}
                         <td class="text-center">
                             <a href="{{ path('admin_user_delete', {'id':user.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer cet utilisateur ?`)"><i class="fas fa-trash"></i></a>
