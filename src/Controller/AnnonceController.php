@@ -54,7 +54,7 @@ class AnnonceController extends AbstractController
     }
 
      /**
-     * Permet de voir les fiches en fonction du type
+     * Permet de voir les fiches en fonction du type de formation
      * @Route("/annonces/{type}", name="annonces_index")
      * @IsGranted("ROLE_USER")
      */

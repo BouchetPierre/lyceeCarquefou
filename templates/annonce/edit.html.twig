@@ -12,7 +12,12 @@
                 {{ form_start(form) }}
 
                 <p>Mes informations personnelles</p>
-                {{ form_row(form.imageFile) }}
+                {{ form_row(form.imageFile,{
+                    attr:{
+                        'placeholder': 'Selectionnez une image,  facultatif'
+                    }
+                })
+                }}
                 {{ form_row(form.address) }}
                 {{ form_row(form.city) }}
                 {{ form_row(form.country) }}
@@ -24,18 +29,21 @@
                 <p>Mon parcours</p>
                 <div class="parcours1">
                     {{ form_row(form.yearsOne) }}
+                    {{ form_row(form.categoryOne) }}
                     {{ form_row(form.typeScoolOne) }}
                     {{ form_row(form.specialOne) }}
                     {{ form_row(form.descriptionOne) }}
                 </div>
                 <div class="parcours2">
                     {{ form_row(form.yearsTwo) }}
+                    {{ form_row(form.categoryTwo) }}
                     {{ form_row(form.typeScoolTwo) }}
                     {{ form_row(form.specialTwo) }}
                     {{ form_row(form.descriptionTwo) }}
                 </div>
                 <div class="parcours3">
                     {{ form_row(form.yearsThree) }}
+                    {{ form_row(form.categoryThree) }}
                     {{ form_row(form.typeScoolThree) }}
                     {{ form_row(form.specialThree) }}
                     {{ form_row(form.descriptionThree) }}
@@ -61,10 +69,14 @@
 
     {% block javascripts %}
         <script type="text/javascript" language="javascript">
-
+            var parcours1 = document.querySelector('.parcours1');
+            var parcours2 = document.querySelector('.parcours2');
+            var parcours3 = document.querySelector('.parcours3');
+            var parcours4 = document.querySelector('.parcours4');
             var btn1 = document.querySelector('.ajouter1');
             var btn2 = document.querySelector('.ajouter2');
             var btn3 = document.querySelector('.ajouter3');
+            var activityOk =document.querySelector('#annonce_profActivity');
 
             var yearsOne1 = document.querySelector('#annonce_yearsOne_month');
             var yearsOne2 = document.querySelector('#annonce_yearsOne_day');
@@ -80,10 +92,40 @@
             yearsThree2.style.display = 'none';
 
 
-            btn1.style.display = 'none';
+            parcours1.style.display = 'none';
+            parcours2.style.display = 'none';
+            parcours3.style.display = 'none';
+            parcours4.style.display = 'none';
             btn2.style.display = 'none';
             btn3.style.display = 'none';
 
+            $('.ajouter1').click(function () {
+                parcours1.style.display = "block";
+                btn2.style.display = "block";
+                btn1.style.display = "none";
+            })
+            $('.ajouter2').click(function () {
+                parcours2.style.display = "block";
+                btn2.style.display = "none";
+                btn3.style.display = "block";
+            })
+            $('.ajouter3').click(function () {
+                parcours3.style.display = "block";
+                btn2.style.display = "none";
+                btn3.style.display = "none";
+            })
+
+            if ($('#annonce_profActivity').is(':checked')){
+                parcours4.style.display = 'block';
+            }
+
+            $('#annonce_profActivity').click(function(){
+                if (activityOk.checked){
+                    parcours4.style.display = 'block';
+                } else {
+                    parcours4.style.display = 'none';
+                }
+            })
 
         </script>
 

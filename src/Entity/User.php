@@ -130,6 +130,16 @@ class User implements UserInterface
     private $ficheOK;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $BacSpec;
+
+    /**
+     * @ORM\Column(type="array", nullable=true)
+     */
+    private $BacSpec2 = [];
+
+    /**
      * Get passwordRequestedAt
      */
     public function getPasswordRequestedAt()
@@ -527,6 +537,30 @@ class User implements UserInterface
     public function setFicheOK(?bool $ficheOK): self
     {
         $this->ficheOK = $ficheOK;
+
+        return $this;
+    }
+
+    public function getBacSpec(): ?string
+    {
+        return $this->BacSpec;
+    }
+
+    public function setBacSpec(?string $BacSpec): self
+    {
+        $this->BacSpec = $BacSpec;
+
+        return $this;
+    }
+
+    public function getBacSpec2(): ?array
+    {
+        return $this->BacSpec2;
+    }
+
+    public function setBacSpec2(?array $BacSpec2): self
+    {
+        $this->BacSpec2 = $BacSpec2;
 
         return $this;
     }

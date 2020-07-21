@@ -6,19 +6,91 @@
 
     <div class="container bg-light py-5">
         <h1 class="decalage">Modification du profil</h1>
-            <div class="row">
+            <div >
                 <div class="col-md-6">
                     {{ form_start(form) }}
-                    {{ form_widget(form) }}
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name) }}
+                    {{ form_label(form.lastname) }}
+                    {{ form_widget(form.lastname) }}
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email) }}
 
-                    <button type="submit" class="btn btn-primary">Enregitrer les modifications</button>
+                </div>
+                <div class="col-md-6" id="studiant">
+                    {{ form_label(form.yearsBac) }}
+                    {{ form_widget(form.yearsBac) }}
+                    {{ form_label(form.typeBac) }}
+                    {{ form_widget(form.typeBac) }}
 
+                    <div class="col-md-8" id="specgene">
+                        {{ form_label(form.BacSpec2) }}
+                        {{ form_label(form.BacSpec2[0]) }}
+                        {{ form_widget(form.BacSpec2[0]) }}
+                        {{ form_label(form.BacSpec2[1]) }}
+                        {{ form_widget(form.BacSpec2[1]) }}
+                        {{ form_label(form.BacSpec2[2]) }}
+                        {{ form_widget(form.BacSpec2[2]) }}
+                        {{ form_label(form.BacSpec2[3]) }}
+                        {{ form_widget(form.BacSpec2[3]) }}
+                        {{ form_label(form.BacSpec2[4]) }}
+                        {{ form_widget(form.BacSpec2[4]) }}
+                        {{ form_label(form.BacSpec2[5]) }}
+                        {{ form_widget(form.BacSpec2[5]) }}
+                        {{ form_label(form.BacSpec2[6]) }}
+                        {{ form_widget(form.BacSpec2[6]) }}
+                        {{ form_label(form.BacSpec2[7]) }}
+                        {{ form_widget(form.BacSpec2[7]) }}
+                        {{ form_label(form.BacSpec2[8]) }}
+                        {{ form_widget(form.BacSpec2[8]) }}
+
+                    </div>
+                    <div class="col-md-8" id="spectech">
+                        {{ form_label(form.BacSpec2[9]) }}
+                        {{ form_widget(form.BacSpec2[9]) }}
+                        {{ form_label(form.BacSpec2[10]) }}
+                        {{ form_widget(form.BacSpec2[10]) }}
+
+                    </div>
+
+                </div>
+                <div class="mt-5">
+                    <button type="submit" class="btn btn-success">Modifier mes informations</button>
                     {{ form_end(form) }}
                 </div>
             </div>
     </div>
     {% block javascripts %}
+        <script type="text/javascript" language="javascript">
+            var parcours1 = document.querySelector('#registration_yearsBac_month');
+            var parcours2 = document.querySelector('#registration_yearsBac_day');
+            var spec1 = document.querySelector('#specgene');
+            var spec2 = document.querySelector('#spectech');
+            var studiant = document.querySelector('#studiant');
 
+            if ($('#account_typeBac_0').is(':checked')){
+                spec1.style.display ='block';
+                spec2.style.display ='none';
+            }else {
+                spec1.style.display ='none';
+                spec2.style.display ='block';
+            }
+
+
+
+
+            $('#account_typeBac_0').change(function () {
+                spec1.style.display ='block';
+                spec2.style.display ='none';
+                console.log('test');
+            })
+
+            $('#account_typeBac_1').change(function () {
+                spec1.style.display ='none';
+                spec2.style.display ='block';
+            })
+
+        </script>
 
     {% endblock %}
 

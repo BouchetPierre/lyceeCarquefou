@@ -12,7 +12,8 @@
             <tr>
                 <th>Nom / Prénom</th>
                 <th >Année d'obtention du Bac</th>
-                <th >Filière Bac</th>
+                <th >Série Bac</th>
+                <th >Options</th>
                 <th >Edutiant / Prof.</th>
                 <th class="text-center">En savoir plus !</th>
             </tr>
@@ -22,7 +23,8 @@
                 <tr>
                     <td>{{ user.fullname}}</td>
                     <td >{{ user.yearsBac | date ('Y') }}</td>
-                    <td >{{ user.typeBac }}</td>
+                    <td >{{ include ('user/typeSerie.html.twig')  }}</td>
+                    <td>{{ user.BacSpec2|join(', ') }} </td>
                     <td > {% if user.studOrTeach == 'Student' %}
                             <i class="fas fa-user-graduate"></i>
                         {% else %}

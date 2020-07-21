@@ -157,6 +157,21 @@ class Annonce
      */
     private $descriptionActivity;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $categoryOne;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $categoryTwo;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $categoryThree;
+
     public function __construct()
     {
         $this->messages = new ArrayCollection();
@@ -495,6 +510,42 @@ class Annonce
     public function setDescriptionActivity(?string $descriptionActivity): self
     {
         $this->descriptionActivity = $descriptionActivity;
+
+        return $this;
+    }
+
+    public function getCategoryOne(): ?string
+    {
+        return $this->categoryOne;
+    }
+
+    public function setCategoryOne(?string $categoryOne): self
+    {
+        $this->categoryOne = $categoryOne;
+
+        return $this;
+    }
+
+    public function getCategoryTwo(): ?string
+    {
+        return $this->categoryTwo;
+    }
+
+    public function setCategoryTwo(?string $categoryTwo): self
+    {
+        $this->categoryTwo = $categoryTwo;
+
+        return $this;
+    }
+
+    public function getCategoryThree(): ?string
+    {
+        return $this->categoryThree;
+    }
+
+    public function setCategoryThree(?string $categoryThree): self
+    {
+        $this->categoryThree = $categoryThree;
 
         return $this;
     }

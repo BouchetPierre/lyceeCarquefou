@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AnnonceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AnnonceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Annonce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Annonce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AccountType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AccountType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AnnonceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AnnonceType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/profile.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/registration.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/annonce/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +167,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/pictures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../leMas" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
@@ -242,6 +253,9 @@
       <workItem from="1592903194284" duration="10000" />
       <workItem from="1592903229899" duration="599000" />
       <workItem from="1592905698623" duration="599000" />
+      <workItem from="1592992408398" duration="2120000" />
+      <workItem from="1595225665711" duration="15385000" />
+      <workItem from="1595315185872" duration="3946000" />
     </task>
     <servers />
   </component>
@@ -252,64 +266,30 @@
     <state x="634" y="236" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591087309104">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="2508" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584353802288" />
     <state x="634" y="236" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591087309104" />
-    <state x="690" y="361" width="573" height="381" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584528909814">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="2566" y="343" width="583" height="390" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584106267120" />
-    <state x="690" y="361" width="573" height="381" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584528909814" />
-    <state x="1987" y="27" width="825" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583224853341">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1987" y="27" width="825" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583224853341" />
     <state x="488" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591092427783">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="872" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1583145959597" />
-    <state x="2356" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583849645276" />
     <state x="488" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591092427783" />
-    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1584353796211">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="254" height="195" key="DatabaseViewActions_Filter/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584353796211" />
-    <state x="753" y="316" width="374" height="497" key="FileChooserDialogImpl" timestamp="1591618268172">
+    <state x="753" y="316" width="374" height="497" key="FileChooserDialogImpl" timestamp="1595231374460">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="1041" y="316" key="FileChooserDialogImpl/0.27.3840.1053@0.27.3840.1053" timestamp="1583135859898" />
-    <state x="2441" y="296" width="374" height="497" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583486829827" />
-    <state x="753" y="316" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1591618268172" />
-    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1583312292616">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="263" height="500" key="HiddenNamespacesPopup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583312292616" />
-    <state x="2274" y="249" width="718" height="676" key="RollbackChangesDialog" timestamp="1584347598520">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2274" y="249" width="718" height="676" key="RollbackChangesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584347598520" />
+    <state x="753" y="316" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1595231374460" />
     <state width="519" height="446" key="SwitcherDM" timestamp="1591629775497">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="519" height="446" key="SwitcherDM/67.27.1853.1053@67.27.1853.1053" timestamp="1591629775497" />
-    <state x="649" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586417648591">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1584113046348" />
-    <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584344500416" />
-    <state x="2483" y="390" key="com.intellij.ide.util.TipDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584430618583" />
-    <state x="649" y="368" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1586417648591" />
-    <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583852054948">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583852054948" />
     <state x="158" y="288" width="1555" height="630" key="find.popup" timestamp="1590579445595">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="2014" y="268" width="1611" height="646" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584347558941" />
     <state x="158" y="288" width="1555" height="630" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1590579445595" />
     <state x="631" y="253" key="run.anything.popup" timestamp="1591085537026">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="631" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1591085537026" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1595236110005">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1595236110005" />
   </component>
 </project>

@@ -48,12 +48,30 @@ class RegistrationType extends AbstractType
             ])
             ->add('typeBac', ChoiceType::class, [
                 'choices' => [
-                    'S' => 'S',
-                    'L' => 'L',
-                    'ES' => 'ES',
+                    'Série générale' => 'Serie_generale',
+                    'Série technologique' => 'Serie_technologique'
                 ],  'expanded' => true,
                 'multiple' => false,
-                'label' =>'Choisissez le Type de Bac',
+                'label' =>'Choisissez la série de Bac',
+                'label_attr'=>[
+                    'class'=>'radio-inline'
+                ] ])
+            ->add('BacSpec2', ChoiceType::class, [
+                'choices' => [
+                    'SES' => 'SES',
+                    'Maths' => 'Maths',
+                    'SVT' => 'SVT',
+                    'Physique' => 'Physique',
+                    'NSI' => 'NSI',
+                    'SI' => 'SI',
+                    'Histoire Géo, Sciences politiques' => 'Histoire-Geo_Sciennes-Po',
+                    'Humanité, littérature et philosophie' => 'Humanite_Litterature_Philo',
+                    'LLCE' => 'LLCE',
+                    'STMG' => 'STMG',
+                    'ST2S' => 'ST2S'
+                ],  'expanded' => true,
+                'multiple' => true,
+                'label' =>'Choisissez les options de votre Bac (2 max.)',
                 'label_attr'=>[
                     'class'=>'radio-inline'
                 ] ])

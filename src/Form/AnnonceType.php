@@ -45,6 +45,21 @@ class AnnonceType extends AbstractType
             ->add('country',TextType::class, $this->getConf("Pays","Entrez le nom de votre pays de résidence", false))
             ->add('linkIn', TextType::class, $this->getConf("Lien LinkedIn","Copiez l'URL de votre compte LinkedIn", false))
             ->add('emailOk', CheckboxType::class, $this->getConf("J'autorise l'affichage de mon email et de mon téléphone",false, false))
+            ->add('categoryOne', ChoiceType::class, [
+                'choices' => [
+                    'Sciences' => 'Sciences',
+                    'Langues' => 'Langues',
+                    'Sport' => 'Sport',
+                    'Sciences humaine' => 'Science_humaine',
+                    'Droit' => 'Droit',
+                    'Commerce' => 'Commerce',
+                    'Littérature' => 'Litterature',
+                    'Arts' => 'Arts'
+                ],'expanded' => false,
+                'multiple' => false,
+                'label' =>'Catégorie de formation',
+                'required' => false
+            ])
             ->add('typeScoolOne', ChoiceType::class, [
                 'choices' => [
                     'BTS ou BTSA' => 'BTS_BTSA',
@@ -86,6 +101,21 @@ class AnnonceType extends AbstractType
                 'label' =>"Année d'entrée",
                 'required' => false
                 ])
+            ->add('categoryTwo', ChoiceType::class, [
+                'choices' => [
+                    'Sciences' => 'Sciences',
+                    'Langues' => 'Langues',
+                    'Sport' => 'Sport',
+                    'Sciences humaine' => 'Science_humaine',
+                    'Droit' => 'Droit',
+                    'Commerce' => 'Commerce',
+                    'Littérature' => 'Litterature',
+                    'Arts' => 'Arts'
+                ],'expanded' => false,
+                'multiple' => false,
+                'label' =>'Catégorie de formation',
+                'required' => false
+            ])
             ->add('typeScoolTwo', ChoiceType::class, [
                 'choices' => [
                     'BTS ou BTSA' => 'BTS_BTSA',
@@ -124,6 +154,21 @@ class AnnonceType extends AbstractType
                 'widget' => 'choice',
                 'data' => new \DateTime(),
                 'label' =>"Année d'entrée",
+                'required' => false
+            ])
+            ->add('categoryThree', ChoiceType::class, [
+                'choices' => [
+                    'Sciences' => 'Sciences',
+                    'Langues' => 'Langues',
+                    'Sport' => 'Sport',
+                    'Sciences humaines' => 'Science_humaine',
+                    'Droit' => 'Droit',
+                    'Commerce' => 'Commerce',
+                    'Littérature' => 'Litterature',
+                    'Arts' => 'Arts'
+                ],'expanded' => false,
+                'multiple' => false,
+                'label' =>'Catégorie de formation',
                 'required' => false
             ])
             ->add('typeScoolThree', ChoiceType::class, [

@@ -40,7 +40,7 @@
                     </div>
                     <div class="mt-5 border rounded-lg border-secondary p-3">
                         <h2 class="text-success">Mes coordonnées</h2>
-                            <h5>Adresse: {{ annonce.address }}, {{ annonce.city }}, {{ annonce.country }} </h5>
+                            <h5>Adresse: {{ annonce.address }} {{ annonce.city }} {{ annonce.country }} </h5>
                             {% if annonce.emailOk == 1 %}
                                 <h5>Téléphone: {{ annonce.phone }}</h5>
                                 <h5>Email: {{ annonce.author.email }}</h5>
@@ -53,8 +53,14 @@
                         <h2 class="text-success">Mon lien Linkedln</h2>
                         <a href="{{ annonce.linkIn }}">{{ annonce.linkIn }}</a>
                     </div>
+                    <div class="mt-5 border rounded-lg border-secondary p-3">
+                        <h2 class="text-success">BAC obtenu en {{ annonce.author.yearsBac|date('Y') }}</h2>
+                        <h5>Série: {{ include('user/typeSerie2.html.twig') }} </h5>
+                        <h5>Option: {{ annonce.author.BacSpec2|join(', ') }}</h5>
+                    </div>
                     <div class="mt-5 mb-5 border rounded-lg border-secondary p-3">
-                        <h2 class="text-success">Mon parcours</h2>
+                        <h2 class="text-success">Mon parcours post-BAC</h2>
+
                         <div class="parcours1 mt-3">
                             {% if annonce.typeScoolOne %}
                                 <h5 class="font-weight-bold">Année d'entrée: {{ annonce.yearsOne |date('Y')}}</h5>

@@ -11,7 +11,8 @@
             <tr>
                 <th>Nom / Prénom</th>
                 <th>Année BAC</th>
-                <th>Filière Bac</th>
+                <th>Série BAC</th>
+                <th>Options BAC</th>
                 <th>Email</th>
                 <th>Utilisateur approuvé</th>
                 <th>Voir le fiche</th>
@@ -23,7 +24,8 @@
                 <tr>
                     <td>{{ user.fullname }}</td>
                     <td>{{ user.yearsBac | date ('Y')}}</td>
-                    <td >{{ user.typeBac }}</td>
+                    <td>{{ include('user/typeSerie.html.twig') }}</td>
+                    <td >{{ user.BacSpec2|join(', ') }}</td>
                     <td>{{ user.email }}</td>
                     <td>{% if user.inscriVal == 0%}
                         <a href="{{ path('admin_user_val', {'id':user.id}) }}" class="btn btn-warning" onclick="return confirm(`Voulez vous valider cet utilisateur ?`)"><i class="fas fa-chalkboard-teacher"></i></a>
@@ -32,9 +34,11 @@
                         {% endif%}
                     </td>
                     <td class="text-center"><a class="btn btn-success" href="{{path('user_show', {'id': user.id})}}"><i class="fas fa-money-check"></i></a></td>
-                    <td class="text-center">
-                        <a href="{{ path('admin_user_delete', {'id':user.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer cet utilisateur ?`)"><i class="fas fa-trash"></i></a>
-                    </td>
+                    {% if user != app.user %}
+                        <td class="text-center">
+                            <a href="{{ path('admin_user_delete', {'id':user.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer cet utilisateur ?`)"><i class="fas fa-trash"></i></a>
+                        </td>
+                    {% endif %}
                 </tr>
             {% endfor %}
             </tbody>

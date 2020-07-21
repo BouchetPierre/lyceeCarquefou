@@ -6,10 +6,62 @@
 
     <div class="container bg-light py-5">
         <h1 class="decalage">Inscrivez vous sur notre site</h1>
-            <div class="row">
+            <div >
                 <div class="col-md-6">
                     {{ form_start(form) }}
-                    {{ form_widget(form) }}
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name) }}
+                    {{ form_label(form.lastname) }}
+                    {{ form_widget(form.lastname) }}
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email) }}
+                    {{ form_label(form.studOrTeach) }}
+                    {{ form_widget(form.studOrTeach) }}
+                </div>
+                 <div class="col-md-6" id="studiant">
+                    {{ form_label(form.yearsBac) }}
+                    {{ form_widget(form.yearsBac) }}
+                    {{ form_label(form.typeBac) }}
+                    {{ form_widget(form.typeBac) }}
+
+                     <div class="col-md-8" id="specgene">
+                         {{ form_label(form.BacSpec2) }}
+                         {{ form_label(form.BacSpec2[0]) }}
+                         {{ form_widget(form.BacSpec2[0]) }}
+                         {{ form_label(form.BacSpec2[1]) }}
+                         {{ form_widget(form.BacSpec2[1]) }}
+                         {{ form_label(form.BacSpec2[2]) }}
+                         {{ form_widget(form.BacSpec2[2]) }}
+                         {{ form_label(form.BacSpec2[3]) }}
+                         {{ form_widget(form.BacSpec2[3]) }}
+                         {{ form_label(form.BacSpec2[4]) }}
+                         {{ form_widget(form.BacSpec2[4]) }}
+                         {{ form_label(form.BacSpec2[5]) }}
+                         {{ form_widget(form.BacSpec2[5]) }}
+                         {{ form_label(form.BacSpec2[6]) }}
+                         {{ form_widget(form.BacSpec2[6]) }}
+                         {{ form_label(form.BacSpec2[7]) }}
+                         {{ form_widget(form.BacSpec2[7]) }}
+                         {{ form_label(form.BacSpec2[8]) }}
+                         {{ form_widget(form.BacSpec2[8]) }}
+
+                     </div>
+                     <div class="col-md-8" id="spectech">
+                         {{ form_label(form.BacSpec2[9]) }}
+                         {{ form_widget(form.BacSpec2[9]) }}
+                         {{ form_label(form.BacSpec2[10]) }}
+                         {{ form_widget(form.BacSpec2[10]) }}
+
+                     </div>
+
+                 </div>
+                <div class="col-md-6 mt-3">
+                    {{ form_label(form.hash) }}
+                    {{ form_widget(form.hash) }}
+                    {{ form_label(form.passwordConfirm) }}
+                    {{ form_widget(form.passwordConfirm) }}
+                </div>
+                <div class="mt-5">
                     <button type="submit" class="btn btn-success">Confirmez l'inscription</button>
                     {{ form_end(form) }}
                 </div>
@@ -19,9 +71,34 @@
         <script type="text/javascript" language="javascript">
             var parcours1 = document.querySelector('#registration_yearsBac_month');
             var parcours2 = document.querySelector('#registration_yearsBac_day');
+            var spec1 = document.querySelector('#specgene');
+            var spec2 = document.querySelector('#spectech');
+            var studiant = document.querySelector('#studiant');
 
             parcours2.style.display = 'none';
             parcours1.style.display = 'none';
+            spec1.style.display ='none';
+            spec2.style.display ='none';
+            studiant.style.display ='none';
+
+            $('#registration_studOrTeach_0').change(function () {
+                studiant.style.display ='block';
+            })
+            $('#registration_studOrTeach_1').change(function () {
+                studiant.style.display ='none';
+            })
+            $('#registration_typeBac_0').change(function () {
+                spec1.style.display ='block';
+                spec2.style.display ='none';
+            })
+
+            $('#registration_typeBac_1').change(function () {
+                spec1.style.display ='none';
+                spec2.style.display ='block';
+            })
+
+
+
 
         </script>
     {% endblock %}

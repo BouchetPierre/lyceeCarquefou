@@ -44,6 +44,16 @@ class AnnonceRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function findAllForCat($cat)
+    {
+        return $this->createQueryBuilder('a')
+            ->select()
+            ->where('(a.categoryOne = :val) or (a.categoryTwo = :val) or (a.categoryThree = :val)')
+            ->setParameter('val', $cat)
+            ->getQuery()
+            ->getResult();
+    }
+
     /*
     public function findOneBySomeField($value): ?Annonce
     {

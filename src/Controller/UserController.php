@@ -116,6 +116,19 @@ class UserController extends AbstractController
         ]);
     }
 
+    /**
+     * permet de trouver les users en fonction d'une formation
+     * @Route("/form/cat/{cat}", name="user_show_cat")
+     * @IsGranted("ROLE_USER")
+     */
+    public function allUcat($cat, AnnonceRepository $repo)
+    {
+        $users = $repo->findAllForCat($cat);
+        return $this->render('/user/formation.html.twig', [
+            'users' => $users
+        ]);
+    }
+
 
 
 
