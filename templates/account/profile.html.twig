@@ -17,67 +17,70 @@
                     {{ form_widget(form.email) }}
 
                 </div>
-                <div class="col-md-6" id="studiant">
-                    {{ form_label(form.yearsBac) }}
-                    {{ form_widget(form.yearsBac) }}
-                    {{ form_label(form.typeBac) }}
-                    {{ form_widget(form.typeBac) }}
 
-                    <div class="col-md-8" id="specgene">
-                        {{ form_label(form.BacSpec2) }}
-                        {{ form_label(form.BacSpec2[0]) }}
-                        {{ form_widget(form.BacSpec2[0]) }}
-                        {{ form_label(form.BacSpec2[1]) }}
-                        {{ form_widget(form.BacSpec2[1]) }}
-                        {{ form_label(form.BacSpec2[2]) }}
-                        {{ form_widget(form.BacSpec2[2]) }}
-                        {{ form_label(form.BacSpec2[3]) }}
-                        {{ form_widget(form.BacSpec2[3]) }}
-                        {{ form_label(form.BacSpec2[4]) }}
-                        {{ form_widget(form.BacSpec2[4]) }}
-                        {{ form_label(form.BacSpec2[5]) }}
-                        {{ form_widget(form.BacSpec2[5]) }}
-                        {{ form_label(form.BacSpec2[6]) }}
-                        {{ form_widget(form.BacSpec2[6]) }}
-                        {{ form_label(form.BacSpec2[7]) }}
-                        {{ form_widget(form.BacSpec2[7]) }}
-                        {{ form_label(form.BacSpec2[8]) }}
-                        {{ form_widget(form.BacSpec2[8]) }}
+                    <div class="col-md-6" id="studiant">
+                        {{ form_label(form.yearsBac) }}
+                        {{ form_widget(form.yearsBac) }}
+                        {{ form_label(form.typeBac) }}
+                        {{ form_widget(form.typeBac) }}
+
+                        <div class="col-md-8" id="specgene">
+                            {{ form_label(form.BacSpec2) }}
+                            {{ form_label(form.BacSpec2[0]) }}
+                            {{ form_widget(form.BacSpec2[0]) }}
+                            {{ form_label(form.BacSpec2[1]) }}
+                            {{ form_widget(form.BacSpec2[1]) }}
+                            {{ form_label(form.BacSpec2[2]) }}
+                            {{ form_widget(form.BacSpec2[2]) }}
+                            {{ form_label(form.BacSpec2[3]) }}
+                            {{ form_widget(form.BacSpec2[3]) }}
+                            {{ form_label(form.BacSpec2[4]) }}
+                            {{ form_widget(form.BacSpec2[4]) }}
+                            {{ form_label(form.BacSpec2[5]) }}
+                            {{ form_widget(form.BacSpec2[5]) }}
+                            {{ form_label(form.BacSpec2[6]) }}
+                            {{ form_widget(form.BacSpec2[6]) }}
+                            {{ form_label(form.BacSpec2[7]) }}
+                            {{ form_widget(form.BacSpec2[7]) }}
+                            {{ form_label(form.BacSpec2[8]) }}
+                            {{ form_widget(form.BacSpec2[8]) }}
+
+                        </div>
+                        <div class="col-md-8" id="spectech">
+                            {{ form_label(form.BacSpec2[9]) }}
+                            {{ form_widget(form.BacSpec2[9]) }}
+                            {{ form_label(form.BacSpec2[10]) }}
+                            {{ form_widget(form.BacSpec2[10]) }}
+                        </div>
 
                     </div>
-                    <div class="col-md-8" id="spectech">
-                        {{ form_label(form.BacSpec2[9]) }}
-                        {{ form_widget(form.BacSpec2[9]) }}
-                        {{ form_label(form.BacSpec2[10]) }}
-                        {{ form_widget(form.BacSpec2[10]) }}
-
+                    <div class="mt-5">
+                        <button type="submit" class="btn btn-success">Modifier mes informations</button>
+                        {{ form_end(form) }}
                     </div>
 
-                </div>
-                <div class="mt-5">
-                    <button type="submit" class="btn btn-success">Modifier mes informations</button>
-                    {{ form_end(form) }}
-                </div>
             </div>
     </div>
     {% block javascripts %}
         <script type="text/javascript" language="javascript">
-            var parcours1 = document.querySelector('#registration_yearsBac_month');
-            var parcours2 = document.querySelector('#registration_yearsBac_day');
+            var parcours1 = document.querySelector('#account_yearsBac_month');
+            var parcours2 = document.querySelector('#account_yearsBac_day');
             var spec1 = document.querySelector('#specgene');
             var spec2 = document.querySelector('#spectech');
             var studiant = document.querySelector('#studiant');
+            parcours2.style.display = 'none';
+            parcours1.style.display = 'none';
 
             if ($('#account_typeBac_0').is(':checked')){
                 spec1.style.display ='block';
                 spec2.style.display ='none';
-            }else {
+            } else if ($('#account_typeBac_1').is(':checked')) {
                 spec1.style.display ='none';
                 spec2.style.display ='block';
+            }else {
+                spec1.style.display ='none';
+                spec2.style.display ='none';
             }
-
-
-
 
             $('#account_typeBac_0').change(function () {
                 spec1.style.display ='block';

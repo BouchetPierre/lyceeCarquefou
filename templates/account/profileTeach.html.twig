@@ -1,0 +1,28 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %}Modification du profil{% endblock %}
+
+{% block body %}
+
+    <div class="container bg-light py-5">
+        <h1 class="decalage">Modification du profil</h1>
+        <div >
+            <div class="col-md-6">
+                {{ form_start(form) }}
+                {{ form_label(form.name) }}
+                {{ form_widget(form.name) }}
+                {{ form_label(form.lastname) }}
+                {{ form_widget(form.lastname) }}
+                {{ form_label(form.email) }}
+                {{ form_widget(form.email) }}
+
+            </div>
+            <div class="mt-5">
+                <button type="submit" class="btn btn-success">Modifier mes informations</button>
+                {{ form_end(form) }}
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

@@ -13,8 +13,7 @@
                 <th>Nom / Prénom</th>
                 <th >Année d'obtention du Bac</th>
                 <th >Série Bac</th>
-                <th >Options</th>
-                <th >Edutiant / Prof.</th>
+                <th >Spécialités</th>
                 <th class="text-center">En savoir plus !</th>
             </tr>
             </thead>
@@ -22,15 +21,13 @@
             {% for user in users %}
                 <tr>
                     <td>{{ user.fullname}}</td>
-                    <td >{{ user.yearsBac | date ('Y') }}</td>
+                    {% if user.studOrTeach == 'Student' %}
+                        <td >{{ user.yearsBac | date ('Y') }}</td>
+                    {% else %}
+                        <td> - - </td>
+                    {% endif%}
                     <td >{{ include ('user/typeSerie.html.twig')  }}</td>
                     <td>{{ user.BacSpec2|join(', ') }} </td>
-                    <td > {% if user.studOrTeach == 'Student' %}
-                            <i class="fas fa-user-graduate"></i>
-                        {% else %}
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        {% endif%}
-                    </td>
                     {% if  user.ficheOK == true %}
                         <td class="text-center"><a class="btn btn-success" href="{{path('user_show', {'id': user.id})}}"><i class="fas fa-money-check"></i></a></td>
                     {% else %}

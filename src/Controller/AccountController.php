@@ -8,6 +8,7 @@ use App\Form\PasswordUpdateType;
 use App\Entity\User;
 use App\Form\AccountType;
 use App\Form\RegistrationType;
+use App\Form\AccountTeachType;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -95,25 +96,43 @@ class AccountController extends AbstractController
 
         public function profil(Request $request, EntityManagerInterface $manager){
             $user= $this->getUser();
+            if ($user->getStudOrTeach()=='Student'){
+                $form = $this->createForm(AccountType::class, $user);
 
-            $form = $this->createForm(AccountType::class, $user);
+                $form->handleRequest($request);
 
-            $form->handleRequest($request);
+                if($form->isSubmitted() && $form->isValid()) {
+                    $manager->persist($user);
+                    $manager->flush();
 
-            if($form->isSubmitted() && $form->isValid()) {
-                $manager->persist($user);
-                $manager->flush();
+                    $this->addFlash(
+                        'success',
+                        'Les données ont bien été modifiées !'
+                    );
+                }
 
-                $this->addFlash(
-                    'success',
-                    'Les données ont bien été modifiées !'
-                );
-            }
-
-            return $this->render('account/profile.html.twig', [
+                return $this->render('account/profile.html.twig', [
                     'form' => $form->createView()
-            ]);
-            
+                ]);
+            } else {
+                $form = $this->createForm(AccountTeachType::class, $user);
+
+                $form->handleRequest($request);
+
+                if($form->isSubmitted() && $form->isValid()) {
+                    $manager->persist($user);
+                    $manager->flush();
+
+                    $this->addFlash(
+                        'success',
+                        'Les données ont bien été modifiées !'
+                    );
+                }
+
+                return $this->render('account/profileTeach.html.twig', [
+                    'form' => $form->createView()
+                ]);
+            }
         }
 
     /**

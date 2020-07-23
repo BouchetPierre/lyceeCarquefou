@@ -39,8 +39,6 @@ class AppFixtures extends Fixture
             ->setLastname('Lycée')
             ->setInscriVal(1)
             ->setEmail('ancienshdo@gmail.com')
-            ->setYearsBac($yearsBac)
-            ->setTypeBac('S')
             ->setStudOrTeach('Teacher')
             ->setHash($this->encoder->encodePassword($adminUser, 'password'))
             ->addUserRole($adminRole);

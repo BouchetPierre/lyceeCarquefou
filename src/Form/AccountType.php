@@ -23,16 +23,15 @@ class AccountType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
         $builder
             ->add('name', TextType::class, $this->getConf('Nom'))
             ->add('lastname', TextType::class, $this->getConf('Prénom'))
             ->add('email', EmailType::class, $this->getConf('Adresse Mail'))
             ->add('yearsBac', DateType::class, [
-                'widget' => 'single_text',
-                'format' => 'yyyy',
-                'html5' => false,
+                'widget' => 'choice',
+                'data' => new \DateTime(),
                 'label' =>"Année d'obtention du BAC"
-
             ])
             ->add('typeBac', ChoiceType::class, [
                 'choices' => [
@@ -40,6 +39,8 @@ class AccountType extends AbstractType
                     'Série technologique' => 'Serie_technologique'
                 ],  'expanded' => true,
                 'multiple' => false,
+                'required' => false,
+                'placeholder' => false,
                 'label' =>'Choisissez la série de Bac',
                 'label_attr'=>[
                     'class'=>'radio-inline'

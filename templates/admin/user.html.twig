@@ -10,6 +10,7 @@
             <thead>
             <tr>
                 <th>Nom / Prénom</th>
+                <th>Etudiant/Prof</th>
                 <th>Année BAC</th>
                 <th>Série BAC</th>
                 <th>Options BAC</th>
@@ -23,7 +24,17 @@
             {% for user in users %}
                 <tr>
                     <td>{{ user.fullname }}</td>
-                    <td>{{ user.yearsBac | date ('Y')}}</td>
+                    <td > {% if user.studOrTeach == 'Student' %}
+                            <i class="fas fa-user-graduate"></i>
+                        {% else %}
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        {% endif%}
+                    </td>
+                    {% if user.studOrTeach == 'Student' %}
+                        <td >{{ user.yearsBac | date ('Y') }}</td>
+                    {% else %}
+                        <td> - - </td>
+                    {% endif%}
                     <td>{{ include('user/typeSerie.html.twig') }}</td>
                     <td >{{ user.BacSpec2|join(', ') }}</td>
                     <td>{{ user.email }}</td>
@@ -43,6 +54,11 @@
                         <td class="text-center">
                             <a href="{{ path('admin_user_delete', {'id':user.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer cet utilisateur ?`)"><i class="fas fa-trash"></i></a>
                         </td>
+                    {% else%}
+                        <td class="text-center">
+                            <i class="fas fa-ban"></i>
+                        </td>
+
                     {% endif %}
                 </tr>
             {% endfor %}

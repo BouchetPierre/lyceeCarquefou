@@ -71,7 +71,7 @@ class RegistrationType extends AbstractType
                     'ST2S' => 'ST2S'
                 ],  'expanded' => true,
                 'multiple' => true,
-                'label' =>'Choisissez les options de votre Bac (2 max.)',
+                'label' =>'Indiquez les spécialités de votre Bac (2 max.)',
                 'label_attr'=>[
                     'class'=>'radio-inline'
                 ] ])

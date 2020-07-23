@@ -56,7 +56,7 @@
                     <div class="mt-5 border rounded-lg border-secondary p-3">
                         <h2 class="text-success">BAC obtenu en {{ annonce.author.yearsBac|date('Y') }}</h2>
                         <h5>Série: {{ include('user/typeSerie2.html.twig') }} </h5>
-                        <h5>Option: {{ annonce.author.BacSpec2|join(', ') }}</h5>
+                        <h5>Spécialités: {{ annonce.author.BacSpec2|join(', ') }}</h5>
                     </div>
                     <div class="mt-5 mb-5 border rounded-lg border-secondary p-3">
                         <h2 class="text-success">Mon parcours post-BAC</h2>

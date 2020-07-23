@@ -130,12 +130,11 @@ class User implements UserInterface
     private $ficheOK;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $BacSpec;
-
-    /**
      * @ORM\Column(type="array", nullable=true)
+     * @Assert\Count(
+     *     max = 2,
+     *     maxMessage = "vous ne pouvez pas indiquer plus de deux spécialités !!!"
+     * )
      */
     private $BacSpec2 = [];
 
@@ -537,18 +536,6 @@ class User implements UserInterface
     public function setFicheOK(?bool $ficheOK): self
     {
         $this->ficheOK = $ficheOK;
-
-        return $this;
-    }
-
-    public function getBacSpec(): ?string
-    {
-        return $this->BacSpec;
-    }
-
-    public function setBacSpec(?string $BacSpec): self
-    {
-        $this->BacSpec = $BacSpec;
 
         return $this;
     }
