@@ -13,7 +13,7 @@
         <table id="tab" class="table table-hover">
             <thead>
             <tr>
-                <th>Id</th>
+                <th>Date</th>
                 <th>Titre</th>
                 <th class="text-center">Auteur</th>
                 <th class="text-center">Texte</th>
@@ -26,7 +26,7 @@
             <tbody>
             {% for publication in publications %}
                 <tr>
-                    <td>{{ publication.id }}</td>
+                    <td>{{ publication.createdAt|date ("d/m/Y") }}</td>
                     <td>{{ publication.subject}}</td>
                     <td class="text-center">{{ publication.author.fullName }}</td>
                     <td>{{ publication.text|raw }}</td>

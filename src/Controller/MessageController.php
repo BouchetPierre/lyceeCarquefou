@@ -29,6 +29,7 @@ class MessageController extends AbstractController
     public function create(Annonce $annonce, Request $request, EntityManagerInterface $manager, \Swift_Mailer $mailer)
     {
         $message = new Message();
+        $message->setCreatedAt(new \DateTime('now'));
         $destinataire = $annonce->getAuthor()->getFullName();
 
         $form= $this->createForm(MessageType::class, $message);

@@ -10,7 +10,7 @@
         <table id="tab" class="table table-hover">
             <thead>
             <tr>
-                <th>Id</th>
+                <th>Date</th>
                 <th>Auteur</th>
                 <th>Destinataire</th>
                 <th class="">Sujet</th>
@@ -21,7 +21,7 @@
             <tbody>
             {% for message in messages %}
                 <tr>
-                    <td>{{ message.id }}</td>
+                    <td>{{ message.createdAt|date ("d/m/Y") }}</td>
                     <td>{{ message.author.fullname }}</td>
                     <td>{{ message.destinataire.author.fullname }}</td>
                     <td></td>
@@ -33,7 +33,7 @@
             {% endfor %}
             {% for reponse in reponses %}
                 <tr>
-                    <td>{{ reponse.id }}</td>
+                    <td>{{ reponse.createdAt|date ("d/m/Y") }}</td>
                     <td>{{ reponse.author.fullname }}</td>
                     <td>{{ reponse.destinataire.fullname }}</td>
                     <td>{{ reponse.subject }}</td>

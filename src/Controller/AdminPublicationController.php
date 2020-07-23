@@ -25,7 +25,7 @@ class AdminPublicationController extends AbstractController
 
     public function create(Request $request, EntityManagerInterface $manager){
         $publication = new AdminPublication();
-
+        $publication->setCreatedAt(new \DateTime('now'));
         $form= $this->createForm(AdminPublicationType::class, $publication);
 
         $form->handleRequest($request);

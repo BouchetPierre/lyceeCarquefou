@@ -25,6 +25,7 @@ class RepondController extends AbstractController
     public function create(User $user, Request $request, EntityManagerInterface $manager, \Swift_Mailer $mailer)
     {
         $reponse = new Repond();
+        $reponse->setCreatedAt(new \DateTime('now'));
         $destinataire = $user->getLastname();
 
         $form= $this->createForm(RepondType::class, $reponse);

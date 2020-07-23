@@ -4,13 +4,15 @@
 
 {% block body %}
 
-    <div class="container">
+    <div class="container-fluid">
         <h1 class="decalage my-5 ">Votre messagerie</h1>
+        <p ><i class="fas fa-exclamation-triangle text-warning"></i> Seule la personne recevant le message peut le suprimer !!!</p>
         <h4 class="text-primary">Message Reçus</h4>
 
         <table id="tab" class="table table-hover  bg-light">
             <thead>
             <tr>
+                <th>Date</th>
                 <th>Auteur</th>
                 <th>Sujet</th>
                 <th>Texte</th>
@@ -21,6 +23,7 @@
             <tbody>
             {% for messageRecu in messageRecu  %}
                 <tr>
+                    <td>{{ messageRecu.createdAt|date ("d/m/Y") }}</td>
                     <td>{{ messageRecu.author.fullname }}</td>
                     <td></td>
                     <td>{{ messageRecu.message |nl2br }}</td>
@@ -34,6 +37,7 @@
             {% endfor %}
             {% for reponseRecu in reponsesRecu  %}
                 <tr>
+                    <td>{{ reponseRecu.createdAt|date ("d/m/Y") }}</td>
                     <td>{{ reponseRecu.author.fullname }}</td>
                     <td>{{ reponseRecu.subject }}</td>
                     <td>{{ reponseRecu.text |nl2br }}</td>
@@ -51,6 +55,7 @@
         <table id="tab2" class="table table-hover  bg-light">
             <thead>
             <tr>
+                <th>Date</th>
                 <th>Destinataire</th>
                 <th>Sujet</th>
                 <th>Texte</th>
@@ -60,6 +65,7 @@
             <tbody>
             {% for message in messages  %}
                 <tr>
+                    <td>{{ message.createdAt|date ("d/m/Y") }}</td>
                     <td>{{ message.destinataire.author.fullname }}</td>
                     <td></td>
                     <td>{{ message.message }}</td>
@@ -67,7 +73,9 @@
                 </tr>
             {% endfor %}
             {% for reponseSend in reponsesSend  %}
+
                 <tr>
+                    <td>{{ reponseSend.createdAt|date ("d/m/Y") }}</td>
                     <td>{{ reponseSend.destinataire.fullname }}</td>
                     <td>{{ reponseSend.subject }}</td>
                     <td>{{ reponseSend.text }}</td>
