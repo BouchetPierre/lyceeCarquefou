@@ -69,6 +69,10 @@
 
     {% block javascripts %}
         <script type="text/javascript" language="javascript">
+            $('.custom-file-input').on('change', function() {
+                let fileName = $(this).val().split('\\').pop();
+                $(this).siblings('.custom-file-label').addClass('selected').html(fileName);
+            });
             var parcours1 = document.querySelector('.parcours1');
             var parcours2 = document.querySelector('.parcours2');
             var parcours3 = document.querySelector('.parcours3');

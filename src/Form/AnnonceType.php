@@ -41,7 +41,7 @@ class AnnonceType extends AbstractType
             ->add('phone', TextType::class, $this->getConf("Téléphone","Entrez votre numéro", false))
             ->add('address', TextType::class, $this->getConf("Adresse","Entrez votre adresse",false))
             ->add('city', TextType::class, $this->getConf("Ville","Entrez le nom de votre ville de résidence", false))
-            ->add('imageFile', FileType::class, $this->getConf('Votre photo (2Mo maxi.)', 'Selectionnez un fichier', false))
+            ->add('imageFile', FileType::class, ['label' => 'Votre Photo (jpg, jpeg ou png 2Mo Max.)','required'=> false])
             ->add('country',TextType::class, $this->getConf("Pays","Entrez le nom de votre pays de résidence", false))
             ->add('linkIn', TextType::class, $this->getConf("Lien LinkedIn","Copiez l'URL de votre compte LinkedIn", false))
             ->add('emailOk', CheckboxType::class, $this->getConf("J'autorise l'affichage de mon email et de mon téléphone",false, false))

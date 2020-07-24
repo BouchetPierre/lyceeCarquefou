@@ -44,6 +44,7 @@ class RegistrationType extends AbstractType
             ->add('yearsBac', DateType::class, [
                 'widget' => 'choice',
                 'data' => new \DateTime(),
+                'required'=>false,
                 'label' =>"Année d'obtention du BAC"
             ])
             ->add('typeBac', ChoiceType::class, [
@@ -52,6 +53,7 @@ class RegistrationType extends AbstractType
                     'Série technologique' => 'Serie_technologique'
                 ],  'expanded' => true,
                 'multiple' => false,
+                'required'=>false,
                 'label' =>'Choisissez la série de Bac',
                 'label_attr'=>[
                     'class'=>'radio-inline'
@@ -71,6 +73,7 @@ class RegistrationType extends AbstractType
                     'ST2S' => 'ST2S'
                 ],  'expanded' => true,
                 'multiple' => true,
+                'required' => false,
                 'label' =>'Indiquez les spécialités de votre Bac (2 max.)',
                 'label_attr'=>[
                     'class'=>'radio-inline'
