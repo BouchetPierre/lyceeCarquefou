@@ -85,9 +85,11 @@ class UserController extends AbstractController
      */
      public function allUStud(UserRepository $repo)
     {
+        $typeUser = 'étudiants';
         $users = $repo->findAllStud();
         return $this->render('/user/allUsers.html.twig', [
-            'users' => $users
+            'users' => $users,
+            'typeUser' => $typeUser
         ]);
     }
 
@@ -97,9 +99,11 @@ class UserController extends AbstractController
      */
     public function allUTeach(UserRepository $repo)
     {
+        $typeUser = 'enseignants';
         $users = $repo->findAllTeach();
         return $this->render('/user/allUsers.html.twig', [
-            'users' => $users
+            'users' => $users,
+            'typeUser' => $typeUser
         ]);
     }
 
@@ -124,6 +128,7 @@ class UserController extends AbstractController
     public function allUcat($cat, AnnonceRepository $repo)
     {
         $users = $repo->findAllForCat($cat);
+
         return $this->render('/user/formation.html.twig', [
             'users' => $users
         ]);

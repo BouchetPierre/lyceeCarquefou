@@ -64,7 +64,7 @@
                         <div class="parcours1 mt-3">
                             {% if annonce.typeScoolOne %}
                                 <h5 class="font-weight-bold">Année d'entrée: {{ annonce.yearsOne |date('Y')}}</h5>
-                                <h5>Formation: {{ annonce.typeScoolOne }}</h5>
+                                <h5>Formation: {{ include('user/annonceFormation.html.twig') }}</h5>
                                 <h5>Spécialité: {{ annonce.specialOne }}</h5>
                                 <h5>Commentaire: {{ annonce.descriptionOne }}</h5>
                             {% endif %}
@@ -72,7 +72,7 @@
                         <div class="parcours2 mt-3">
                             {% if annonce.typeScoolTwo %}
                                 <h5 class="font-weight-bold">Année d'entrée: {{ annonce.yearsTwo |date('Y')}}</h5>
-                                <h5>Formation: {{ annonce.typeScoolTwo }}</h5>
+                                <h5>Formation: {{ include('user/annonceFormation2.html.twig') }}</h5>
                                 <h5>Spécialité: {{ annonce.specialTwo }}</h5>
                                 <h5>Commentaire: {{ annonce.descriptionTwo }}</h5>
                             {% endif %}
@@ -80,7 +80,7 @@
                         <div class="parcours3 mt-3">
                             {% if annonce.typeScoolThree %}
                                 <h5 class="font-weight-bold">Année d'entrée: {{ annonce.yearsThree |date('Y')}}</h5>
-                                <h5>Formation: {{ annonce.typeScoolThree }}</h5>
+                                <h5>Formation: {{ include('user/annonceFormation3.html.twig') }}</h5>
                                 <h5>Spécialité: {{ annonce.specialThree }}</h5>
                                 <h5>Commentaire: {{ annonce.descriptionThree }}</h5>
                             {% endif %}

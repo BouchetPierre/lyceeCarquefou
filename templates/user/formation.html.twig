@@ -80,20 +80,27 @@
             <thead>
             <tr>
                 <th>Nom / Prénom</th>
-                <th >Année d'obtention du Bac</th>
+                <th >Année du Bac</th>
                 <th >Série Bac</th>
                 <th>Spécialités</th>
+                <th>Type formation Sup.</th>
                 <th >Etudiant / Prof.</th>
                 <th class="text-center">En savoir plus !</th>
             </tr>
             </thead>
             <tbody>
             {% for user in users %}
+
                 <tr>
                     <td>{{ user.author.fullname}}</td>
                     <td >{{ user.author.yearsBac | date ('Y') }}</td>
                     <td >{{ include('user/typeSerie3.html.twig') }}</td>
                     <td>{{ user.author.BacSpec2|join(', ') }}</td>
+                    <td>{% if user.typeScoolOne and not user.typeScoolTwo%}{{ include('user/typeFormation.html.twig') }}
+                        {% elseif user.typeScoolOne and user.typeScoolTwo and not user.typeScoolThree %}{{ include('user/typeFormation.html.twig') }}, {{ include('user/typeFormation2.html.twig') }}
+                        {% elseif user.typeScoolOne and user.typeScoolTwo and user.typeScoolThree%}{{include('user/typeFormation.html.twig') }}, {{ include('user/typeFormation2.html.twig') }},  {{ include('user/typeFormation3.html.twig') }}
+                        {% endif %}
+                    </td>
                     <td > {% if user.author.studOrTeach == 'Student' %}
                             <i class="fas fa-user-graduate"></i>
                         {% else %}

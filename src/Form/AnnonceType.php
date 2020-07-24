@@ -93,8 +93,8 @@ class AnnonceType extends AbstractType
                 'label' =>'Type de formation supérieure',
                 'required' => false
                 ])
-            ->add('specialOne', TextType::class, $this->getConf("Spécialité","Indiquez votre spécialité", false))
-            ->add('descriptionOne', TextareaType::class, $this->getConf("Commentaire","Ajoutez un commentaire", false))
+            ->add('specialOne', TextType::class, $this->getConf("Dominante","Indiquez votre spécialité", false))
+            ->add('descriptionOne', TextareaType::class, $this->getConf("Informations complémentaires","Ex: Lieu, Alternance, Parcours international, Points forts,...", false))
             ->add('yearsOne', DateType::class, [
                 'widget' => 'choice',
                 'data' => new \DateTime(),
@@ -148,8 +148,8 @@ class AnnonceType extends AbstractType
                 'label' =>'Type de formation supérieure',
                 'required' => false
             ])
-            ->add('specialTwo', TextType::class, $this->getConf("Spécialité","Indiquez votre spécialité", false))
-            ->add('descriptionTwo', TextareaType::class, $this->getConf("Commentaire","Ajoutez un commentaire", false))
+            ->add('specialTwo', TextType::class, $this->getConf("Dominante","Indiquez votre spécialité", false))
+            ->add('descriptionTwo', TextareaType::class, $this->getConf("Informations complémentaires","Ex: Lieu, Alternance, Parcours international, Points forts,...", false))
             ->add('yearsTwo', DateType::class, [
                 'widget' => 'choice',
                 'data' => new \DateTime(),
@@ -189,7 +189,7 @@ class AnnonceType extends AbstractType
                     "ENS" => "ENS",
                     "Ecoles de commerce" => "Ecoles_commerce",
                     "Ecoles spécialisées" => "Ecoles_specialisees",
-                    "Ecoles vétérinaires (ENV)" =>  "Ecoles_veterinaires)",
+                    "Ecoles vétérinaires (ENV)" =>  "Ecoles_veterinaires",
                     "Ecoles d'art" => "Ecoles_art",
                     "Ecoles de journalisme" => "Ecoles_journalisme",
                     "Formation des enseignants" => "Formation_enseignants",
@@ -203,15 +203,15 @@ class AnnonceType extends AbstractType
                 'label' =>'Type de formation supérieure',
                 'required' => false
             ])
-            ->add('specialThree', TextType::class, $this->getConf("Spécialité","Indiquez votre spécialité", false))
-            ->add('descriptionThree', TextareaType::class, $this->getConf("Commentaire","Ajoutez un commentaire", false))
+            ->add('specialThree', TextType::class, $this->getConf("Dominante","Indiquez votre spécialité", false))
+            ->add('descriptionThree', TextareaType::class, $this->getConf("Informations complémentaires","Ex: Lieu, Alternance, Parcours international, Points forts,...", false))
             ->add('yearsThree', DateType::class, [
                 'widget' => 'choice',
                 'data' => new \DateTime(),
                 'label' =>"Année d'entrée",
                 'required' => false
             ])
-            ->add('profActivity',CheckboxType::class, $this->getConf("J'exerce une activité proféssionnelle",false, false))
+            ->add('profActivity',CheckboxType::class, $this->getConf("J'exerce une activité professionnelle",false, false))
             ->add('yourActivity',TextType::class, $this->getConf("Votre métier","Indiquez votre métier", false))
             ->add('descriptionActivity',TextareaType::class, $this->getConf("Commentaire","Ajoutez un commentaire", false))
 
