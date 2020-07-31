@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/user/annonceFormation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/annonceFormation2.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/annonceFormation3.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/typeFormation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/typeFormation2.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/typeFormation3.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pictures/LogoCarquefou.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AnnonceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AnnonceType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/annonce/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/annonce/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/formation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/formation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,23 +157,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../leMas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/pictures" />
+      <recent name="$PROJECT_DIR$/public/pictures/carroussel" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/pictures/liens" />
+      <recent name="$PROJECT_DIR$/public/pictures/placeolderPictures" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/pictures/carroussel" />
       <recent name="$PROJECT_DIR$/public/pictures" />
       <recent name="$PROJECT_DIR$/public/pictures/annonces" />
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/assets/css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/pictures/carroussel" />
-      <recent name="$PROJECT_DIR$/public/pictures" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/pictures/liens" />
-      <recent name="$PROJECT_DIR$/public/pictures/placeolderPictures" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -260,7 +250,16 @@
       <workItem from="1595487813105" duration="23429000" />
       <workItem from="1595578826813" duration="16000" />
       <workItem from="1595578925530" duration="12000" />
-      <workItem from="1595579008839" duration="13294000" />
+      <workItem from="1595579008839" duration="14647000" />
+      <workItem from="1595756896677" duration="604000" />
+      <workItem from="1595765146924" duration="2027000" />
+      <workItem from="1595768837093" duration="2386000" />
+      <workItem from="1595776316392" duration="753000" />
+      <workItem from="1595850286390" duration="619000" />
+      <workItem from="1595923891165" duration="44000" />
+      <workItem from="1595932224291" duration="225000" />
+      <workItem from="1596014856833" duration="857000" />
+      <workItem from="1596091545101" duration="38000" />
     </task>
     <servers />
   </component>
@@ -280,10 +279,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="488" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591092427783" />
-    <state x="753" y="316" width="374" height="497" key="FileChooserDialogImpl" timestamp="1595505588192">
+    <state x="753" y="316" width="374" height="497" key="FileChooserDialogImpl" timestamp="1595923932406">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="753" y="316" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1595505588192" />
+    <state x="753" y="316" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1595923932406" />
     <state x="760" y="272" width="457" height="561" key="NewPhpClassDialog" timestamp="1595498695741">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
